@@ -1,0 +1,138 @@
+%%Lyryx Linear Algebra Slides Style
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Definitions
+\setlength{\unitlength}{1in}
+\newcommand{\shiftup}[1]{\vspace*{-#1\baselineskip}}
+\newcommand{\bs}{\backslash}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\rank}{\mbox{rank }}
+\newcommand{\nul}{\mbox{null}}
+\newcommand{\im}{\mbox{im}}
+\newcommand{\col}{\mbox{col}}
+\newcommand{\row}{\mbox{row}}
+\newcommand{\Span}{\mbox{span}}
+\newcommand{\trace}{\mbox{tr}}
+\newcommand{\diag}{\mbox{diag}}
+\newcommand{\proj}{\mbox{proj}}
+\newcommand{\eigenVar}{\lambda}
+\newcommand{\adj}{\mbox{adj}}
+\providecommand{\func}[1]{\mbox{#1}}
+
+%%Bracket Options
+%for  square brackets
+\newcommand{\leftB}{\left[} 
+\newcommand{\rightB}{\right]}
+%for  round brackets
+%\newcommand{\leftB}{\left(} 
+%\newcommand{\rightB}{\right)}
+
+%%Reduced Row-Echelon Form Options
+%\newcommand{\RREF}{ Row Reduced Echelon Form }
+\newcommand{\RREF}{ Reduced Row-Echelon Form }
+%\newcommand{\rref}{row reduced echelon form }
+\newcommand{\rref}{reduced row-echelon form }
+
+%%Row-Echelon Form Options
+%\newcommand{\EF}{Echelon Form }
+\newcommand{\EF}{Row-Echelon Form }
+%\newcommand{\ef}{echelon form }
+\newcommand{\ef}{row-echelon form }
+
+%% Vector Notation Options
+%\newcommand{\vect}{\mathbf}
+\newcommand{\vect}{\vec}
+%\newcommand{\longvect}{\mathbf}
+\newcommand{\longvect}{\overrightarrow}
+
+%% Dot Product Notation Options
+%\newcommand{\dotprod}{\cdot}
+\newcommand{\dotprod}{\bullet}
+
+%% Vector Length Notation Options
+%\newcommand{\vectlength}{\mid}
+\newcommand{\vectlength}{\|}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% Layout
+\usetheme{Boadilla}
+
+%% Colours, fonts, style
+\usepackage{pagecolor,color}
+
+\usepackage{multicol}
+
+%\definecolor{titleDarkBlue}{HTML}{172D3D}
+\definecolor{titleDarkBlue}{HTML}{0044A5}
+ 
+%\definecolor{titlebgDarkYellow}{HTML}{D09F2A}
+
+\definecolor{titlebgDarkYellow}{HTML}{00B5EF}
+ 
+\definecolor{titletextcolour}{HTML}{044155}
+\definecolor{subtitletextcolour}{HTML}{F8EAC2}
+\definecolor{cctextcolour}{HTML}{F8EAC2}
+
+\usepackage[T1]{fontenc}
+
+\setbeamertemplate{blocks}[rounded][shadow=true] 
+\usepackage{epsfig,amssymb}
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+
+% Colored tables and other nice enhancements
+\usepackage{tabu}
+
+% Creates coloured boxes for Examples, Definitions & Theorems
+\usepackage{tcolorbox}
+
+% For the Lyryx marketing page paragraph header boxes
+%\definecolor{lscshdrboxcolour}{HTML}{E2970A}
+\definecolor{lscshdrboxcolour}{HTML}{D09F2A}
+
+\newtcolorbox{lscshdrbox}{colback=lscshdrboxcolour,colframe=lscshdrboxcolour,top=0mm,bottom=0mm,width=19em}
+
+
+%%To number theorem boxes
+%\setbeamertemplate{theorems}[numbered]
+
+%% Draw images, figures, circuits
+\usepackage{tikz}
+\usetikzlibrary{calc,intersections,shapes.callouts}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{shadows}
+\usetikzlibrary{backgrounds}
+\usepackage{circuitikz}
+
+%% Headline 
+%\setbeamertemplate{headline}
+%{\leavevmode
+%\begin{beamercolorbox}[wd=.6\paperwidth,ht=2mm,right]{section in head/foot}
+%\insertsection 
+%\end{beamercolorbox}
+%\begin{beamercolorbox}[wd=\paperwidth,ht=2mm,right]{lightblue}%{section in head/foot}
+%\raisebox{-1mm}{\scalebox{3}[1.5]{\insertslidenavigationsymbol}}
+%\end{beamercolorbox}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Choose and resize navigation symbols you need
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{footlinecolor}{fg=white,bg=titleDarkBlue}
+\setbeamercolor{navigation symbols}{fg=white,bg=white}
+\setbeamertemplate{footline}{
+     \begin{beamercolorbox}[ht=2mm,leftskip=.1cm]{footlinecolor}
+       %\raisebox{-1mm}{
+	\tiny{
+        \insertdate \hfill   \insertsection    \hfill 
+	Page \insertframenumber/\inserttotalframenumber 
+	}
+	%}
+        \usebeamercolor[fg]{navigation symbols}
+	\hfill  \raisebox{-1mm}{\scalebox{3}[1.5]{\insertslidenavigationsymbol}}
+	%\vspace{0.06cm}
+   \end{beamercolorbox}
+}
