@@ -1,0 +1,515 @@
+%%%%%%%%%%%%%%%%%%%%%%
+%%Options for presentations (in-class) and handouts (e.g. print). 
+\documentclass[pdf
+,handout
+]{beamer}
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}[letterpaper,border shrink=5mm]
+
+\graphicspath{{../}}
+%%%%%%%%%%%%%%%%%%%%%%
+%% Change this for different slides so it appears in bar
+\usepackage{authoraftertitle}
+\date{Linear Transformations: Matrix of a Linear Transformation}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% Upload common style file
+\usepackage{../LyryxLinearAlgebraSlidesStyle}
+
+\begin{document}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%
+	%% Title Page and Copyright Common to All Slides	
+	%Title Page
+	\input ../frontmatter/titlepage.tex	
+	%LOTS Page
+	%\input frontmatter/lyryxopentexts.tex	
+	%Copyright Page
+	\input ../frontmatter/copyright.tex	
+	%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Linear Transformations}
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Recall: Linear Transformations}
+\begin{definition}
+A transformation $T:\RR^n\rightarrow \RR^m$ is a
+\alert{linear transformation} if it satisfies the following
+two properties for all $\vect{x},\vect{y}\in\RR^n$ and all (scalars) $a\in\RR$.
+\pause
+\begin{enumerate}
+\item $T(\vect{x}+\vect{y})=T(\vect{x})+T(\vect{y})$ \hfill\alert{(preservation of addition)}
+\pause
+\item $T(a\vect{x})=aT(\vect{x})$
+\hfill\alert{(preservation of scalar multiplication)}
+\end{enumerate}
+\end{definition}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Matrix Transformations}
+
+\begin{theorem}\em
+Let $T:\RR^n\rightarrow\RR^m$ be a linear transformation. Then we can find an $n \times m$ matrix $A$ such that 
+
+
+\[ 
+T(\vect{x})=A\vect{x} 
+\]
+
+\pause 
+
+In this case, we say that $T$ is induced, or determined, by $A$ and we write
+\[
+T_A(\vect{x}) = A\vect{x}
+\]
+\end{theorem}
+
+}
+%-------------- end slide -------------------------------%
+
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{problem}\em
+The transformation
+$T:\RR^3\rightarrow\RR^4$ defined by
+$T\left[\begin{array}{c} a \\ b\\ c\end{array}\right]
+=\left[ \begin{array}{c} 
+a+b \\ b+c \\ a-c\\ c-b \end{array}\right]$
+for each $\vect{x}\in\RR^3$
+is another matrix transformation, that is,
+$T(\vect{x}) = A\vect{x}$ for some matrix $A$. 
+\alert{Can you find a matrix $A$ that works?}
+\end{problem}
+\pause
+\begin{solution}\em
+\pause
+First, since $T:\RR^3\to\RR^4$, we know that $A$ must have
+size
+\pause
+\alert{$4\times 3$}.
+\pause
+Now consider the product
+\[ \left[\begin{array}{rrr}
+? & ? & ? \\ ? & ? & ? \\ ? & ? & ? \\
+? & ? & ? \end{array}\right]
+\left[\begin{array}{c} a \\ b\\ c\end{array}\right]
+=
+\left[ \begin{array}{c}
+a+b \\ b+c \\ a-c\\ c-b \end{array}\right],
+\]
+and try to fill in the values of the matrix.
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{solution}[continued]\em
+We can deduce from the product that $T$ is induced by
+the matrix
+\[ A=\left[\begin{array}{rrr}
+1 & 1 & 0 \\ 0 & 1 & 1 \\ 1 & 0 & -1 \\
+0 & -1 & 1 \end{array}\right]. \]
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%--------------------start slide--------------%
+\frame{
+\begin{alertblock}
+{Is there an easier way to find the matrix of $T$?}
+\pause
+For some transformations guess and check will work, but this is not an efficient method. The next theorem gives a method for finding the matrix of $T$. 
+\end{alertblock}
+
+\pause
+
+\begin{definition}
+The set of columns $\{ \vect{e}_1, \vect{e}_2, \ldots, \vect{e}_n\}$ of $I_n$ is
+called the \alert{standard basis of $\RR^n$.}
+\end{definition}
+
+}
+%-------------- end slide -------------------------------%
+
+
+%------------------start slide--------------------------%
+\frame{\frametitle{Matrix and Linear Transformations}
+
+\begin{theorem}\em
+Let $T:\RR^n\rightarrow \RR^m$ be a linear transformation.
+\pause
+Then $T$ is a matrix transformation.
+\pause
+Furthermore, 
+$T$ is induced by the
+\alert{unique} matrix
+\[ A =
+\left[\begin{array}{cccc}
+T(\vect{e}_1) & T(\vect{e}_2) & \cdots & T(\vect{e}_n) \end{array}\right],
+\]
+where $\vect{e}_j$ is the $j^{\mbox{th}}$ column of $I_n$,
+and $T(\vect{e}_j)$ is the $j^{\mbox{th}}$ column of $A$.
+\end{theorem}
+\pause
+
+\begin{alertblock}{Corollary}
+A transformation $T:\RR^n\rightarrow \RR^m$ is a linear transformation if and only if it is a matrix transformation.
+\end{alertblock}
+
+
+}
+%------------------------end slide-------------------------%
+
+\section{Finding the Matrix}
+
+%-------------- start slide -------------------------------%
+{\small
+\frame{
+\begin{problem}\em
+Let $T:\RR^2\to\RR^2$ be a linear transformation defined by
+\[ T \left[ \begin{array}{c} x \\ y \end{array} \right]
+=
+\left[ \begin{array}{c} x+ 2y \\ x - y \end{array} \right]
+\]
+for each $\vect{x}\in\RR^2$.
+Find the matrix, $A$, of $T$.
+\end{problem}
+\pause
+\begin{solution}\em
+\pause
+To find $A$, we must find $T(\vect{e}_1)$ and $T(\vect{e}_2)$, where
+$\vect{e}_1$ and $\vect{e}_2$ are the standard basis vectors of $\RR^2$.
+\pause
+\[
+T\left[ \begin{array}{r} 1 \\ 0 \end{array} \right]
+\pause
+= \left[ \begin{array}{c} 1 + 2(0) \\ 1-0 \end{array} \right]
+\pause
+= \left[ \begin{array}{r} 1 \\ 1 \end{array} \right]
+\pause
+\mbox{ and }
+T\left[ \begin{array}{r} 0 \\ 1 \end{array} \right] 
+\pause
+= \left[ \begin{array}{c} 0 + 2(1) \\ 0-1 \end{array} \right] 
+\pause
+= \left[ \begin{array}{r} 2 \\ -1 \end{array} \right]
+\]
+\pause
+The columns $T(\vect{e}_1)$ and $T(\vect{e}_2)$ become the columns of $A$, 
+\pause
+so
+\[ A = \left[ \begin{array}{rr}
+1 & 2 \\ 1 & -1
+\end{array} \right], \]
+\vspace*{-.1in}
+
+and $T(\vect{x}) = A\vect{x}$ for every $\vect{x}\in\RR^2$.
+\pause
+Therefore $A$ is the matrix for $T$.
+\end{solution}
+}}
+%------------------------end slide-------------------------%
+
+%------------------------start slide---------------%
+\frame{\frametitle{Find the Matrix of $T$}
+\begin{problem}\em
+Sometimes $T$ is not defined so nicely for us. 
+Suppose $T$ is given as 
+\[ T\left[
+\begin{array}{r}
+1 \\
+1
+\end{array}
+\right] =\left[
+\begin{array}{r}
+1 \\
+2
+\end{array}
+\right] ,\ T\left[
+\begin{array}{r}
+0 \\
+-1 
+\end{array}
+\right] =\left[
+\begin{array}{r}
+3 \\
+2
+\end{array}
+\right]
+\]
+
+\uncover<2->{
+Find the matrix $A$ of $T$.}
+\end{problem}
+}
+%--------------------end slide-------------------%
+
+%----------------- start slide------------------%
+\frame{
+\begin{solution}[continued]\em
+We need to write $\vect{e}_1$ and $\vect{e}_2$ as a linear combination of the vectors provided. 
+First, find $x$ and $y$ such that 
+\[
+\left[
+\begin{array}{r}
+1 \\
+0
+\end{array}
+\right] = x\left[
+\begin{array}{r}
+1\\
+1
+\end{array}
+\right] +y\left[
+\begin{array}{r}
+0 \\
+-1 
+\end{array}
+\right]
+\]
+
+\uncover<2->{
+Once we find $x$ and $y$ we can compute
+\[
+T\left[
+\begin{array}{r}
+1 \\
+0 
+\end{array}
+\right]  = x T\left[
+\begin{array}{r}
+1 \\
+1
+\end{array}
+\right] +y T\left[
+\begin{array}{r}
+0 \\
+-1 
+\end{array}
+\right]
+\]
+\[
+=
+ x\left[
+\begin{array}{r}
+1 \\
+2
+\end{array}
+\right] +y\left[
+\begin{array}{r}
+3 \\
+2
+\end{array}
+\right]
+\]
+
+}
+\end{solution}
+}
+%-----------------end slide--------------%
+
+%-------------------start slide------------%
+\frame{
+\begin{solution}[continued]\em
+Finding $x$ and $y$ involves solving the following system of equations.
+\[
+\begin{array}{c}
+x = 1 \\
+x - y = 0
+\end{array}
+\]
+
+\uncover<2->{
+The solution is $x=1, y=1$.}
+
+\uncover<3->{
+Hence, we can find $T(\vect{e}_1)$ as follows.
+\[
+T\left[
+\begin{array}{r}
+1 \\
+0 
+\end{array}
+\right] = 
+ 1 \left[
+\begin{array}{r}
+1 \\
+2
+\end{array}
+\right] + 1 \left[
+\begin{array}{r}
+3 \\
+2
+\end{array}
+\right] 
+= 
+ \left[
+\begin{array}{r}
+1 \\
+2
+\end{array}
+\right] + \left[
+\begin{array}{r}
+3 \\
+2
+\end{array}
+\right]
+=
+\left[
+\begin{array}{r}
+4 \\
+4
+\end{array}
+\right]
+\]
+}
+
+\uncover<4->{
+This is the first column of the matrix $A$. Similarly, we can find $T(\vect{e}_2)$ which will be the second column of $A$. The resulting matrix is 
+\[
+A
+=
+\left[
+\begin{array}{rr}
+4 & -3 \\
+4 & -2
+\end{array}
+\right]
+\]
+}
+\end{solution}
+}
+%---------------------end slide----------------------%
+
+%-------------- start slide -------------------------------%
+{\small
+\frame{\frametitle{Determining if a Transformation is Linear}
+\begin{example}
+Let $T:\RR^2\rightarrow\RR^3$ be a transformation defined by
+$T\left[\begin{array}{c} x \\ y \end{array}\right] =
+\left[\begin{array}{c} 2x \\ y \\ -x +2y \end{array}\right]$.
+\pause
+
+One way to show that $T$ is a linear transformation is to show
+that it \textcolor{blue}{preserves addition and scalar
+multiplication}.
+\pause
+However, now that we know that linear transformations are
+matrix transformations, we can use this to our advantage.
+\pause
+\medskip
+
+\alert{If} $T$ were a linear transformation, then
+\alert{$T$ would be induced by the matrix}
+\pause
+\vspace*{-.1in}
+
+\[ A= \left[ \begin{array}{cc} T(\vect{e}_1) & T(\vect{e}_2)
+\end{array}\right]
+\pause
+=
+\left[\begin{array}{cc}
+{T \left[\begin{array}{c} 1 \\ 0 \end{array}\right]} &
+{T \left[\begin{array}{c} 0 \\ 1 \end{array}\right]}
+\end{array}\right]
+\pause
+=
+\left[\begin{array}{rr}
+2 & 0 \\ 0 & 1 \\ -1 & 2
+\end{array}\right].
+\]
+\pause
+Since
+\[
+A\left[\begin{array}{c} x\\y \end{array}\right]
+=
+\left[\begin{array}{rr}
+2 & 0 \\ 0 & 1 \\ -1 & 2
+\end{array}\right]
+\left[\begin{array}{c} x\\ y \end{array}\right]
+=
+\left[\begin{array}{c} 2x\\ y \\ -x+2y  \end{array}\right]
+=T\left[\begin{array}{c} x\\y \end{array}\right],
+\]
+$T$ is a matrix transformation, and therefore a
+linear transformation.
+\end{example}
+}
+}
+%------------------------end slide-------------------------%
+
+%-------------- start slide -------------------------------%
+{\small
+\frame{
+\begin{example}
+Let $T:\RR^2\rightarrow\RR^2$ be a transformation defined by
+$T\left[\begin{array}{c} x \\ y \end{array}\right] =
+\left[\begin{array}{c} xy \\ x+y \end{array}\right]$.
+\pause
+
+\alert{If} $T$ were a linear transformation, then 
+\alert{$T$ would be
+induced by the matrix}
+\pause
+\[ A= \left[ \begin{array}{cc} T(\vect{e}_1) & T(\vect{e}_2)
+\end{array}\right]
+\pause
+=
+\left[\begin{array}{cc}
+{T \left[\begin{array}{c} 1 \\ 0 \end{array}\right]} &
+{T \left[\begin{array}{c} 0 \\ 1 \end{array}\right]}
+\end{array}\right]
+\pause
+=
+\left[\begin{array}{rr}
+0 & 0 \\ 1 & 1
+\end{array}\right].
+\]
+\pause
+However,
+\[ A\left[\begin{array}{c} x \\ y \end{array}\right]
+=
+\left[\begin{array}{rr}
+0 & 0 \\ 1 & 1
+\end{array}\right]
+\left[\begin{array}{c} x \\ y \end{array}\right]
+= \left[\begin{array}{c} 0 \\ x+y \end{array}\right].
+\]
+\pause
+We see from this that
+if $x=0$ or $y=0$, then $xy=0$, so
+$A\left[\begin{array}{c} x \\ y \end{array}\right]
+=T\left[\begin{array}{c} x \\ y \end{array}\right]$.
+\pause
+
+But if we take $x=y=1$, 
+\pause then 
+\[ A\left[\begin{array}{c} x \\ y \end{array}\right]
+\pause
+=A\left[\begin{array}{c} 1 \\ 1 \end{array}\right]
+\pause
+=\left[\begin{array}{c} 0 \\ 2 \end{array}\right]
+\pause
+\mbox{ while }
+T\left[\begin{array}{c} x \\ y \end{array}\right]
+\pause
+=T\left[\begin{array}{c} 1 \\ 1 \end{array}\right]
+\pause
+=\left[\begin{array}{c} 1 \\ 2 \end{array}\right], \]
+\pause
+i.e., $A\left[\begin{array}{c} 1 \\ 1 \end{array}\right]
+\neq T\left[\begin{array}{c} 1 \\ 1 \end{array}\right]$.
+\pause
+Therefore, $T$ in \alert{not} a linear transformation.
+\end{example}
+}
+}
+%------------------------end slide-------------------------%
+
+
+\end{document}

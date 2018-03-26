@@ -1,0 +1,757 @@
+%%%%%%%%%%%%%%%%%%%%%%
+%%Options for presentations (in-class) and handouts (e.g. print). 
+\documentclass[pdf
+%,handout
+]{beamer}
+\usepackage{pgfpages}
+%\pgfpagesuselayout{2 on 1}[letterpaper,border shrink=5mm]
+
+\graphicspath{{../}}
+%%%%%%%%%%%%%%%%%%%%%%
+%% Change this for different slides so it appears in bar
+\usepackage{authoraftertitle}
+\date{Spectral Theory: 7.2 Diagonalization}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% Upload common style file
+\usepackage{../LyryxLinearAlgebraSlidesStyle}
+
+\begin{document}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%
+	%% Title Page and Copyright Common to All Slides	
+	%Title Page
+	\input ../frontmatter/titlepage.tex	
+	%LOTS Page
+	%\input frontmatter/lyryxopentexts.tex	
+	%Copyright Page
+	\input ../frontmatter/copyright.tex	
+	%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+{\small
+%\section{Similar Matrices}
+%%-------------- start slide -------------------------------%
+%\frame{
+%\begin{definition}[Similar Matrices]
+%Let $A$ and $B$ be $n\times n$ matrices.
+%\alert{$A$ is similar to $B$}, written $A\sim B$, if there
+%exists an \textcolor{blue}{invertible} matrix $P$ such
+%that $B=P^{-1}AP$.
+%\end{definition}
+%\pause
+%\begin{lemma}\em
+%Similarity is an equivalence relation,
+%i.e., for $n\times n$ matrices $A$, $B$ and $C$
+%\vspace*{-.10in}
+%
+%\begin{enumerate}
+%\item $A\sim A$
+%\textcolor{blue}{(reflexive)};
+%\pause
+%\item if $A\sim B$, then $B\sim A$
+%\textcolor{blue}{(symmetric)};
+%\pause
+%\item if $A\sim B$ and $B\sim C$, then $A\sim C$
+%\textcolor{blue}{(transitive)}.
+%\end{enumerate}
+%\end{lemma}
+%\pause
+%\begin{proof}[Proof that similarity is transitive]
+%Since $A\sim B$ and $B\sim C$, there exist invertible
+%$n\times n$ matrices $P$ and $Q$ such that
+%\vspace*{-.1in}
+%
+%\[ B=P^{-1}AP \mbox{ and } C=Q^{-1}BQ.\]
+%\vspace*{-.15in}
+%
+%Thus
+%\vspace*{-.15in}
+%
+%\[  C=Q^{-1}BQ=Q^{-1}(P^{-1}AP)Q
+%=(Q^{-1}P^{-1})A(PQ)=(PQ)^{-1}A(PQ),\]
+%\vspace*{-.1in}
+%
+%where $PQ$ is invertible, and hence $A\sim C$.
+%\end{proof}
+%}
+%%-------------- end slide -------------------------------%
+%
+%%-------------- start slide -------------------------------%
+%\frame{
+%\begin{definition}
+%If $A=[a_{ij}]$ is an $n\times n$ matrix, then the
+%\alert{trace of $A$} is
+%\[ \trace(A) = \sum_{i=1}^n a_{ii}.\]
+%\end{definition}
+%\pause
+%\begin{lemma}[Properties of trace]\em
+%For $n\times n$ matrices $A$ and $B$, and any $k\in\mathbb{R}$,
+%\begin{enumerate}
+%\item $\trace(A+B)=\trace(A) + \trace(B)$;
+%\item $\trace(kA)=k\cdot\trace(A)$;
+%\item $\trace(AB)=\trace(BA)$.
+%\end{enumerate}
+%\end{lemma}
+%\pause
+%\begin{alertblock}{}
+%The proofs of these are exercises in manipulating sums.
+%\end{alertblock}
+%}
+%%-------------- end slide -------------------------------%
+
+%%-------------- start slide -------------------------------%
+%\frame{
+%\begin{alertblock}{Reminder (Characteristic Polynomial)}
+%For any $n\times n$ matrix $A$, the
+%\alert{characteristic polynomial} of $A$ is 
+%\[ c_A(x)=\det(xI-A),\]
+%and is a polynomial of degree $n$.
+%\end{alertblock}
+%\pause
+%\begin{theorem}[Properties of Similar Matrices]\em
+%If $A$ and $B$ are $n\times n$ matrices and $A\sim B$, then
+%\begin{enumerate}
+%\item $\det(A) = \det(B)$;
+%\item $\rank(A) = \rank(B)$;
+%\item $\trace(A)= \trace(B)$;
+%\item $c_A(x)=c_B(x)$;
+%\item $A$ and $B$ have the same eigenvalues.
+%\end{enumerate}
+%\end{theorem}
+%}
+%%-------------- end slide -------------------------------%
+
+%%-------------- start slide -------------------------------%
+%\frame{
+%\begin{block}{Proof.}
+%Since $A\sim B$, there exists an $n\times n$ invertible matrix
+%$P$ so that $B=P^{-1}AP$.
+%\pause
+%\begin{enumerate}
+%\item
+%$\det(B) = \det(P^{-1}AP) 
+%= \det(P^{-1})\cdot\det(A)\cdot\det(P)$.
+%
+%Since $P$ is invertible, $\det(P^{-1})=\frac{1}{\det(P)}$, so
+%\[ \det(B) =  \frac{1}{\det(P)}\cdot\det(A)\cdot\det(P) 
+%= \frac{1}{\det(P)}\cdot\det(P) \cdot\det(A) 
+%= \det(A).\]
+%Therefore, $\det(B) =\det(A)$.
+%\pause
+%\item 
+%$\rank(B) = \rank(P^{-1}AP)$. 
+%
+%Since $P$ is invertible, 
+%$\rank(P^{-1}AP) = \rank(P^{-1}A)$,
+%and since $P^{-1}$ is invertible,
+%$\rank(P^{-1}A)=\rank(A)$.
+%Therefore, $\rank(B) =\rank(A)$.
+%\pause
+%\item $\trace(B)=\trace[(P^{-1}A)P]
+%=\trace[P(P^{-1}A)]
+%=\trace[(PP^{-1})A]
+%=\trace(IA)
+%=\trace(A)$.
+%\end{enumerate}
+%\end{block}
+%}
+%%-------------- end slide -------------------------------%
+%
+%%-------------- start slide -------------------------------%
+%\frame{
+%\begin{proof}[Proof (continued).]
+%\begin{enumerate}
+%\setcounter{enumi}{3}
+%\item
+%\begin{eqnarray*}
+%c_B(x)  =  \det(xI-B) 
+%& = & \det(xI-P^{-1}AP) \\
+%& = & \det(xP^{-1}P-P^{-1}AP) \\
+%& = & \det(P^{-1}xP-P^{-1}AP) \\
+%& = & \det[P^{-1}(xI-A)P] \\
+%& = & \det(P^{-1})\cdot\det(xI-A)\cdot\det(P) \\
+%& = & \det(P^{-1})\cdot\det(P)\cdot \det(xI-A) \\
+%\end{eqnarray*}
+%\vspace*{-.4in} 
+%
+%Since $P$ is invertible, $\det(P^{-1})=\frac{1}{\det(P)}$, so
+%\vspace*{-.1in} 
+%
+%\[ c_B(x) =  \frac{1}{\det(P)}\cdot{\det(P)}\cdot \det(xI-A)
+%= \det(xI-A) =c_A(x).\]
+%\vspace*{-.25in}
+%
+%\pause
+%\item
+%Since the eigenvalues of a matrix are the roots of the
+%characteristic polynomial, $c_B(x) =c_A(x)$ implies
+%that $A$ and $B$ have the same eigenvalues.
+%\end{enumerate}
+%\end{proof}
+%}
+%%-------------- end slide -------------------------------%
+
+\section{Diagonalizing a Matrix}
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Diagonal Matrices}
+\begin{definition}
+An $n\times n$ matrix $A$ is \alert{diagonal} if
+it is both upper triangular and lower triangular.
+\pause
+Equivalently, all entries except those on the main diagonal
+are zeros.
+\end{definition}
+\pause
+\begin{block}{Notation}
+An $n\times n$ diagonal matrix
+\[ D=
+\left[\begin{array}{cccccc}
+a_1 & 0 & 0 & \cdots & 0 & 0 \\
+0 & a_2 & 0 & \cdots & 0 & 0 \\
+0 & 0 & a_3 & \cdots & 0 & 0 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\
+0 & 0 & 0 & \cdots & a_{n-1} & 0\\
+0 & 0 & 0 & \cdots & 0 & a_n
+\end{array}\right]\]
+is written \alert{$D=\diag(a_1, a_2, a_3, \ldots, a_{n-1}, a_n)$.}
+\end{block}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Diagonalizability}
+
+\begin{definition}
+An $n\times n$ matrix $A$ is said to be
+\alert{diagonalizable} if there exists an 
+invertible $n\times n$ matrix $P$ such that
+$A=PDP^{-1}$.\\
+Equivalently:
+$A$ is \alert{diagonalizable} if $A\sim D$ for
+some \textcolor{blue}{diagonal matrix} $D$.
+
+\end{definition}
+\pause
+
+%\begin{definition}
+%An $n\times n$ matrix $A$ is \alert{diagonalizable} if $A\sim D$ for
+%some \textcolor{blue}{diagonal matrix} $D$.
+%\end{definition}
+%\pause
+
+\begin{alertblock}{Diagonalizing a Matrix}
+Let $A$ be an $n\times n$ matrix.
+The process of finding an \alert{invertible} matrix $P$ and
+a \alert{diagonal} matrix $D$ so that $A=PDP^{-1}$
+is referred to as \alert{diagonalizing} the matrix $A$,
+and $P$ is called the \alert{diagonalizing} matrix for $A$.
+\bigskip
+
+\pause
+The key to diagonalizing a matrix (finding the matrices
+$P$ and $D$) lies in the eigenvectors and
+eigenvalues of the matrix $A$.
+\end{alertblock}
+}
+%-------------- end slide -------------------------------%
+
+%----------------start slide-----------------------------%
+\frame{
+
+\begin{block}{Reminder}
+Let $A$ be an $n \times n$ matrix and $\lambda$ a real number. 
+If $\lambda$ is an eigenvalue of $A$, then
+\[ AX=\lambda X\]
+for some {\bf nonzero} vector $X$ in $\mathbb{R}^n$.
+Such a vector $X$ is called a
+\alert{$\lambda$-eigenvector of $A$}
+or an eigenvector of $A$ corresponding to $\lambda$.
+\end{block}
+\pause
+
+\begin{theorem}
+Let $A$ be an $n\times n$ matrix.
+\pause
+\begin{enumerate}
+\item
+$A$ is diagonalizable if and only if it has eigenvectors
+$X_1, X_2, \ldots, X_n$ so that $P = \left[
+\begin{array}{cccc}
+X_1 & X_2 & \cdots & X_n
+\end{array}\right] $
+is invertible.
+\pause
+\item If $P$ is invertible, then
+\[ P^{-1}AP=\diag(\lambda_1, \lambda_2, \ldots, \lambda_n ) \]
+where $\lambda_i$ is the eigenvalue of $A$ corresponding to
+the eigenvector $X_i$, i.e., $AX_i=\lambda_i X_i$.
+\end{enumerate}
+\end{theorem}
+
+}
+%----------------end slide--------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{example}
+Diagonalize, if possible, the matrix 
+$A=\left[\begin{array}{rrr}
+1 & 0 & 1 \\
+0 & 1 & 0 \\
+0 & 0 & -3
+\end{array}\right]$.
+\end{example}
+\pause
+\begin{solution}\em
+\[ c_A(x)=\det(xI-A) =
+\left|\begin{array}{ccc}
+x-1 & 0 & -1 \\
+0 & x-1 & 0 \\
+0 & 0 & x+3
+\end{array}\right|
+=(x-1)^2(x+3).\]
+\pause
+Therefore, $A$ has eigenvalues $\lambda_1=1$ of multiplicity two and
+$\lambda_2=-3$ of multiplicity one.
+\bigskip
+\pause
+
+Eigenvectors for $\lambda_1=1$: solve $(I-A)X=0$.
+\[ \left[\begin{array}{rrr|r}
+0 & 0 & -1 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 4 & 0 
+\end{array}\right]
+\rightarrow
+\left[\begin{array}{rrr|r}
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 
+\end{array}\right]
+\pause
+\mbox{ so }
+X = \left[\begin{array}{r} s \\ t \\ 0 
+\end{array}\right], s,t\in\RR.
+\]
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{solution}[continued]\em
+Therefore,
+basic eigenvectors corresponding to $\lambda_1=1$ are
+$\left[\begin{array}{r} 1 \\ 0 \\ 0   
+\end{array}\right]$ and 
+$\left[\begin{array}{r} 0 \\ 1 \\ 0   
+\end{array}\right]$.
+\bigskip
+
+Eigenvectors for $\lambda_2=-3$: solve $(-3I-A)X=0$.
+\[ \left[\begin{array}{rrr|r}
+-4 & 0 & -1 & 0 \\
+0 & -4 & 0 & 0 \\
+0 & 0 & 0 & 0 
+\end{array}\right]
+\rightarrow
+\left[\begin{array}{rrr|r}
+1 & 0 & \frac{1}{4} & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0
+\end{array}\right]
+\pause
+\mbox{ so }
+X = \left[\begin{array}{c} -\frac{1}{4}t \\ 0 \\ t   
+\end{array}\right], t\in\RR.
+\]
+\pause
+Therefore, a basic eigenvector corresponding to $\lambda_2=-3$ is
+$\left[\begin{array}{r} -1 \\ 0 \\ 4    
+\end{array}\right]$
+\pause
+
+Let
+\[ P= \left[\begin{array}{rrr}
+-1 & 1 & 0 \\
+0 & 0 & 1 \\
+4 & 0 & 0
+\end{array}\right].  \]
+Then $P$ is invertible \alert{(easily checked by computing $\det P$)}.
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{solution}[continued]\em
+\pause
+Furthermore, 
+\[ P^{-1}AP=D=\diag(-3,1,1)=
+\left[\begin{array}{rrr}
+-3 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{array}\right].  \]
+\pause
+\alert{The eigenvalues of $A$ in $D$ (from left to right)
+occur in the same order as their corresponding eigenvectors
+as columns of $P$.}
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{example}
+Diagonalize the matrix
+$A=
+\left[\begin{array}{rrr}
+3 & -4 & 2 \\
+1 & -2 & 2 \\
+1 & -5 & 5
+\end{array}\right]$ 
+\end{example}
+\pause
+
+\begin{solution}\em
+You can check that $A$ has eigenvalues and
+corresponding basic eigenvectors:
+\[ \lambda_1=3\mbox{ and } 
+X_1 = \left[\begin{array}{r}
+1 \\ 1 \\ 2
+\end{array}\right];
+\lambda_2=2\mbox{ and } 
+X_2 = \left[\begin{array}{r}
+2 \\ 1 \\ 1
+\end{array}\right];
+\lambda_3=1\mbox{ and } 
+X_3 = \left[\begin{array}{r}
+1 \\ 1 \\ 1
+\end{array}\right].\]
+\pause
+Let
+$P= \left[
+\begin{array}{ccc}
+X_1 & X_2 & X_3
+\end{array}\right]
+=\left[\begin{array}{rrr}
+1 & 2 & 1 \\
+1 & 1 & 1 \\
+2 & 1 & 1
+\end{array}\right]$.
+\pause
+Then $P$ is invertible \alert{(check this!)}, so
+by the previous theorem, 
+\[ P^{-1}AP = \left[\begin{array}{rrr}
+3 & 0 & 0 \\
+0 & 2 & 0 \\
+0 & 0 & 1
+\end{array}\right].\]
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Eigenvalues, Eigenvectors, and Diagonalization}
+
+\begin{theorem}\em
+Let $A$ be an $n\times n$ matrix, and suppose that $A$ 
+has distinct eigenvalues $\lambda_1, \lambda_2, \ldots, \lambda_m$.
+For each $i$, let $X_i$ be a $\lambda_i$-eigenvector of $A$.
+Then $\{ X_1, X_2, \ldots, X_m\}$ is 
+linearly independent.
+\end{theorem}
+
+\pause
+\medskip
+
+\begin{alertblock}{Diagonalizability}
+Determining whether or not a square matrix $A$ is diagonalizable
+can be done using \alert{eigenvalues} and 
+\alert{eigenvectors} of the matrix $A$.
+
+\end{alertblock}
+
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{theorem}[]\em
+Let $A$ be an $n \times n$ matrix and suppose it has $n$ distinct eigenvalues. Then it follows that $A$ is diagonalizable.
+\end{theorem}
+\pause
+\begin{proof}
+Let $\{ \lambda_1, \lambda_2, \ldots, \lambda_n\}$ denote the
+$n$ (distinct) eigenvalues of $A$, and let $X_i$ be
+an eigenvector of $A$ corresponding to $\lambda_i$, $1\leq i\leq n$.
+Then $\{ X_1, X_2, \ldots, X_n\}$
+is a linearly independent set in $\mathbb{R}^n$ (i.e. a basis).
+
+\pause
+%A subset of $n$ linearly independent vectors of $\mathbb{R}^n$ also
+%spans $\mathbb{R}^n$, and thus 
+%$\{ X_1, X_2, \ldots, X_n\}$
+%is a basis of $\mathbb{R}^n$.
+It follows that $ P=\left[ X_1\; X_2  \cdots  X_n\right]  $ is invertible, and therefore $A$ is diagonalizable.
+\end{proof}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{example}
+Show that the matrix 
+\[ A=\leftB\begin{array}{rrr}
+0 & -1 & 1 \\ 8 & 6 & -2 \\ 0 & 0 & -3
+\end{array}\rightB\]
+is diagonalizable.
+\end{example}
+
+\pause
+\begin{solution}\em
+$A$ has characteristic polynomial
+\[ c_A(x) =(x+3)(x-2)(x-4), \]
+and thus $A$ has distinct eigenvalues $-3, 2$ and $4$.
+\medskip
+
+Since $A$ is $3 \times 3$ and has three distinct eigenvalues, $A$ is
+diagonalizable.
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{definition}
+Let $A$ be an $n\times n$ matrix and $\lambda\in\mathbb{R}$.
+The eigenspace of $A$ corresponding to $\lambda$, written $E_{\lambda}(A)$
+is the subspace spanned by the set of all eigenvectors corresponding to $\lambda$. 
+\end{definition}
+\pause
+\begin{alertblock}{}
+In other words, the eigenspace $E_{\lambda}(A)$ is all $X$ (including $ X =\vec{0} $) such that $AX = \lambda X$.
+ In other words, $E_{\lambda}(A) = \func{null}(\lambda I - A)$. 
+
+\end{alertblock}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{definition}[recall]
+Let $A$ be an $n \times n$ matrix with characteristic polynomial given by 
+$\det \left( \eigenVar I -  A\right)$. Then, the multiplicity of an eigenvalue $\lambda$ \index{multiplicity} of $A$
+is the number of times $\lambda$ occurs as a root of that characteristic polynomial.
+\end{definition}
+\pause
+\begin{lemma}\em
+If $A$ is an $n\times n$ matrix,  then 
+\[ \dim(E_{\lambda}(A))\leq m\]
+where $\lambda$ is an
+eigenvalue of $A$ of multiplicity $m$.
+\end{lemma}
+\pause
+\begin{alertblock}{}
+This result tells us that if $\lambda$ is an eigenvalue of $A$, then
+the number of linearly independent $\lambda$-eigenvectors
+is never more than the multiplicity of $\lambda$.
+\end{alertblock}
+}
+%-------------- end slide -------------------------------%
+
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{alertblock}{}
+The crucial consequence of the above Lemma is the
+characterization of matrices that are diagonalizable.
+\end{alertblock}
+\pause
+\begin{theorem}\em
+Let $A$ be an $n \times n$ matrix $A$. Then $A$ is diagonalizable if and only if for each eigenvalue $\lambda$ of $A$, $\dim(E_{\lambda}(A))$ is equal to the multiplicity of $\lambda$.
+\end{theorem}
+}
+%-------------- end slide -------------------------------%
+
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{example}
+Let
+\begin{equation*}
+A = 
+\leftB
+\begin{array}{rr}
+1 & 1 \\
+0 & 1
+\end{array}
+\rightB
+\end{equation*}
+Determine if $A$ is diagonalizable
+\end{example}
+
+\medskip
+\pause
+
+\begin{solution}\em
+Through the usual procedure, we find that the eigenvalues of $A$ are $\lambda_1 =1, \lambda_2=1.$ Solving as usual, we find that the eigenvectors are given by
+\begin{equation*}
+t\leftB
+\begin{array}{r}
+1 \\
+0
+\end{array}
+\rightB
+\; \mbox{and the basic eigenvector is} \;
+X_1
+=
+\leftB
+\begin{array}{r}
+1 \\
+0
+\end{array}
+\rightB
+\end{equation*}
+
+\medskip
+\pause
+
+This means that $\dim(E_{\lambda}(A)) = 1$, but the multiplicity of $\lambda = 1$ is $2$. Therefore this matrix is not diagonalizable. 
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+\section{Complex Eigenvalues}
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Complex Eigenvalues}
+\begin{alertblock}{}
+
+If a matrix has eigenvalues that have imaginary parts
+(and aren't simply real numbers),
+we can still find eigenvectors and
+possibly diagonalize the matrix.
+\end{alertblock}
+\pause
+\begin{problem}\em
+Diagonalize, if possible, the matrix 
+$A=\leftB\begin{array}{rr}
+1 & 1 \\ -1 & 1 \end{array}\rightB$.
+\end{problem}
+\pause
+\begin{block}{Solution}
+\[
+c_A(x)=\det(xI-A) 
+=\left| \begin{array}{cc}
+x-1 & -1 \\ 1 & x-1 \end{array}\right|
+= x^2-2x+2.\]
+The roots of $c_A(x)$ are
+\textcolor{blue}{distinct complex numbers}:
+$\lambda_1=1+i$ and $\lambda_2=1-i$, so $A$ is diagonalizable.
+Corresponding eigenvectors are
+\[ X_1=\leftB\begin{array}{c} -i \\ 1 \end{array}\rightB
+\mbox{ and }
+X_2=\leftB\begin{array}{c} i \\ 1 \end{array}\rightB,\]
+respectively.
+\end{block}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{block}{Solution (continued)}
+A diagonalizing matrix for $A$ is 
+\[ 
+P=\leftB\begin{array}{cc}
+-i & i \\ 1 & 1 \end{array}\rightB,\]
+and 
+\[ P^{-1}AP=\leftB\begin{array}{cc}
+1+i & 0 \\ 0 & 1-i \end{array}\rightB.\]
+\end{block}
+\pause
+\begin{alertblock}{}
+Notice that $A$ is a real matrix, but has complex eigenvalues
+(and eigenvectors).
+\end{alertblock}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Eigenvalues of a Real Symmetric Matrix}
+\begin{theorem}\em
+The eigenvalues of any \textcolor{blue}{real symmetric} matrix
+are \textcolor{blue}{real}.
+\end{theorem}
+\pause
+\begin{block}{Proof.}
+Let $A$ be an $n\times n$ real symmetric matrix, and let 
+$\lambda$ be an eigenvalue of $A$.
+To prove that $\lambda$ is real, it is enough to prove
+that $\overline{\lambda}=\lambda$, i.e., $\lambda$ is
+equal to its (complex) conjugate.
+\medskip
+
+We use $\overline{A}$ to denote the matrix obtained from $A$
+by replacing each entry by its conjugate.
+Since $A$ is real, $\overline{A}=A$.
+\medskip
+
+Suppose 
+\[X= \leftB\begin{array}{c} z_1 \\ z_2 \\ \vdots \\ z_n
+\end{array}\rightB\]
+is a $\lambda$-eigenvector of $A$.
+Then $AX=\lambda X$.
+\end{block}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{proof}[Proof (continued)]
+Let 
+$y=X^T\overline{X}
+=\leftB\begin{array}{cccc}
+z_1 & z_2 & \cdots & z_n \end{array}\rightB
+\leftB\begin{array}{c} \overline{z}_1 \\ \overline{z}_2 \\
+\vdots \\ \overline{z}_n \end{array}\rightB$.
+\smallskip
+
+\pause
+Then
+$y= z_1 \overline{z}_1 + z_2 \overline{z}_2 + \cdots +
+z_n \overline{z}_n
+= |z_1|^2 + |z_2|^2 + \cdots + |z_n|^2$;\\ \pause 
+since $X\neq 0$,
+$y$ is a positive real number.
+So
+\begin{eqnarray*}
+\lambda y & = & \lambda(X^T\overline{X}) 
+=(\lambda X^T)\overline{X} 
+=(\lambda X)^T\overline{X} \\ \pause 
+& = & (AX)^T\overline{X} 
+= X^T A^T \overline{X} \\  \pause 
+& = &X^T A \overline{X}~~
+\mbox{\textcolor{blue}{ (since $A$ is symmetric)}} \\  \pause 
+& = & X^T ~\overline{A} \overline{X}~~
+\mbox{\textcolor{blue}{ (since $A$ is real)}} \\  \pause 
+& = & X^T (\overline{AX})
+= X^T (\overline{\lambda X})
+= X^T ~\overline{\lambda}\overline{X} \\  \pause 
+& = & \overline{\lambda} (X^T \overline{X}) \\  \pause 
+& = & \overline{\lambda} y.
+\end{eqnarray*}  \pause 
+Thus, $\lambda y= \overline{\lambda} y$.
+Since $y\neq 0$, it follows that
+$\lambda = \overline{\lambda}$, and therefore $\lambda$ is real. 
+\end{proof}
+}
+%-------------- end slide -------------------------------%
+
+
+}\end{document}

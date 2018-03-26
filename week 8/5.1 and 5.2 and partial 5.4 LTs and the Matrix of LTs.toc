@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Copyright}{2}{0}{1}
+\beamer@sectionintoc {2}{Transformations}{3}{0}{2}
+\beamer@sectionintoc {3}{Linear Transformations}{14}{0}{3}
+\beamer@sectionintoc {4}{Finding the Matrix}{63}{0}{4}
+\beamer@sectionintoc {5}{5.4: Rotations}{112}{0}{5}
+\beamer@sectionintoc {6}{Reflections}{133}{0}{6}

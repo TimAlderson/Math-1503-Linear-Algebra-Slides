@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Copyright}{2}{0}{1}
+\beamer@sectionintoc {2}{Equations of Planes}{3}{0}{2}
+\beamer@sectionintoc {3}{Shortest distance from a point to a plane}{7}{0}{3}
+\beamer@sectionintoc {4}{The Cross Product}{10}{0}{4}
+\beamer@sectionintoc {5}{The Box Product}{26}{0}{5}

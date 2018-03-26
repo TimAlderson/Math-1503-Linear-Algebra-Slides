@@ -1,0 +1,1184 @@
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+%%Options for presentations (in-class) and handouts (e.g. print). 
+\documentclass[pdf
+%,handout
+]{beamer}
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{2 on 1}[letterpaper,border shrink=5mm]
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% Change this for different slides so it appears in bar
+\usepackage{authoraftertitle}
+\date{Section 4.10\\$\mathbb{R}^n$: An Overview of Spanning, Linear Independence, and Basis}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% Upload common style file
+\usepackage{../LyryxLinearAlgebraSlidesStyle}
+
+\begin{document}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%
+	%% Title Page and Copyright Common to All Slides
+	
+	%Title Page
+	\input ../frontmatter/titlepage.tex
+	
+	%LOTS Page
+	%\input frontmatter/lyryxopentexts.tex
+	
+	%Copyright Page
+	\input ../frontmatter/copyright.tex
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Spanning}
+
+%-------------- start slide -------------------------------%
+\frame{
+
+\begin{definition}[Recall: Linear Combination]
+Let $\vect{u}_1,\cdots ,\vect{u}_n, \vect{v}$ be vectors. Then 
+$\vect{v}$ is said to be a \textbf{linear combination }
+of the vectors $\vect{u}_1,\cdots , \vect{u}_n $ 
+if there exist scalars, $a_{1},\cdots ,a_{n}$ such
+that
+\begin{equation*}
+\vect{v} = a_1 \vect{u}_1 + \cdots + a_n \vect{u}_n
+\end{equation*}
+\end{definition}
+
+\medskip
+
+\pause
+
+\begin{definition}[Span of a Set of Vectors]
+The collection of all linear combinations of a set of vectors $\{ \vect{u}_1,
+\cdots ,\vect{u}_k\}$ in $\mathbb{R}^{n}$ is known as the span of these
+vectors and is written as $\func{span} \{\vect{u}_1, \cdots , \vect{u}_k\}$.
+\end{definition}
+
+\pause
+\medskip
+
+{\bf Additional Terminology.}
+If $U=\Span \{\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_k\}$, then 
+\begin{itemize}
+\item \textcolor{red}{$U$ is spanned by} the vectors 
+$\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_k$.
+\item the vectors $\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_k$ 
+\textcolor{red}{span $U$}.
+\item the set of vectors $\{ \vect{u}_1, \vect{u}_2, \ldots, \vect{u}_k\}$ is
+a \textcolor{red}{spanning set} for $U$.
+\end{itemize}
+}
+%-------------- end slide -------------------------------%
+%-------------- start slide -------------------------------%
+\frame{
+\begin{problem}
+Let $\vect{u}=\leftB 
+\begin{array}{rrr}
+1  & 1 & 0
+\end{array}
+\rightB^T$ and
+$\vect{v}=\leftB 
+\begin{array}{rrr}
+3  & 2 & 0
+\end{array}
+\rightB^T \in \mathbb{R}^{3}$. Show that $\vect{w} = \leftB 
+\begin{array}{rrr}
+4 & 5 & 0 
+\end{array}
+\rightB^{T}$ is in $\func{span} \left\{ \vect{u}, \vect{v} \right\}$.
+\end{problem}
+
+\pause
+\begin{block}{Solution}
+For a vector to be in $\func{span} \left\{ \vect{u}, \vect{v} \right\}$, it must be a linear combination of these vectors. If $\vect{w} \in \func{span} \left\{ \vect{u}, \vect{v} \right\}$, we must be able to find scalars $a,b$ such that\[
+\vect{w} = a \vect{u} +b \vect{v}
+\]
+
+%We proceed as follows.
+\[
+\leftB \begin{array}{r}
+4 \\
+5 \\
+0
+\end{array}
+\rightB
+=
+a 
+\leftB \begin{array}{r}
+1 \\
+1 \\
+0
+\end{array}
+\rightB
++
+b
+\leftB \begin{array}{r}
+3 \\
+2 \\
+0
+\end{array}
+\rightB
+\]
+This is equivalent to the following system of equations
+\begin{eqnarray*}
+a + 3b &=& 4 \\
+a + 2b &=& 5
+\end{eqnarray*}
+\end{block}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{block}{Solution (continued)}
+We solving this system the usual way, constructing the augmented matrix and row reducing to find the \rref.
+\[
+\leftB \begin{array}{rr|r}
+1 & 3 & 4 \\
+1 & 2 & 5 
+\end{array}
+\rightB
+\rightarrow \cdots \rightarrow
+\leftB \begin{array}{rr|r}
+1 & 0 & 7 \\
+0 & 1 & -1
+\end{array}
+\rightB
+\]
+The solution is $a=7, b=-1$. This means that 
+\[
+\vect{w} = 7 \vect{u} - \vect{v}
+\] 
+Therefore we can say that $\vect{w}$ is in $\func{span} \left\{ \vect{u}, \vect{v} \right\}$. 
+\end{block}
+}
+%-------------- end slide -------------------------------%
+%-----------------start slide-----------------------%
+\frame{\frametitle{Span of a Set of Vectors}
+
+%\begin{definition}
+%Let $\left\{ \vect{u}_1, \vect{u}_2, ..., \vect{u}_k \right\}$ be a set of vectors in $\mathbb{R}^n$. Then the collection of all linear combinations of these vectors is called the \alert{span} of these vectors, written span$\left\{ \vect{u}_1, \vect{u}_2, ..., \vect{u}_k \right\}$.
+%\end{definition}
+%
+%\medskip
+
+\begin{example}
+Let $\vect{x}\in\mathbb{R}^3$ be a nonzero vector. 
+Then $\Span\{\vect{x}\} = \{ k\vect{x} ~|~ k\in\mathbb{R}\}$
+is a line through the origin having direction vector $\vect{x}$.
+\end{example}
+\pause
+
+
+\uncover<2->
+{
+\begin{problem}\em
+Describe the span of the vectors $\vect{u} = \left[ \begin{array}{r}
+0 \\
+1 \\
+2 
+\end{array}
+\right]$ and 
+$\vect{v} = \left[ 
+\begin{array}{r}
+0 \\
+2 \\
+3
+\end{array}
+\right]$. 
+\end{problem}
+}
+}
+%---------------------end slide--------------------%
+
+%---------------------- start slide----------------------%
+\frame{
+\begin{solution}\em
+Notice that any linear combination of the vectors $\vect{u}$ and $\vect{v}$ yields a vector $\left[ \begin{array}{r}
+0 \\
+y \\
+z 
+\end{array}
+\right]$ in the $YZ$-plane. 
+
+\medskip
+
+\uncover<2->{
+Suppose we take an arbitrary vector $\left[ \begin{array}{r}
+0 \\
+y \\
+z 
+\end{array}
+\right]$ in the $YZ$-plane. It turns out we can write any such vector as a linear combination of $\vect{u}$ and $\vect{v}$. 
+}
+
+\medskip
+
+\uncover<3->{
+\[
+\left[ \begin{array}{r}
+0 \\
+y \\
+z 
+\end{array}
+\right]
+=
+(-3y + 2z) \left[
+\begin{array}{r}
+0 \\
+1 \\
+2 
+\end{array}
+\right]
++
+(2y - z) \left[ 
+\begin{array}{r}
+0 \\
+2 \\
+3 
+\end{array}
+\right]
+\]
+}
+
+\medskip
+
+\uncover<4->{
+Hence, span$\left\{ \vect{u}, \vect{v} \right\}$ is the $YZ$-plane.}
+
+\end{solution}
+}
+%------------------------end slide------------------------%
+
+%------------------------ start slide--------------------%
+\frame{\frametitle{Span of a Set of Vectors}
+Consider the previous example where the span of $\vect{u}$ and $\vect{v}$ was the $YZ$-plane. Suppose we add another vector $\vect{w}$, and consider the span of $\vect{u}, \vect{v}$, and $\vect{w}$. What would happen to the span?
+
+\bigskip
+
+\uncover<2->{
+\textbf{Scenario 1}
+Suppose $\vect{w}$ is a vector in the $YZ$-plane. For example, $\vect{w} = \left[
+\begin{array}{r}
+0 \\
+4 \\
+1 
+\end{array}
+\right]$. Then $\vect{w}$ is in the span of $\vect{u}, \vect{v}$. Adding $\vect{w}$ to the set doesn't change the span at all. 
+\[
+\mbox{span}\left\{ \vect{u}, \vect{v}, \vect{w} \right\} = \mbox{span}\left\{ \vect{u}, \vect{v} \right\}
+\]
+}
+}
+%------------------------end slide---------------------%
+
+%-----------------------start slide--------------------%
+\frame{\frametitle{Span of a Set of Vectors}
+\textbf{Scenario 2}
+Suppose $\vect{w}$ is not in the $YZ$-plane. For example, suppose $\vect{w} = \left[
+\begin{array}{r}
+1 \\
+0 \\
+2 
+\end{array}
+\right]
+$. 
+
+\uncover<2->{
+Notice that now, the three vectors span $\mathbb{R}^3$. Any vector in $\mathbb{R}^3$ can be written as a linear combination of $\vect{u}, \vect{v}, \vect{w}$ as follows:
+\[
+\left[
+\begin{array}{r}
+x \\
+y \\
+z 
+\end{array}
+\right]
+=
+(-4x + 5y + 2z)
+\left[
+\begin{array}{r}
+0 \\
+1 \\
+2 
+\end{array}
+\right]
++ (2x + 2y - z)
+\left[
+\begin{array}{r}
+0 \\
+2 \\
+3 
+\end{array}
+\right]
++
+(x)
+\left[
+\begin{array}{r}
+1 \\
+0 \\
+2
+\end{array}
+\right]
+\]
+}
+
+\uncover<3->{
+You can see that the span of these three vectors depended on whether $\vect{w}$ was in span$\left\{ \vect{u}, \vect{v} \right\}$ or not. In the next section, we will examine the distinction between these two scenarios using the concept of linear independence. 
+}
+}
+%----------------------end slide-------------------%
+
+\section{Independence}
+
+%-------------------start slide---------------------%
+\frame{\frametitle{Linearly Independent Set of Vectors}
+
+\begin{definition}
+Let $\left\{ \vect{u}_1, \vect{u}_2, ..., \vect{u}_k \right\}$ be a set of vectors in $\mathbb{R}^n$. This set is \alert{linearly independent} if no vector in the set is in the span of the other vectors of that set. 
+\end{definition}
+
+
+\uncover<2->{
+If a set of vectors is not linearly independent, we call it \alert{linearly dependent}. 
+}
+}
+%--------------------end slide------------------------%
+
+%--------------------start slide------------------------%
+\frame{\frametitle{A Linearly Dependent Set}
+
+\begin{problem}\em
+Consider the vectors $
+\vect{u} = \left[
+\begin{array}{r}
+0 \\
+1  \\
+2 
+\end{array}
+\right], 
+\vect{v} = \left[
+\begin{array}{r}
+0 \\
+2 \\
+3
+\end{array}
+\right], \vect{w} = \left[
+\begin{array}{r}
+0 \\
+4 \\
+1 
+\end{array}
+\right]$.  
+Is the set $\left\{ \vect{u}, \vect{v}, \vect{w} \right\}$ linearly independent?
+\end{problem}
+
+
+\uncover<2->{
+\begin{solution}\em
+Notice that we can write $\vect{w}$ as a linear combination of $\vect{u}, \vect{v}$ as follows:
+\[
+\left[
+\begin{array}{r}
+0 \\
+4 \\
+1 
+\end{array}
+\right]
+=
+(-10)
+\left[
+\begin{array}{r}
+0 \\
+1 \\
+2 
+\end{array}
+\right]
++
+(7)
+\left[
+\begin{array}{r}
+0 \\
+2 \\
+3 
+\end{array}
+\right]
+\]
+Hence, $\vect{w}$ is in span$\left\{ \vect{u}, \vect{v} \right\}$. By the definition, this set is not linearly independent (it is linearly dependent). 
+}
+\end{solution}
+}
+%----------------------end slide--------------------%
+
+%----------------------start slide-------------------%
+\frame{\frametitle{A Linearly Independent Set}
+
+\begin{problem}\em
+Consider the vectors
+\[
+\vect{u} = \left[
+\begin{array}{r}
+0 \\
+1 \\
+2 
+\end{array}
+\right], 
+\vect{v} = \left[
+\begin{array}{r}
+0 \\
+2 \\
+3
+\end{array}
+\right],
+\vect{w} = \left[
+\begin{array}{r}
+1 \\
+0 \\
+2 
+\end{array}
+\right]
+\] 
+Is the set $\left\{ \vect{u}, \vect{v}, \vect{w} \right\}$ linearly independent?
+\end{problem}
+
+\medskip
+
+\uncover<2->{
+\begin{solution}\em
+We cannot write any of the three vectors as a linear combination of the other two. (We will see how to show this soon.) Therefore the set $\left\{ \vect{u}, \vect{v}, \vect{w} \right\}$ is \alert{linearly independent}. 
+}
+\end{solution}
+}
+%------------------------end slide--------------------%
+
+%------------------start slide----------------------------%
+\frame{\frametitle{Linear Independence as a Linear Combination}
+
+The following theorem provides a familiar way to check if a set of vectors is linearly independent.
+
+\medskip
+
+\uncover<2->{
+\begin{theorem}\em
+The collection of vectors, $\left\{\vect{u}_{1},\cdots ,\vect{u}_{k}\right\}$ in
+$\mathbb{R}^{n}$  is linearly independent if
+and only if whenever
+\begin{equation*}
+\sum_{i=1}^{n}a_{i}\vect{u}_{i}=\vect{0}
+\end{equation*}
+it follows that each $a_{i}=0$.
+}
+
+\uncover<3->{
+Thus \alert{$\left\{\vect{u}_{1},\cdots ,\vect{u}_{k}\right\} $ in
+$\mathbb{R}^{n}$ is linearly independent exactly when the system of
+linear equations $AX=0$ has only the trivial solution}, where $A$ is
+the $n \times k$ matrix having these vectors as columns. 
+\end{theorem}
+}
+
+}
+%-----------------------end slide------------------------%
+
+%-------------------start slide---------------------%
+\frame{\frametitle{Linear Independence}
+We can state the conclusion of this theorem in another way: The set of vectors $\left\{ \vect{u}_1, ..., \vect{u}_k \right\}$ is linearly independent if and only if there is no nontrivial linear combination which equals zero. If a linear combination of the vectors equals zero, then all the coefficients of the combination are zero. 
+
+\medskip
+
+\uncover<2->{
+If the set is linearly independent, then 
+\[
+a_1 \vect{u}_1 + ... + a_k \vect{u}_k = 0
+\]
+implies that 
+\[
+a_1 = a_2 = ... = a_k = 0
+\]
+}
+
+}
+%---------------------end slide--------------------------%
+
+%--------------------start slide----------------------%
+\frame{\frametitle{Linear Independence}
+
+We can use the reduced row-echelon form of the matrix to determine if the columns form a linearly independent set of vectors. 
+
+\medskip
+
+\uncover<2->{
+\begin{problem}\em
+Determine whether the following set of vectors are linearly independent. 
+\[
+\left\{
+\left[
+\begin{array}{c}
+1 \\
+2 \\
+3
+\end{array}
+\right],
+\left[
+\begin{array}{c}
+2 \\
+1 \\
+0
+\end{array}
+\right],
+\left[
+\begin{array}{c}
+0 \\
+1 \\
+1
+\end{array}
+\right]
+\right\}
+\]
+\end{problem}
+}
+
+
+}
+%-----------------------end slide----------------------%
+
+%---------------------start slide--------------------%
+\frame{
+\begin{solution}\em
+Construct the $3$ x $3$ matrix $A$ having these vectors as columns:
+\[
+A = \left[
+\begin{array}{rrr}
+1 & 2 & 0 \\
+2 & 1 & 1 \\
+3 & 0 & 1 
+\end{array}
+\right]
+\]
+
+\uncover<2->{
+By the above theorem, the set of vectors is linearly independent if the system $AX=0$ has only the trivial solution. We can see this from the reduced row-echelon form of the matrix $A$. 
+}
+
+\uncover<3->{
+\[
+\left[
+\begin{array}{rrr}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 
+\end{array}
+\right]
+\]
+}
+\uncover<4->{
+Since all columns are pivot columns (and the rank of $A$ is $3$), the vectors are linearly independent. 
+}
+\end{solution}
+
+}
+%------------------------end slide----------------%
+
+%------------------------start slide-------------%
+\frame{
+\begin{problem}\em
+Determine whether the following vectors are linearly independent. If they are linearly dependent, write one of the vectors as a linear combination of the others. 
+\[
+\left\{
+\left[
+\begin{array}{c}
+1 \\
+2 \\
+4 \\
+1
+\end{array}
+\right],
+\left[
+\begin{array}{c}
+2 \\
+7 \\
+17 \\
+2
+\end{array}
+\right],
+\left[
+\begin{array}{c}
+0 \\
+1 \\
+3 \\
+0
+\end{array}
+\right],
+\left[
+\begin{array}{c}
+8 \\
+5 \\
+11 \\
+11
+\end{array}
+\right]
+\right\}
+\]
+\end{problem}
+
+\uncover<2->{
+\begin{solution}\em
+Construct the matrix $A$ using these vectors as columns. 
+\[
+A = 
+\left[
+\begin{array}{rrrr}
+1 & 2 & 0 & 8 \\
+2 & 0 & 1 & 5 \\
+4 & 0 & 3 & 11 \\
+1 & 3 & 0 & 11 
+\end{array}
+\right]
+\]
+}
+\end{solution}
+}
+%-------------------------end slide---------------%
+
+%-------------------start slide----------------------%
+\frame{
+\begin{solution}[continued]\em
+The reduced row-echelon form of this matrix is 
+\[
+\left[
+\begin{array}{rrrr}
+1 & 0 & 0 & 2 \\
+0 & 1 & 0 & 1 \\
+0 & 0 & 1 & 3 \\
+0 & 0 & 0 & 0 
+\end{array}
+\right]
+\]
+
+\uncover<2->{
+Since the rank of $A$ is $3 < 4$, the vectors are linearly dependent. 
+}
+
+\uncover<3->{
+Therefore, there are infinitely many solutions to $AX=0$, one of which is 
+\[
+\left[
+\begin{array}{r}
+-2 \\
+-1 \\
+-3 \\
+1
+\end{array}
+\right]
+\]
+}
+\end{solution}
+}
+%----------------end slide------------------------%
+
+%--------------------start slide--------------%
+\frame{
+\begin{solution}[continued]\em
+Therefore we can write:
+\[
+-2 \left[
+\begin{array}{r}
+1 \\
+2 \\
+4 \\
+1
+\end{array}
+\right]
+- 1 \left[
+\begin{array}{r}
+0 \\
+1 \\
+3 \\
+0
+\end{array}
+\right]
+-3 \left[
+\begin{array}{r}
+2 \\
+0 \\
+0 \\
+3
+\end{array}
+\right]
++ 1  \left[
+\begin{array}{r}
+8 \\
+5 \\
+11 \\
+11
+\end{array}
+\right]
+=
+\left[
+\begin{array}{r}
+0 \\
+0 \\
+0 \\
+0
+\end{array}
+\right]
+\]
+
+\uncover<2->{
+We can rewrite this as:
+\[
+2 \left[
+\begin{array}{r}
+1 \\
+2 \\
+4 \\
+1
+\end{array}
+\right]
++ 1 \left[
+\begin{array}{r}
+0 \\
+1 \\
+3 \\
+0
+\end{array}
+\right]
++ 3 \left[
+\begin{array}{r}
+2 \\
+0 \\
+0 \\
+3
+\end{array}
+\right]
+=  \left[
+\begin{array}{r}
+8 \\
+5 \\
+11 \\
+11
+\end{array}
+\right]
+\]
+This shows that one of the vectors can be written as a linear combination of the other three vectors. While here we chose the fourth vector, we could have chosen any of the vectors to isolate. 
+}
+\end{solution}
+}
+%---------------------end slide--------------------%
+
+%%-----------------------start slide----------------%
+%\frame{\frametitle{Linear Dependence in $\mathbb{R}^n$}
+%
+%\begin{theorem}\em
+%Let $\left\{ \vect{u}_1, \vect{u}_2, ..., \vect{u}_k \right\}$ be a set of vectors in $\mathbb{R}^n$. If $k > n$ then the set is linearly dependent. 
+%\end{theorem}
+%
+%}
+%%------------------end slide-------------------------%
+
+\section{Subspaces and Basis}
+
+%-------------------start slide-----------------------%
+\frame{\frametitle{Subspaces}
+
+\begin{definition}
+Let $V$ be a nonempty collection of vectors in $\mathbb{R}^n$. Then $V$ is a \alert{subspace} if whenever $a$ and $b$ are scalars and $\vect{u}$ and $\vect{v}$ are vectors in $V$, $a\vect{u} + b\vect{v}$ is also in $V$.
+\end{definition}
+
+\medskip
+
+\uncover<2->{
+Subspaces are closely related to the span of a set of vectors which we discussed earlier.
+}
+
+\medskip
+
+\uncover<3->{
+\begin{theorem}\em
+Let $V$ be a nonempty collection of vectors in $\mathbb{R}^n$. Then $V$ is a subspace of $\mathbb{R}^n$ if and only if there exist vectors $\left\{ \vect{u}_1, ..., \vect{u}_k\right\}$ in $V$ such that 
+\[
+V = \mbox{span}\left\{\vect{u}_1, ..., \vect{u}_k\right\}
+\]
+\end{theorem}
+}
+
+}
+%---------------------end slide--------------------%
+
+%----------------------start slide---------------%
+\frame{\frametitle{Subspaces}
+
+Subspaces are also related to the property of linear independence.
+
+\medskip
+
+\uncover<2->{
+\begin{theorem}\em
+If $V$ is a subspace of $\mathbb{R}^n$, then there exist linearly independent vectors $\left\{\vect{u}_1, ..., \vect{u}_k\right\}$ of $V$ such that 
+\[
+V = \mbox{span}\left\{\vect{u}_1, ..., \vect{u}_k\right\}
+\]
+\end{theorem}
+}
+
+\uncover<3->{
+In other words, subspaces of $\mathbb{R}^n$ consist of spans of finite, linearly independent collections of vectors in $\mathbb{R}^n$. 
+}
+}
+%---------------------end slide------------------%
+
+%----------------------start slide----------------%
+\frame{\frametitle{Basis of a Subspace}
+
+\begin{definition}
+Let $V$ be a subspace of $\mathbb{R}^n$. Then $\left\{\vect{u}_1, ..., \vect{u}_k\right\}$ is called a \alert{basis} for $V$ if the following conditions hold:
+\begin{itemize}
+\item<2->
+span$\left\{\vect{u}_1, ..., \vect{u}_k\right\} = V$
+\item<3->
+$\left\{\vect{u}_1, ..., \vect{u}_k\right\}$ is linearly independent.
+\end{itemize}
+\end{definition}
+
+\uncover<4->{
+The following theorem claims that any two bases of a subspace must be of the same size. 
+}
+
+\uncover<5->{
+\begin{theorem}\em
+Let $V$ be a subspace of $\mathbb{R}^n$ and suppose $\left\{\vect{u}_1, ..., \vect{u}_k\right\}$ and $\left\{ \vect{v}_1, ..., \vect{v}_m\right\}$ are two bases for $V$. Then $k=m$. 
+\end{theorem}
+}
+
+}
+%------------------------end slide------------------%
+
+%-------------------------start slide---------------%
+\frame{\frametitle{Dimension}
+The previous theorem shows than all bases of a subspace will have the same size. This size is called the \alert{dimension} of the subspace.
+
+\medskip
+
+\uncover<2->{
+\begin{definition}
+Let $V$ be a subspace of $\mathbb{R}^n$. Then the \alert{dimension} of $V$ is the number of a vectors in a basis of $V$.
+\end{definition}
+}
+
+}
+%-----------------------end slide ---------------------%
+
+%------------------------start slide---------------%
+\frame{\frametitle{Properties of $\mathbb{R}^n$}
+
+Note that the dimension of $\mathbb{R}^n$ is $n$. 
+
+\medskip
+
+\uncover<2->{
+There are some other important properties of vectors in $\mathbb{R}^n$. 
+}
+\uncover<3->{
+
+%\begin{theorem}\em
+%Let $\left\{ \vect{u}_1, \vect{u}_2, ..., \vect{u}_k \right\}$ be a set of vectors in $\mathbb{R}^n$. If $k > n$ then the set is linearly dependent. 
+%\end{theorem}
+
+\begin{theorem}\em
+\begin{itemize}
+\item<4->
+If $\left\{ \vect{u}_1, ..., \vect{u}_{\alert{n}} \right\}$ is a linearly independent set of a vectors in $\mathbb{R}^{\alert{n}}$, then $\left\{ \vect{u}_1, ..., \vect{u}_n \right\}$ is a basis for $\mathbb{R}^n$. \\
+\item<5->
+Suppose $\left\{ \vect{u}_1, ..., \vect{u}_{\alert{m}} \right\}$ spans $\mathbb{R}^{\alert{n}}$. Then \alert{$m \ge n$}.\\ 
+\item<6->
+If $\left\{ \vect{u}_1, ..., \vect{u}_{\alert{n}} \right\}$ spans $\mathbb{R}^{\alert{n}}$, then $\left\{ \vect{u}_1, ..., \vect{u}_n \right\}$ is linearly independent.\\
+\item<6-> If $\left\{ \vect{u}_1, \vect{u}_2, ..., \vect{u}_{\alert k} \right\}$ is a set of vectors in $\mathbb{R}^{\alert n}$ with { $\alert{ k > n}$}, then the set is linearly dependent. 
+\end{itemize}
+\end{theorem}
+}
+\uncover<7->{ \textit{It follows then that a basis is a minimal spanning set. If a subspace has dimension $ d $, then any spanning set has size at least $ d $, and any spanning set of size $ d $ must be a basis (and is therefore independent).}  
+}
+}
+%---------------------end slide---------------------%
+
+\section{Special Spaces}
+
+%-------------------start slide-----------------------%
+\frame{\frametitle{Row and Column Space}
+
+\begin{definition}
+Let $A$ be an $m \times n$ matrix. The \alert{column space} of $A$ is the span of the columns of $A$. The \alert{row space} of $A$ is the span of the rows of $A$. 
+\end{definition}
+
+\medskip
+
+\uncover<2->{
+\begin{problem}\em
+Find the rank of the matrix $A$ and describe the column and row spaces efficiently. 
+
+\[
+A = \left[
+\begin{array}{rrrrr}
+1 & 2 & 1 & 3 & 2 \\
+1 & 3 & 6 & 0 & 2 \\
+3 & 7 & 8 & 6 & 6 
+\end{array}
+\right]
+\]
+\end{problem}
+}
+
+}
+%------------------end slide-----------------------------%
+
+%------------------start slide-----------------------%
+\frame{\frametitle{Example: Column Space}
+\begin{solution}\em
+To find the column space, we first find the reduced row-echelon form of $A$:
+\[
+\left[ 
+\begin{array}{rrrrr}
+1 & 0 & -9 & 9 & 2 \\
+0 & 1 & 5 & -3 & 0 \\
+0 & 0 & 0 & 0 & 0 
+\end{array}
+\right]
+\]
+
+\uncover<2->{
+Therefore rank$(A)=2$. 
+}
+
+\uncover<3->{
+Note the first two columns are the pivot columns. All columns of the above reduced row-echelon matrix are in 
+\[
+\mbox{span} \left\{ 
+\left[
+\begin{array}{r}
+1 \\
+0 \\
+0 
+\end{array}
+\right], 
+\left[
+\begin{array}{r}
+0 \\
+1 \\
+0
+\end{array}
+\right]
+\right\}
+\]
+}
+
+\end{solution}
+}
+%--------------------end slide------------------------%
+
+%--------------------start slide-----------------------%
+\frame{\frametitle{Example: Column Space}
+
+\begin{solution}[continued]\em
+To construct the column space, we use the pivot columns of the original matrix - in this case, the first and second columns. Therefore the column space of $A$ is 
+\[
+\mbox{span} \left\{ 
+\left[
+\begin{array}{r}
+1 \\
+1 \\
+3
+\end{array}
+\right],
+\left[
+\begin{array}{r}
+2 \\
+3 \\
+7
+\end{array}
+\right]
+\right\}
+\]
+
+\end{solution}
+}
+%-------------------end slide--------------%
+
+%--------------------start slide------------%
+\frame{\frametitle{Example: Row Space}
+
+\begin{solution}[continued]\em
+To find the row space of $A$ we again look at the reduced row-echelon form of the matrix. 
+
+\[
+\left[ 
+\begin{array}{rrrrr}
+1 & 0 & -9 & 9 & 2 \\
+0 & 1 & 5 & -3 & 0 \\
+0 & 0 & 0 & 0 & 0 
+\end{array}
+\right]
+\]
+
+\uncover<2->{
+The row space of $A$ is the span of the non-zero rows of the above matrix:
+\[
+\mbox{span} \left\{
+\left[ 
+\begin{array}{rrrrr}
+1 & 0 & -9 & 9 & 2 
+\end{array}
+\right],
+\left[
+\begin{array}{rrrrr}
+0 & 1 & 5 & -3 & 0 
+\end{array}
+\right]
+\right\}
+\]
+}
+
+\uncover<3->{
+Notice that the vectors used in the description of the \alert{column space are from the original matrix}, while those in the \textcolor{blue}{row space are from the reduced row-echelon form of the original matrix}.}
+\end{solution}
+}
+%-------------------end slide-------------------%
+
+%----------------start slide-------------------%
+\frame{\frametitle{Null Space}
+
+\begin{definition}
+The \alert{null space} of $A$, or \alert{kernel} of $A$ is defined as:
+\[
+\mbox{ker}(A) = \left\{ X: AX=0 \right\}
+\]
+\end{definition}
+
+\medskip
+
+\uncover<2->{
+We also speak of the image of $A$, Im$(A)$, which is all vectors of the form $AX$ where $X$ is in $\mathbb{R}^n$. 
+}
+
+\uncover<3->{
+To find ker$(A)$, we solve the system of equations $AX=0$. 
+}
+
+\uncover<4->{
+\begin{problem}\em
+Find ker$(A)$ for the matrix $A$:
+\[
+A = 
+\left[
+\begin{array}{rrr}
+1 & 2 & 1 \\
+0 & -1 & 1 \\
+2 & 3 & 3 
+\end{array}
+\right]
+\]
+\end{problem}
+}
+}
+%-------------------end slide---------------------%
+
+%--------------------start slide--------------------%
+\frame{\frametitle{Null Space}
+
+\begin{solution}\em
+The first step is to set up the augmented matrix:
+\[ 
+\left[
+\begin{array}{rrr|r}
+1 & 2 & 1 & 0 \\
+0 & -1 & 1 & 0 \\
+2 & 3 & 3 & 0 
+\end{array}
+\right]
+\]
+
+\uncover<2->{
+Place this matrix in reduced row-echelon form:
+\[ 
+\left[
+\begin{array}{rrr|r}
+1 & 0 & 3 & 0 \\
+0 & 1 & -1 & 0 \\
+0 & 0 & 0 & 0 
+\end{array}
+\right]
+\]
+}
+
+\end{solution}
+
+}
+%---------------------end slide----------------------%
+
+%-----------------start slide---------------------%
+\frame{\frametitle{Null Space}
+
+\begin{solution}[continued]\em
+The solution to this system of equations is
+\[
+\left\{ \left[
+\begin{array}{r}
+3t \\
+t \\
+t 
+\end{array}
+\right]  : 
+t \in \mathbb{R} \right\}
+\]
+
+\uncover<2->{
+Therefore the null space of $A$ is the span of this vector:
+\[
+\mbox{ker}(A) = \mbox{span} \left\{
+\left[
+\begin{array}{r}
+3 \\
+1 \\
+1
+\end{array}
+\right]
+\right\}
+\]
+}
+
+\end{solution}
+}
+%---------------------end slide---------------------%
+
+%---------------------start slide--------------------%
+\frame{\frametitle{Nullity}
+
+\begin{definition}
+The dimension of the null space of a matrix is called the \alert{nullity}, denoted null$(A)$. 
+\end{definition}
+
+\medskip
+
+\uncover<2->{
+\begin{theorem}\em
+Let $A$ be an $m \times n$ matrix. Then, 
+\[
+\mbox{rank}(A) + \mbox{null}(A) = n
+\]
+\end{theorem}
+}
+
+\medskip
+
+\uncover<3->{
+For instance, in the last example, $A$ was a $3 \times 3$ matrix. The rank was $2$ and the nullity was $1$ (since the null space had dimension $1$).
+\[
+\mbox{rank}(A) + \mbox{null}(A) = 2 + 1 = 3 = n
+\]
+}
+}
+%-----------------------end slide------------------%
+\end{document}

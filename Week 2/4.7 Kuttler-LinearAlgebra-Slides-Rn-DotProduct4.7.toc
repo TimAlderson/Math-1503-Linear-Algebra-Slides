@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Copyright}{2}{0}{1}
+\beamer@sectionintoc {2}{The Dot Product}{3}{0}{2}
+\beamer@sectionintoc {3}{The Geometric Significance of the Dot Product}{21}{0}{3}
+\beamer@sectionintoc {4}{Projections}{73}{0}{4}

@@ -1,0 +1,343 @@
+
+%%Options for presentations (in-class) and handouts (e.g. print). 
+\documentclass[pdf]{beamer}
+%\documentclass[pdf,handout]{beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%Change this for different slides so it appears in bar
+\usepackage{authoraftertitle}
+\date{$\mathbb{R}^n$: Spanning Sets of Vectors}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% Upload common style file
+\usepackage{LyryxLinearAlgebraSlidesStyle}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Title Page and Copyright Common to All Slides
+
+%Title Page
+\input frontmatter/titlepage.tex
+
+%LOTS Page
+\input frontmatter/lyryxopentexts.tex
+
+%Copyright Page
+\input frontmatter/copyright.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\small
+
+\section{Preliminary Notation}
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Notation}
+\begin{definition}
+$\mathbb{R}$ denotes the set of \alert{real} numbers. $\mathbb{R}^n$ is the set of all \alert{$n$-tuples} of real numbers, i.e.,
+\[ \mathbb{R}^n=\left\{ (x_1, x_2, \ldots, x_n) ~|~ x_i\in\mathbb{R}, 1\leq i\leq n
+\right\}.\]
+\end{definition}
+
+\pause
+
+Vectors are denoted as follows:
+$\vect{u}, \vect{v}, \vect{x}$, etc.
+\begin{example}
+$\vect{u}=\leftB \begin{array}{r} -2 \\3\\ 0.7 \\ 5\\ \pi \end{array}\rightB$
+is a vector in $\mathbb{R}^5$, written $\vect{u}\in\mathbb{R}^5$.
+
+\pause
+
+To save space on the page, the same vector $\vect{u}$ 
+may be written instead as a row matrix by taking the transpose of
+the column:
+\[ \vect{u}=\leftB\begin{array}{ccccc}
+-2, & 3, & 0.7, & 5, & \pi \end{array}\rightB^T.\]
+\end{example}
+
+}
+%-------------- end slide -------------------------------%
+
+\section{Spanning}
+%-------------- start slide -------------------------------%
+\frame{
+
+\begin{definition}[Recall: Linear Combination]
+Let $\vect{u}_1,\cdots ,\vect{u}_n, \vect{v}$ be vectors. Then 
+$\vect{v}$ is said to be a \textbf{linear combination }
+of the vectors $\vect{u}_1,\cdots , \vect{u}_n $ 
+if there exist scalars, $a_{1},\cdots ,a_{n}$ such
+that
+\begin{equation*}
+\vect{v} = a_1 \vect{u}_1 + \cdots + a_n \vect{u}_n
+\end{equation*}
+\end{definition}
+
+\medskip
+
+\pause
+
+\begin{definition}[Span of a Set of Vectors]
+The collection of all linear combinations of a set of vectors $\{ \vect{u}_1,
+\cdots ,\vect{u}_k\}$ in $\mathbb{R}^{n}$ is known as the span of these
+vectors and is written as $\func{span} \{\vect{u}_1, \cdots , \vect{u}_k\}$.
+\end{definition}
+
+\pause
+\medskip
+
+{\bf Additional Terminology.}
+If $U=\Span \{\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_k\}$, then 
+\begin{itemize}
+\item \textcolor{red}{$U$ is spanned by} the vectors 
+$\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_k$.
+\item the vectors $\vect{u}_1, \vect{u}_2, \ldots, \vect{u}_k$ 
+\textcolor{red}{span $U$}.
+\item the set of vectors $\{ \vect{u}_1, \vect{u}_2, \ldots, \vect{u}_k\}$ is
+a \textcolor{red}{spanning set} for $U$.
+\end{itemize}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{example}
+Let $\vect{x}\in\mathbb{R}^3$ be a nonzero vector. 
+Then $\Span\{\vect{x}\} = \{ k\vect{x} ~|~ k\in\mathbb{R}\}$
+is a line through the origin having direction vector $\vect{x}$.
+\end{example}
+\pause
+
+\begin{example}
+Let $\vect{x},\vect{y}\in\mathbb{R}^3$ be nonzero vectors that are not
+parallel.  
+Then 
+\[ \Span\{\vect{x},\vect{y}\} = \{ k\vect{x} + t\vect{y} ~|~ k,t\in\mathbb{R}\} \]
+is a plane through the origin containing $\vect{x}$ and $\vect{y}$.
+\pause
+\medskip
+
+\textcolor{blue}{How would you find the equation of this plane?}
+\end{example}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{problem}
+Let $\vect{u}=\leftB 
+\begin{array}{rrr}
+1  & 1 & 0
+\end{array}
+\rightB^T$ and
+$\vect{v}=\leftB 
+\begin{array}{rrr}
+3  & 2 & 0
+\end{array}
+\rightB^T \in \mathbb{R}^{3}$. Show that $\vect{w} = \leftB 
+\begin{array}{rrr}
+4 & 5 & 0 
+\end{array}
+\rightB^{T}$ is in $\func{span} \left\{ \vect{u}, \vect{v} \right\}$.
+\end{problem}
+
+\pause
+\begin{block}{Solution}
+For a vector to be in $\func{span} \left\{ \vect{u}, \vect{v} \right\}$, it must be a linear combination of these vectors. If $\vect{w} \in \func{span} \left\{ \vect{u}, \vect{v} \right\}$, we must be able to find scalars $a,b$ such that\[
+\vect{w} = a \vect{u} +b \vect{v}
+\]
+
+We proceed as follows.
+\[
+\leftB \begin{array}{r}
+4 \\
+5 \\
+0
+\end{array}
+\rightB
+=
+a 
+\leftB \begin{array}{r}
+1 \\
+1 \\
+0
+\end{array}
+\rightB
++
+b
+\leftB \begin{array}{r}
+3 \\
+2 \\
+0
+\end{array}
+\rightB
+\]
+This is equivalent to the following system of equations
+\begin{eqnarray*}
+a + 3b &=& 4 \\
+a + 2b &=& 5
+\end{eqnarray*}
+\end{block}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{block}{Solution (continued)}
+We solving this system the usual way, constructing the augmented matrix and row reducing to find the \rref.
+\[
+\leftB \begin{array}{rr|r}
+1 & 3 & 4 \\
+1 & 2 & 5 
+\end{array}
+\rightB
+\rightarrow \cdots \rightarrow
+\leftB \begin{array}{rr|r}
+1 & 0 & 7 \\
+0 & 1 & -1
+\end{array}
+\rightB
+\]
+The solution is $a=7, b=-1$. This means that 
+\[
+\vect{w} = 7 \vect{u} - \vect{v}
+\] 
+Therefore we can say that $\vect{w}$ is in $\func{span} \left\{ \vect{u}, \vect{v} \right\}$. 
+\end{block}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{problem}\em
+Let $\vect{u}=\leftB 
+\begin{array}{rrr}
+1  & 1 & \alert{1}
+\end{array}
+\rightB^T$ and
+$\vect{v}=\leftB 
+\begin{array}{rrr}
+3  & 2 & 0
+\end{array}
+\rightB^T \in \mathbb{R}^{3}$. Show that $\vect{w} = \leftB 
+\begin{array}{rrr}
+4 & 5 & 0 
+\end{array}
+\rightB^{T}$ is in $\func{span} \left\{ \vect{u}, \vect{v} \right\}$.
+
+\medskip
+
+\alert{This is almost identical to the previous, except that 
+$\vect{u}$ (above) has one entry that is different.}
+\end{problem}
+
+\pause
+
+\begin{block}{Solution}
+In this case, the system of linear equations is inconsistent which you can verify. Therefore $\vect{w} \notin \func{span}\left\{ \vect{u}, \vect{v} \right\}$. 
+\end{block}
+}
+%-------------- end slide -------------------------------%
+
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{problem}\em
+Let $\vect{x},\vect{y}\in\mathbb{R}^n$,  
+$U_1= \Span\{\vect{x},\vect{y}\}$, and $U_2 = \Span\{2\vect{x}-\vect{y}, 2\vect{y}+\vect{x}\}$.
+Prove that $U_1=U_2$.
+\end{problem}
+\pause
+\begin{block}{Solution}
+\alert{To show that $U_1=U_2$,
+prove that 
+$U_1\subseteq U_2, \mbox{ and }
+U_2\subseteq U_1$.}
+\pause
+\medskip
+
+Since $2\vect{x}-\vect{y}, 2\vect{y}+\vect{x}\in U_1$,
+it follows
+that $\Span\{2\vect{x}-\vect{y}, 2\vect{y}+\vect{x}\}\subseteq U_1$, i.e.,
+$U_2\subseteq U_1$.
+\medskip
+
+Also, since
+\begin{eqnarray*}
+\vect{x} & = & \frac{2}{5}\left( 2\vect{x}-\vect{y}\right) +
+\frac{1}{5}\left(2\vect{y}+\vect{x}\right), \\
+\vect{y} & = & -\frac{1}{5}\left( 2\vect{x}-\vect{y}\right) +
+\frac{2}{5}\left(2\vect{y}+\vect{x}\right),
+\end{eqnarray*}
+\vspace*{-.2in}
+
+$\vect{x},\vect{y}\in U_2$. 
+Therefore,
+$\Span\{\vect{x},\vect{y}\}\subseteq U_2$,
+i.e., $U_1\subseteq U_2$.  
+The result now follows.
+\end{block}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{definition}
+Let $\vect{e}_j$ denote the $j^{th}$ column of $I_n$, the
+$n\times n$ identity matrix;
+$\vect{e}_j$ is called the \alert{$j^{th}$ coordinate vector}
+of $\mathbb{R}^n$.
+\end{definition}
+\pause
+
+
+\begin{block}{Claim}
+$\mathbb{R}^n=\Span\{ \vect{e}_1, \vect{e}_2, \ldots, \vect{e}_n \}$.
+\end{block}
+\pause
+
+\begin{proof}
+Let $\vect{x}=\leftB \begin{array}{c}
+x_1 \\ x_2 \\ \vdots \\ x_n \end{array}\rightB\in \mathbb{R}^n$.  
+Then 
+$\vect{x} = x_1\vect{e}_1 + x_2\vect{e}_2 + \cdots + x_n\vect{e}_n$,
+where $x_1, x_2, \ldots, x_n\in\mathbb{R}$. 
+Therefore,
+$\vect{x}\in \Span\{ \vect{e}_1, \vect{e}_2, \ldots, \vect{e}_n \}$,
+and thus
+$\mathbb{R}^n\subseteq \Span\{ \vect{e}_1, \vect{e}_2, \ldots, \vect{e}_n \}$.
+\medskip
+
+Conversely, since $\vect{e}_i\in\mathbb{R}^n$ for each $i$, $1\leq i\leq n$
+(and $\mathbb{R}^n$ is a vector space), it follows that
+$\Span\{ \vect{e}_1, \vect{e}_2, \ldots, \vect{e}_n \} \subseteq \mathbb{R}^n$.
+The equality now follows.
+\end{proof}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{problem}\em
+Let
+$\vect{u}_1=\leftB\begin{array}{r} 1 \\ -1\\ 1\\ -1 \end{array}\rightB,
+\vect{u}_2=\leftB\begin{array}{r} -1 \\ 1\\ 1\\ 1 \end{array}\rightB,
+\vect{u}_3=\leftB\begin{array}{r} 1 \\ -1\\ -1\\ 1 \end{array}\rightB,
+\vect{u}_4=\leftB\begin{array}{r} 1 \\ -1\\ 1\\ 1 \end{array}\rightB$.
+\medskip
+
+Show that $\Span \{ \vect{u}_1, \vect{u}_2, \vect{u}_3, \vect{u}_4 \}\neq \mathbb{R}^4$.
+\end{problem}
+\pause
+\begin{block}{Solution}
+If you check, you'll find that $\vect{e}_2$ can not be written
+as a linear combination of $\vect{u}_1, \vect{u}_2, \vect{u}_3$, 
+and $\vect{u}_4$.
+\end{block}
+}
+%-------------- end slide -------------------------------%
+
+
+}\end{document}
