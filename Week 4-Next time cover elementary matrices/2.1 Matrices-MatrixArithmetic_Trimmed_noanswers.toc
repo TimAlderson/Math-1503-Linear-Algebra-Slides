@@ -1,0 +1,11 @@
+\beamer@sectionintoc {1}{Copyright}{2}{0}{1}
+\beamer@sectionintoc {2}{Matrices}{3}{0}{2}
+\beamer@sectionintoc {3}{Matrix Addition}{15}{0}{3}
+\beamer@sectionintoc {4}{Scalar Multiplication}{22}{0}{4}
+\beamer@sectionintoc {5}{Vectors}{33}{0}{5}
+\beamer@sectionintoc {6}{Multiplication of Matrices}{38}{0}{6}
+\beamer@sectionintoc {7}{Properties of Matrix Multiplication}{75}{0}{7}
+\beamer@sectionintoc {8}{The Transpose}{118}{0}{8}
+\beamer@sectionintoc {9}{The Identity and Inverse}{142}{0}{9}
+\beamer@sectionintoc {10}{Finding the Inverse of a Matrix}{167}{0}{10}
+\beamer@sectionintoc {11}{Properties of the Inverse}{211}{0}{11}

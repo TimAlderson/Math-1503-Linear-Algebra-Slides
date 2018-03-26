@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Copyright}{2}{0}{1}
+\beamer@sectionintoc {2}{Definition}{3}{0}{2}
+\beamer@sectionintoc {3}{Finding Eigenvalues and Eigenvectors}{58}{0}{3}
+\beamer@sectionintoc {4}{Special Types of Matrices}{114}{0}{4}
+\beamer@sectionintoc {5}{Geometric Interpretation}{129}{0}{5}

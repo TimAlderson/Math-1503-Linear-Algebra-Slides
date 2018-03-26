@@ -1,0 +1,47 @@
+
+%%%%%%%%%%%%%%%TITLE FRAME COMMON TO ALL SLIDES
+
+%-------------------------start title page---------------%
+%%%Background colour for first slide only
+%{\setbeamercolor{background canvas}{bg=titlebgDarkYellow}
+\frame{
+
+%Logo and blue box along top
+%\begin{tikzpicture}[overlay,remember picture,scale=0.2]
+%\fill[titleDarkBlue] (current page.north west) rectangle ([yshift=-8cm]current page.north east);
+%% Grid is 4 units high, assuming the blue box is 6cm high, we want to leave 0.5cm on top and bottom of logo
+%% yshift is measuring from the bottom of the letter l
+%%\draw [line width=2.5,color=white,shift={([xshift=15cm,yshift=-6cm]current page.north west)}]
+%%(0,0.05) -- (0,3.77) %L
+%%(1.48,2.92) -- (1.48,1.8) to [out=275,in=180] (2.3,1.08) to [out=0,in=265] (3.1,1.8) -- (3.1,2.92) %main curve of first Y
+%%(3.1,1.8) -- (3.1,0.9) to [out=265,in=359] (2.09,0.26) %lower curve of first Y
+%%(4.54,0.85) -- (4.54,1.9) to [out=89,in=178] (5.57,2.7) %R
+%%(6.8,2.92) -- (6.8,1.8) to [out=275,in=180] (7.62,1.08) to [out=0,in=265] (8.42,1.8) -- (8.42,2.92) %main curve of second Y
+%%(8.42,1.8) -- (8.42,0.9) to [out=265,in=359] (7.41,0.26) %lower curve of second Y
+%%(9.7,2.8) -- (12.02,0.17) %NW-SE arm of X
+%%(9.7,1.4) -- (11.65,3.65); %SW-NE arm of X
+%%\node [color=white,anchor=east] at ([xshift=-15cm,yshift=-4cm]current page.north east) {\fontencoding{T1}\fontfamily{lmr}\Large\fontseries{b}\selectfont with Open Texts};
+%\end{tikzpicture}
+
+%Book Information
+\begin{center}
+\vspace{2em}
+\textbf{
+\fontencoding{T1}\fontfamily{lmr}\small\fontseries{b}\selectfont{\textcolor{titletextcolour}{A First Course in}} \\ 
+\fontencoding{T1}\fontfamily{lmr}\Large\fontseries{b}\selectfont{\textcolor{titletextcolour}{LINEAR ALGEBRA}} \\
+\vspace{0.5em}
+\fontencoding{T1}\fontfamily{lmr}\huge\fontseries{b}\selectfont{\textcolor{titletextcolour}{Lecture Notes}} \\
+\fontencoding{T1}\fontfamily{lmr}\large\fontseries{b}\selectfont{\textcolor{titletextcolour}{for Math 1503}}}
+\vspace{3em}
+
+%Title of Slide
+\textbf{\fontencoding{T1}\fontfamily{lmr}\LARGE\fontseries{b}\selectfont{\textcolor{titleDarkBlue}{\MyDate}}}\\
+\vspace{5em}
+
+%Copyright
+\textbf{\fontencoding{T1}\fontfamily{lmr}\tiny\fontseries{b}\selectfont{\textcolor{titletextcolour}{Creative Commons License (CC BY-NC-SA)}}}
+\end{center}
+}
+%}
+%---------------end title page--------------------------%
+

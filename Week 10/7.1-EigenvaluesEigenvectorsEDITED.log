@@ -1,0 +1,2075 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.17)  17 NOV 2017 08:39
+entering extended mode
+**./7.1-EigenvaluesEigenvectorsEDITED.tex
+(7.1-EigenvaluesEigenvectorsEDITED.tex
+LaTeX2e <2017-04-15>
+Babel <3.15> and hyphenation patterns for 73 language(s) loaded.
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamer.cls
+Document Class: beamer 2017/11/10 v3.44 A class for typesetting presentations
+
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasemodes.sty
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count79
+)
+\beamer@tempbox=\box26
+\beamer@tempcount=\count80
+\c@beamerpauses=\count81
+
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasedecode.st
+y
+\beamer@slideinframe=\count82
+\beamer@minimum=\count83
+)
+\beamer@commentbox=\box27
+\beamer@modecount=\count84
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+\headdp=\dimen102
+\footheight=\dimen103
+\sidebarheight=\dimen104
+\beamer@tempdim=\dimen105
+\beamer@finalheight=\dimen106
+\beamer@animht=\dimen107
+\beamer@animdp=\dimen108
+\beamer@animwd=\dimen109
+\beamer@leftmargin=\dimen110
+\beamer@rightmargin=\dimen111
+\beamer@leftsidebar=\dimen112
+\beamer@rightsidebar=\dimen113
+\beamer@boxsize=\dimen114
+\beamer@vboxoffset=\dimen115
+\beamer@descdefault=\dimen116
+\beamer@descriptionwidth=\dimen117
+\beamer@lastskip=\skip41
+\beamer@areabox=\box28
+\beamer@animcurrent=\box29
+\beamer@animshowbox=\box30
+\beamer@sectionbox=\box31
+\beamer@logobox=\box32
+\beamer@linebox=\box33
+\beamer@sectioncount=\count85
+\beamer@subsubsectionmax=\count86
+\beamer@subsectionmax=\count87
+\beamer@sectionmax=\count88
+\beamer@totalheads=\count89
+\beamer@headcounter=\count90
+\beamer@partstartpage=\count91
+\beamer@sectionstartpage=\count92
+\beamer@subsectionstartpage=\count93
+\beamer@animationtempa=\count94
+\beamer@animationtempb=\count95
+\beamer@xpos=\count96
+\beamer@ypos=\count97
+\beamer@ypos@offset=\count98
+\beamer@showpartnumber=\count99
+\beamer@currentsubsection=\count100
+\beamer@coveringdepth=\count101
+\beamer@sectionadjust=\count102
+\beamer@tocsectionnumber=\count103
+
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbaseoptions.s
+ty ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+))
+\beamer@paperwidth=\skip42
+\beamer@paperheight=\skip43
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count104
+\Gm@cntv=\count105
+\c@Gm@tempcnt=\count106
+\Gm@bindingoffset=\dimen118
+\Gm@wd@mp=\dimen119
+\Gm@odd@mp=\dimen120
+\Gm@even@mp=\dimen121
+\Gm@layoutwidth=\dimen122
+\Gm@layoutheight=\dimen123
+\Gm@layouthoffset=\dimen124
+\Gm@layoutvoffset=\dimen125
+\Gm@dimlist=\toks15
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\graphics-def\pdftex.def
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.tex"
+\pgfutil@everybye=\toks16
+\pgfutil@tempdima=\dimen128
+\pgfutil@tempdimb=\dimen129
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-lists.te
+x")) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def"
+\pgfutil@abb=\box34
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex"
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
+\pgfkeys@pathtoks=\toks17
+\pgfkeys@temptoks=\toks18
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.code.te
+x"
+\pgfkeys@tmptoks=\toks19
+))
+\pgf@x=\dimen130
+\pgf@y=\dimen131
+\pgf@xa=\dimen132
+\pgf@ya=\dimen133
+\pgf@xb=\dimen134
+\pgf@yb=\dimen135
+\pgf@xc=\dimen136
+\pgf@yc=\dimen137
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count107
+\c@pgf@countb=\count108
+\c@pgf@countc=\count109
+\c@pgf@countd=\count110
+\t@pgf@toka=\toks20
+\t@pgf@tokb=\toks21
+\t@pgf@tokc=\toks22
+ ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+"
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.t
+ex"
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count111
+\pgfsyssoftpath@bigbuffer@items=\count112
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.code.t
+ex"
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) (C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex"
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex"
+\pgfmath@dimen=\dimen138
+\pgfmath@count=\count113
+\pgfmath@box=\box35
+\pgfmath@toks=\toks23
+\pgfmath@stack@operand=\toks24
+\pgfmath@stack@operation=\toks25
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic.code.
+tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigonometr
+ic.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.random.code
+.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.comparison.
+code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.code.t
+ex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round.code.
+tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.code.t
+ex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integerarit
+hmetics.code.tex")))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count114
+))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
+"
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen139
+\pgf@picmaxx=\dimen140
+\pgf@picminy=\dimen141
+\pgf@picmaxy=\dimen142
+\pgf@pathminx=\dimen143
+\pgf@pathmaxx=\dimen144
+\pgf@pathminy=\dimen145
+\pgf@pathmaxy=\dimen146
+\pgf@xx=\dimen147
+\pgf@xy=\dimen148
+\pgf@yx=\dimen149
+\pgf@yy=\dimen150
+\pgf@zx=\dimen151
+\pgf@zy=\dimen152
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.c
+ode.tex"
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen153
+\pgf@path@lasty=\dimen154
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.
+tex"
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+\pgf@shorten@end@additional=\dimen155
+\pgf@shorten@start@additional=\dimen156
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
+"
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box36
+\pgf@hbox=\box37
+\pgf@layerbox@main=\box38
+\pgf@picture@serial@count=\count115
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.co
+de.tex"
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen157
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransformations
+.code.tex"
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+\pgf@pt@x=\dimen158
+\pgf@pt@y=\dimen159
+\pgf@pt@temp=\dimen160
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.code.tex"
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.code.te
+x"
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathprocessing.
+code.tex"
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
+"
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen161
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen162
+\pgf@sys@shading@range@num=\count116
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.te
+x"
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.code.t
+ex"
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box39
+))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
+"
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransparency.co
+de.tex"
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.code.t
+ex"
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+))) ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\xxcolor.sty"
+Package: xxcolor 2003/10/24 ver 0.1
+\XC@nummixins=\count117
+\XC@countmixins=\count118
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package hobsub Info: Skipping package `atbegshi' (already loaded).
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen163
+\Hy@linkcounter=\count119
+\Hy@pagecounter=\count120
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count121
+
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\00miktex\hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 4374.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4374.
+Package hyperref Info: Option `implicit' set `false' on input line 4374.
+Package hyperref Info: Hyper figures OFF on input line 4498.
+Package hyperref Info: Link nesting OFF on input line 4503.
+Package hyperref Info: Hyper index ON on input line 4506.
+Package hyperref Info: Plain pages OFF on input line 4513.
+Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
+Package hyperref Info: Bookmarks ON on input line 4751.
+\c@Hy@tempcnt=\count122
+
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5104.
+\XeTeXLinkMargin=\dimen164
+\Fld@menulength=\count123
+\Field@Width=\dimen165
+\Fld@charsize=\dimen166
+Package hyperref Info: Hyper figures OFF on input line 6358.
+Package hyperref Info: Link nesting OFF on input line 6363.
+Package hyperref Info: Hyper index ON on input line 6366.
+Package hyperref Info: backreferencing OFF on input line 6373.
+Package hyperref Info: Link coloring OFF on input line 6378.
+Package hyperref Info: Link coloring with OCG OFF on input line 6383.
+Package hyperref Info: PDF/A mode OFF on input line 6388.
+LaTeX Info: Redefining \ref on input line 6428.
+LaTeX Info: Redefining \pageref on input line 6432.
+\Hy@abspage=\count124
+
+
+Package hyperref Message: Stopped early.
+
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+\Fld@listcount=\count125
+\c@bookmark@seq@number=\count126
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+))
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbaserequires.
+sty
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasecompatibi
+lity.sty)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasefont.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks26
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\sansmathaccent\sansmathacc
+ent.sty
+Package: sansmathaccent 2013/03/28
+
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\filehook\filehook.sty
+Package: filehook 2011/10/12 v0.5d Hooks for input files
+)))
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasetranslato
+r.sty
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\translator\translat
+or.sty
+Package: translator 2010/06/12 ver 1.10
+
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\translator\translat
+or-language-mappings.tex)))
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasemisc.sty)
+
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasetwoscreen
+s.sty)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbaseoverlay.s
+ty
+\beamer@argscount=\count127
+\beamer@lastskipcover=\skip44
+\beamer@trivlistdepth=\count128
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasetitle.sty
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasesection.s
+ty
+\c@lecture=\count129
+\c@part=\count130
+\c@section=\count131
+\c@subsection=\count132
+\c@subsubsection=\count133
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbaseframe.sty
+\beamer@framebox=\box40
+\beamer@frametitlebox=\box41
+\beamer@zoombox=\box42
+\beamer@zoomcount=\count134
+\beamer@zoomframecount=\count135
+\beamer@frametextheight=\dimen167
+\c@subsectionslide=\count136
+\beamer@frametopskip=\skip45
+\beamer@framebottomskip=\skip46
+\beamer@frametopskipautobreak=\skip47
+\beamer@framebottomskipautobreak=\skip48
+\beamer@envbody=\toks27
+\framewidth=\dimen168
+\c@framenumber=\count137
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbaseverbatim.
+sty
+\beamer@verbatimfileout=\write4
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbaseframesize
+.sty
+\beamer@splitbox=\box43
+\beamer@autobreakcount=\count138
+\beamer@autobreaklastheight=\dimen169
+\beamer@frametitletoks=\toks28
+\beamer@framesubtitletoks=\toks29
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbaseframecomp
+onents.sty
+\beamer@footins=\box44
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasecolor.sty
+\beamer@bg@ht=\dimen170
+\beamer@bg@wd=\dimen171
+\beamer@bg@dp=\dimen172
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasenotes.sty
+\beamer@frameboxcopy=\box45
+) (C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasetoc.sty
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasetemplates
+.sty
+\beamer@sbttoks=\toks30
+
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbaseauxtempla
+tes.sty
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbaseboxes.sty
+\bmb@box=\box46
+\bmb@colorbox=\box47
+\bmb@boxshadow=\box48
+\bmb@boxshadowball=\box49
+\bmb@boxshadowballlarge=\box50
+\bmb@temp=\dimen173
+\bmb@dima=\dimen174
+\bmb@dimb=\dimen175
+\bmb@prevheight=\dimen176
+)
+\beamer@blockheadheight=\dimen177
+))
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbaselocalstru
+cture.sty ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks31
+)
+\c@figure=\count139
+\c@table=\count140
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasenavigatio
+n.sty
+\beamer@section@min@dim=\dimen178
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasetheorems.
+sty (C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\amsmath\amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks32
+\ex@=\dimen179
+))
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen180
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count141
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count142
+\leftroot@=\count143
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count144
+\DOTSCASE@=\count145
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+\big@size=\dimen181
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count146
+\c@MaxMatrixCols=\count147
+\dotsspace@=\muskip11
+\c@parentequation=\count148
+\dspbrk@lvl=\count149
+\tag@help=\toks33
+\row@=\count150
+\column@=\count151
+\maxfields@=\count152
+\andhelp@=\toks34
+\eqnshift@=\dimen182
+\alignsep@=\dimen183
+\tagshift@=\dimen184
+\tagwidth@=\dimen185
+\totwidth@=\dimen186
+\lineht@=\dimen187
+\@envbody=\toks35
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks36
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\amscls\amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks37
+\thm@bodyfont=\toks38
+\thm@headfont=\toks39
+\thm@notefont=\toks40
+\thm@headpunct=\toks41
+\thm@preskip=\skip54
+\thm@postskip=\skip55
+\thm@headsep=\skip56
+\dth@everypar=\toks42
+)
+\c@theorem=\count153
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\beamerbasethemes.st
+y))
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\themes\theme\beamer
+themedefault.sty
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\themes\font\beamerf
+ontthemedefault.sty)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\themes\color\beamer
+colorthemedefault.sty)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\themes\inner\beamer
+innerthemedefault.sty
+\beamer@dima=\dimen188
+\beamer@dimb=\dimen189
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\themes\outer\beamer
+outerthemedefault.sty)))
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgfpages.sty"
+Package: pgfpages 2011/01/05 ver 0.02
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count154
+\calc@Bcount=\count155
+\calc@Adimen=\dimen190
+\calc@Bdimen=\dimen191
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count156
+\calc@Cskip=\skip59
+)
+\pgf@logicalpages=\count157
+\pgf@firstshipout=\count158
+\pgf@lastshipout=\count159
+\pgf@currentshipout=\count160
+\pgf@cpn=\count161
+\pgf@shipoutnextto=\count162
+\pgfphysicalheight=\dimen192
+\pgfphysicalwidth=\dimen193
+\pgfpages@shipoutbox=\box53
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\authoraftertitle\authoraft
+ertitle.sty
+Package: authoraftertitle 2006/10/14 v0.9 package for Author after Titlepage
+) (../LyryxLinearAlgebraSlidesStyle.sty
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\themes\theme\beamer
+themeBoadilla.sty
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\themes\color\beamer
+colorthemerose.sty)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\themes\inner\beamer
+innerthemerounded.sty)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\themes\color\beamer
+colorthemedolphin.sty)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\themes\outer\beamer
+outerthemeinfolines.sty))
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\pagecolor\pagecolor.sty
+Package: pagecolor 2017/05/29 v1.0i Provides thepagecolor (HMM)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
+\c@tracingmulticols=\count163
+\mult@box=\box54
+\multicol@leftmargin=\dimen194
+\c@unbalance=\count164
+\c@collectmore=\count165
+\doublecol@number=\count166
+\multicoltolerance=\count167
+\multicolpretolerance=\count168
+\full@width=\dimen195
+\page@free=\dimen196
+\premulticols=\dimen197
+\postmulticols=\dimen198
+\multicolsep=\skip60
+\multicolbaselineskip=\skip61
+\partial@page=\box55
+\last@line=\box56
+\maxbalancingoverflow=\dimen199
+\mult@rightbox=\box57
+\mult@grightbox=\box58
+\mult@gfirstbox=\box59
+\mult@firstbox=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\c@columnbadness=\count169
+\c@finalcolumnbadness=\count170
+\last@try=\dimen256
+\multicolovershoot=\dimen257
+\multicolundershoot=\dimen258
+\mult@nat@firstbox=\box78
+\colbreak@box=\box79
+\mc@col@check@num=\count171
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+\epsfxsize=\dimen259
+\epsfysize=\dimen260
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\ulem\ulem.sty
+\UL@box=\box80
+\UL@hyphenbox=\box81
+\UL@skip=\skip62
+\UL@hook=\toks43
+\UL@height=\dimen261
+\UL@pe=\count172
+\UL@pixel=\dimen262
+\ULC@box=\box82
+Package: ulem 2012/05/18
+\ULdepth=\dimen263
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\tabu\tabu.sty
+Package: tabu 2011/02/26 v2.8 - flexible LaTeX tabulars (FC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen264
+\extrarowheight=\dimen265
+\NC@list=\toks44
+\extratabsurround=\skip63
+\backup@length=\skip64
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box83
+\sift@deathcycles=\count173
+\@vwid@loff=\dimen266
+\@vwid@roff=\dimen267
+)
+\c@taburow=\count174
+\tabu@nbcols=\count175
+\tabu@cnt=\count176
+\tabu@Xcol=\count177
+\tabu@alloc=\count178
+\tabu@nested=\count179
+\tabu@target=\dimen268
+\tabu@spreadtarget=\dimen269
+\tabu@naturalX=\dimen270
+\tabucolX=\dimen271
+\tabu@Xsum=\dimen272
+\extrarowdepth=\dimen273
+\abovetabulinesep=\dimen274
+\belowtabulinesep=\dimen275
+\tabustrutrule=\dimen276
+\tabu@thebody=\toks45
+\tabu@footnotes=\toks46
+\tabu@box=\box84
+\tabu@arstrutbox=\box85
+\tabu@hleads=\box86
+\tabu@vleads=\box87
+\tabu@cellskip=\skip65
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\tcolorbox\tcolorbox.sty
+Package: tcolorbox 2017/09/14 version 4.11 text color boxes
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box88
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.
+sty"
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen277
+\pgf@nodesepend=\dimen278
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.
+sty"
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks47
+\verbatim@line=\toks48
+\verbatim@in@stream=\read2
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\environ\environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\trimspaces\trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box89
+\tcb@upperbox=\box90
+\tcb@lowerbox=\box91
+\tcb@phantombox=\box92
+\c@tcbbreakpart=\count180
+\c@tcblayer=\count181
+\tcolorbox@number=\count182
+\tcb@temp=\box93
+\tcb@temp=\box94
+\tcb@temp=\box95
+\tcb@temp=\box96
+\tcb@out=\write5
+\tcb@record@out=\write6
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
+\pgffor@iter=\dimen279
+\pgffor@skip=\dimen280
+\pgffor@stack=\toks49
+\pgffor@toks=\toks50
+))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex"
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothandlers.
+code.tex"
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count183
+\pgfplotmarksize=\dimen281
+)
+\tikz@lastx=\dimen282
+\tikz@lasty=\dimen283
+\tikz@lastxsaved=\dimen284
+\tikz@lastysaved=\dimen285
+\tikzleveldistance=\dimen286
+\tikzsiblingdistance=\dimen287
+\tikz@figbox=\box97
+\tikz@figbox@bg=\box98
+\tikz@tempbox=\box99
+\tikz@tempbox@bg=\box100
+\tikztreelevel=\count184
+\tikznumberofchildren=\count185
+\tikznumberofcurrentchild=\count186
+\tikz@fig@count=\count187
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count188
+\pgfmatrixcurrentcolumn=\count189
+\pgf@matrix@numberofcolumns=\count190
+)
+\tikz@expandcount=\count191
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarycalc.code.tex"
+File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+libraryintersections.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryintersections
+.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfpu.code.tex"
+)
+\pgf@intersect@solutions=\count192
+))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+libraryshapes.callouts.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes
+.callouts.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes
+.symbols.code.tex"
+File: pgflibraryshapes.symbols.code.tex 2013/09/11 v3.0.1a (rcs-revision 1.6)
+)))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarydecorations.text.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarydecorations.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecorations.code
+.tex"
+\pgfdecoratedcompleteddistance=\dimen288
+\pgfdecoratedremainingdistance=\dimen289
+\pgfdecoratedinputsegmentcompleteddistance=\dimen290
+\pgfdecoratedinputsegmentremainingdistance=\dimen291
+\pgf@decorate@distancetomove=\dimen292
+\pgf@decorate@repeatstate=\count193
+\pgfdecorationsegmentamplitude=\dimen293
+\pgfdecorationsegmentlength=\dimen294
+)
+\tikz@lib@dec@box=\box101
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibraryd
+ecorations.text.code.tex"
+\pgf@lib@dec@text@box=\box102
+)
+\tikz@lib@dec@te@box=\box103
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarypositioning.code.tex"
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarydecorations.pathreplacing.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibraryd
+ecorations.pathreplacing.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+libraryshadows.code.tex"
+File: tikzlibraryshadows.code.tex 2008/01/13 v3.0.1a (rcs-revision 1.3)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+libraryfadings.code.tex"
+File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.1a (rcs-revision 1.2)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfadings.code.
+tex"
+File: pgflibraryfadings.code.tex 2008/02/07 v3.0.1a (rcs-revision 1.3)
+)))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarybackgrounds.code.tex"
+File: tikzlibrarybackgrounds.code.tex 2013/07/18 v3.0.1a (rcs-revision 1.3)
+\pgf@layerbox@background=\box104
+\pgf@layerboxsaved@background=\box105
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\circuitikz\circuitikz.sty
+Package: circuitikz 2017/05/28{} The CircuiTikz circuit drawing package version
+ 0.8.3
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryarrows.code.t
+ex"
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
+\arrowsize=\dimen295
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\generic\circuitikz\pgfcirc.defin
+es.tex
+\pgf@circ@res@up=\dimen296
+\pgf@circ@res@down=\dimen297
+\pgf@circ@res@zero=\dimen298
+\pgf@circ@res@left=\dimen299
+\pgf@circ@res@right=\dimen300
+\pgf@circ@res@other=\dimen301
+\pgf@circ@res@step=\dimen302
+\pgf@circ@res@temp=\dimen303
+\pgfstartlinewidth=\dimen304
+\pgf@circ@Rlen=\dimen305
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\generic\circuitikz\pgfcircutils.
+tex)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\generic\circuitikz\pgfcircshapes
+.tex)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\generic\circuitikz\pgfcircmonopo
+les.tex)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\generic\circuitikz\pgfcircbipole
+s.tex)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\generic\circuitikz\pgfcirctripol
+es.tex)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\generic\circuitikz\pgfcircquadpo
+les.tex)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\generic\circuitikz\pgfcirclabel.
+tex)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\generic\circuitikz\pgfcircvoltag
+e.tex)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\generic\circuitikz\pgfcirccurren
+t.tex)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\generic\circuitikz\pgfcircflow.t
+ex)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\generic\circuitikz\pgfcircpath.t
+ex))) (7.1-EigenvaluesEigenvectorsEDITED.aux)
+\openout1 = `7.1-EigenvaluesEigenvectorsEDITED.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(10.95003pt, 342.2953pt, 10.95003pt)
+* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
+* \paperwidth=364.19536pt
+* \paperheight=273.14662pt
+* \textwidth=342.2953pt
+* \textheight=244.6939pt
+* \oddsidemargin=-61.31996pt
+* \evensidemargin=-61.31996pt
+* \topmargin=-72.26999pt
+* \headheight=14.22636pt
+* \headsep=0.0pt
+* \topskip=11.0pt
+* \footskip=14.22636pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count194
+\scratchdimen=\dimen306
+\scratchbox=\box106
+\nofMPsegments=\count195
+\nofMParguments=\count196
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count197
+\MPscratchDim=\dimen307
+\MPnumerator=\count198
+\makeMPintoPDFobject=\count199
+\everyMPtoPDFconversion=\toks52
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box107
+Package hyperref Info: Link coloring OFF on input line 19.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count266
+)
+LaTeX Info: Redefining \ref on input line 19.
+LaTeX Info: Redefining \pageref on input line 19.
+LaTeX Info: Redefining \nameref on input line 19.
+
+(7.1-EigenvaluesEigenvectorsEDITED.out) (7.1-EigenvaluesEigenvectorsEDITED.out)
+\@outlinefile=\write7
+\openout7 = `7.1-EigenvaluesEigenvectorsEDITED.out'.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 19.
+\symnumbers=\mathgroup6
+\sympureletters=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  T1/cmss/bx/n --> T1/cmss/bx/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 19.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 19.
+LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
+(Font)              `pureletters' in the math version `normal' on input line 19
+.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 19
+.
+LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
+(Font)              `pureletters' in the math version `bold' on input line 19.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  T1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 1
+9.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
+ut line 19.
+
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\translator\dicts\tr
+anslator-basic-dictionary\translator-basic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\translator\dicts\tr
+anslator-bibliography-dictionary\translator-bibliography-dictionary-English.dic
+t
+Dictionary: translator-bibliography-dictionary, Language: English 
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\translator\dicts\tr
+anslator-environment-dictionary\translator-environment-dictionary-English.dict
+Dictionary: translator-environment-dictionary, Language: English 
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\translator\dicts\tr
+anslator-months-dictionary\translator-months-dictionary-English.dict
+Dictionary: translator-months-dictionary, Language: English 
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\translator\dicts\tr
+anslator-numbers-dictionary\translator-numbers-dictionary-English.dict
+Dictionary: translator-numbers-dictionary, Language: English 
+)
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\translator\dicts\tr
+anslator-theorem-dictionary\translator-theorem-dictionary-English.dict
+Dictionary: translator-theorem-dictionary, Language: English 
+)
+(7.1-EigenvaluesEigenvectorsEDITED.nav) (../frontmatter/titlepage.tex
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 44.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [1
+
+{C:/Users/UNBSJ/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]) (../frontm
+atter/copyright.tex
+<../figures/CCBYNCSA.png, id=73, 88.33pt x 31.11626pt>
+File: ../figures/CCBYNCSA.png Graphic file (type png)
+<use ../figures/CCBYNCSA.png>
+Package pdftex.def Info: ../figures/CCBYNCSA.png  used on input line 61. on inp
+ut line 61.
+Package pdftex.def Info: Requested size: 35.33136pt x 12.44627pt on input line 
+61.
+
+[2
+
+ <../figures/CCBYNCSA.png>])
+LaTeX Font Info:    Try loading font information for U+msa on input line 87.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 87.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
+line 87.
+
+(C:\Users\UNBSJ\AppData\Roaming\MiKTeX\2.9\tex\latex\sansmathaccent\ot1mathkern
+cmss.fd
+File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+) [3
+
+] [4
+
+] [5
+
+] [6
+
+] [7
+
+] [8
+
+] [9
+
+] [10
+
+] [11
+
+] [12
+
+] [13
+
+] [14
+
+] [15
+
+] [16
+
+]
+[17
+
+] [18
+
+] [19
+
+] [20
+
+] [21
+
+] [22
+
+] [23
+
+] [24
+
+] [25
+
+] [26
+
+] [27
+
+] [28
+
+] [29
+
+] [30
+
+] [31
+
+]
+[32
+
+] [33
+
+] [34
+
+] [35
+
+] [36
+
+] [37
+
+] [38
+
+] [39
+
+] [40
+
+] [41
+
+] [42
+
+] [43
+
+] [44
+
+] [45
+
+] [46
+
+]
+[47
+
+] [48
+
+] [49
+
+] [50
+
+] [51
+
+] [52
+
+] [53
+
+] [54
+
+] [55
+
+] [56
+
+] [57
+
+] [58
+
+] [59
+
+] [60
+
+] [61
+
+]
+[62
+
+] [63
+
+] [64
+
+] [65
+
+] [66
+
+] [67
+
+] [68
+
+] [69
+
+] [70
+
+] [71
+
+] [72
+
+] [73
+
+] [74
+
+] [75
+
+] [76
+
+]
+[77
+
+] [78
+
+] [79
+
+]
+Overfull \vbox (0.76518pt too high) detected at line 505
+ []
+
+[80
+
+]
+Overfull \vbox (0.76518pt too high) detected at line 505
+ []
+
+[81
+
+]
+Overfull \vbox (0.76518pt too high) detected at line 505
+ []
+
+[82
+
+]
+Overfull \vbox (0.76518pt too high) detected at line 505
+ []
+
+[83
+
+]
+Overfull \vbox (0.76518pt too high) detected at line 505
+ []
+
+[84
+
+]
+Overfull \vbox (0.76518pt too high) detected at line 505
+ []
+
+[85
+
+]
+Overfull \vbox (0.76518pt too high) detected at line 505
+ []
+
+[86
+
+] [87
+
+] [88
+
+] [89
+
+] [90
+
+] [91
+
+] [92
+
+] [93
+
+] [94
+
+] [95
+
+] [96
+
+] [97
+
+] [98
+
+] [99
+
+] [100
+
+]
+[101
+
+] [102
+
+] [103
+
+] [104
+
+] [105
+
+] [106
+
+] [107
+
+] [108
+
+] [109
+
+] [110
+
+] [111
+
+] [112
+
+]
+[113
+
+] [114
+
+] [115
+
+] [116
+
+] [117
+
+] [118
+
+] [119
+
+] [120
+
+] [121
+
+] [122
+
+] [123
+
+] [124
+
+]
+[125
+
+] [126
+
+] [127
+
+] [128
+
+]
+<../figures/R2-reflectx.pdf, id=1277, pagebox=cropbox, 146.5475pt x 155.58125pt
+>
+File: ../figures/R2-reflectx.pdf Graphic file (type pdf)
+<use ../figures/R2-reflectx.pdf>
+Package pdftex.def Info: ../figures/R2-reflectx.pdf  used on input line 1048. o
+n input line 1048.
+Package pdftex.def Info: Requested size: 73.27356pt x 77.79042pt on input line 
+1048.
+ [129
+
+ <../figures/R2-reflectx.pdf>]
+File: ../figures/R2-reflectx.pdf Graphic file (type pdf)
+<use ../figures/R2-reflectx.pdf>
+Package pdftex.def Info: ../figures/R2-reflectx.pdf  used on input line 1048. o
+n input line 1048.
+Package pdftex.def Info: Requested size: 73.27356pt x 77.79042pt on input line 
+1048.
+ [130
+
+]
+File: ../figures/R2-reflectx.pdf Graphic file (type pdf)
+<use ../figures/R2-reflectx.pdf>
+Package pdftex.def Info: ../figures/R2-reflectx.pdf  used on input line 1048. o
+n input line 1048.
+Package pdftex.def Info: Requested size: 73.27356pt x 77.79042pt on input line 
+1048.
+ [131
+
+]
+File: ../figures/R2-reflectx.pdf Graphic file (type pdf)
+<use ../figures/R2-reflectx.pdf>
+Package pdftex.def Info: ../figures/R2-reflectx.pdf  used on input line 1048. o
+n input line 1048.
+Package pdftex.def Info: Requested size: 73.27356pt x 77.79042pt on input line 
+1048.
+ [132
+
+]
+File: ../figures/R2-reflectx.pdf Graphic file (type pdf)
+<use ../figures/R2-reflectx.pdf>
+Package pdftex.def Info: ../figures/R2-reflectx.pdf  used on input line 1048. o
+n input line 1048.
+Package pdftex.def Info: Requested size: 73.27356pt x 77.79042pt on input line 
+1048.
+
+[133
+
+]
+File: ../figures/R2-reflectx.pdf Graphic file (type pdf)
+<use ../figures/R2-reflectx.pdf>
+Package pdftex.def Info: ../figures/R2-reflectx.pdf  used on input line 1048. o
+n input line 1048.
+Package pdftex.def Info: Requested size: 73.27356pt x 77.79042pt on input line 
+1048.
+ [134
+
+]
+<../figures/eigenvectors-1.pdf, id=1338, pagebox=cropbox, 218.8175pt x 155.5812
+5pt>
+File: ../figures/eigenvectors-1.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-1.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-1.pdf  used on input line 1086
+. on input line 1086.
+Package pdftex.def Info: Requested size: 109.40848pt x 77.79042pt on input line
+ 1086.
+
+Overfull \vbox (0.84996pt too high) detected at line 1086
+ []
+
+[135
+
+ <../figures/eigenvectors-1.pdf>]
+File: ../figures/eigenvectors-1.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-1.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-1.pdf  used on input line 1086
+. on input line 1086.
+Package pdftex.def Info: Requested size: 109.40848pt x 77.79042pt on input line
+ 1086.
+
+Overfull \vbox (0.84996pt too high) detected at line 1086
+ []
+
+[136
+
+]
+File: ../figures/eigenvectors-1.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-1.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-1.pdf  used on input line 1086
+. on input line 1086.
+Package pdftex.def Info: Requested size: 109.40848pt x 77.79042pt on input line
+ 1086.
+
+Overfull \vbox (0.84996pt too high) detected at line 1086
+ []
+
+[137
+
+]
+File: ../figures/eigenvectors-1.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-1.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-1.pdf  used on input line 1086
+. on input line 1086.
+Package pdftex.def Info: Requested size: 109.40848pt x 77.79042pt on input line
+ 1086.
+
+Overfull \vbox (0.84996pt too high) detected at line 1086
+ []
+
+[138
+
+]
+File: ../figures/eigenvectors-1.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-1.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-1.pdf  used on input line 1086
+. on input line 1086.
+Package pdftex.def Info: Requested size: 109.40848pt x 77.79042pt on input line
+ 1086.
+
+Overfull \vbox (0.84996pt too high) detected at line 1086
+ []
+
+[139
+
+]
+File: ../figures/eigenvectors-1.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-1.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-1.pdf  used on input line 1086
+. on input line 1086.
+Package pdftex.def Info: Requested size: 109.40848pt x 77.79042pt on input line
+ 1086.
+
+Overfull \vbox (0.84996pt too high) detected at line 1086
+ []
+
+[140
+
+]
+<../figures/R2-reflecty.pdf, id=1398, pagebox=cropbox, 218.8175pt x 119.44624pt
+>
+File: ../figures/R2-reflecty.pdf Graphic file (type pdf)
+<use ../figures/R2-reflecty.pdf>
+Package pdftex.def Info: ../figures/R2-reflecty.pdf  used on input line 1115. o
+n input line 1115.
+Package pdftex.def Info: Requested size: 109.40848pt x 59.72296pt on input line
+ 1115.
+ [141
+
+ <../figures/R2-reflecty.pdf>]
+File: ../figures/R2-reflecty.pdf Graphic file (type pdf)
+<use ../figures/R2-reflecty.pdf>
+Package pdftex.def Info: ../figures/R2-reflecty.pdf  used on input line 1115. o
+n input line 1115.
+Package pdftex.def Info: Requested size: 109.40848pt x 59.72296pt on input line
+ 1115.
+ [142
+
+]
+File: ../figures/R2-reflecty.pdf Graphic file (type pdf)
+<use ../figures/R2-reflecty.pdf>
+Package pdftex.def Info: ../figures/R2-reflecty.pdf  used on input line 1115. o
+n input line 1115.
+Package pdftex.def Info: Requested size: 109.40848pt x 59.72296pt on input line
+ 1115.
+ [143
+
+]
+File: ../figures/R2-reflecty.pdf Graphic file (type pdf)
+<use ../figures/R2-reflecty.pdf>
+Package pdftex.def Info: ../figures/R2-reflecty.pdf  used on input line 1115. o
+n input line 1115.
+Package pdftex.def Info: Requested size: 109.40848pt x 59.72296pt on input line
+ 1115.
+ [144
+
+]
+File: ../figures/eigenvectors-1.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-1.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-1.pdf  used on input line 1153
+. on input line 1153.
+Package pdftex.def Info: Requested size: 109.40848pt x 77.79042pt on input line
+ 1153.
+
+Overfull \vbox (0.84996pt too high) detected at line 1153
+ []
+
+[145
+
+]
+File: ../figures/eigenvectors-1.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-1.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-1.pdf  used on input line 1153
+. on input line 1153.
+Package pdftex.def Info: Requested size: 109.40848pt x 77.79042pt on input line
+ 1153.
+
+Overfull \vbox (0.84996pt too high) detected at line 1153
+ []
+
+[146
+
+]
+File: ../figures/eigenvectors-1.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-1.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-1.pdf  used on input line 1153
+. on input line 1153.
+Package pdftex.def Info: Requested size: 109.40848pt x 77.79042pt on input line
+ 1153.
+
+Overfull \vbox (0.84996pt too high) detected at line 1153
+ []
+
+[147
+
+]
+File: ../figures/eigenvectors-1.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-1.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-1.pdf  used on input line 1153
+. on input line 1153.
+Package pdftex.def Info: Requested size: 109.40848pt x 77.79042pt on input line
+ 1153.
+
+Overfull \vbox (0.84996pt too high) detected at line 1153
+ []
+
+[148
+
+]
+File: ../figures/eigenvectors-1.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-1.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-1.pdf  used on input line 1153
+. on input line 1153.
+Package pdftex.def Info: Requested size: 109.40848pt x 77.79042pt on input line
+ 1153.
+
+Overfull \vbox (0.84996pt too high) detected at line 1153
+ []
+
+[149
+
+]
+File: ../figures/eigenvectors-1.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-1.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-1.pdf  used on input line 1153
+. on input line 1153.
+Package pdftex.def Info: Requested size: 109.40848pt x 77.79042pt on input line
+ 1153.
+
+Overfull \vbox (0.84996pt too high) detected at line 1153
+ []
+
+[150
+
+]
+<../figures/eigenvectors-2.pdf, id=1493, pagebox=cropbox, 173.64874pt x 155.581
+25pt>
+File: ../figures/eigenvectors-2.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-2.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-2.pdf  used on input line 1181
+. on input line 1181.
+Package pdftex.def Info: Requested size: 130.23624pt x 116.68564pt on input lin
+e 1181.
+ [151
+
+ <../figures/eigenvectors-2.pdf>]
+File: ../figures/eigenvectors-2.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-2.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-2.pdf  used on input line 1181
+. on input line 1181.
+Package pdftex.def Info: Requested size: 130.23624pt x 116.68564pt on input lin
+e 1181.
+ [152
+
+]
+File: ../figures/eigenvectors-2.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-2.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-2.pdf  used on input line 1181
+. on input line 1181.
+Package pdftex.def Info: Requested size: 130.23624pt x 116.68564pt on input lin
+e 1181.
+ [153
+
+]
+<../figures/eigenvectors-3.pdf, id=1524, pagebox=cropbox, 155.58125pt x 137.513
+75pt>
+File: ../figures/eigenvectors-3.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-3.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-3.pdf  used on input line 1220
+. on input line 1220.
+Package pdftex.def Info: Requested size: 116.68564pt x 103.13506pt on input lin
+e 1220.
+ [154
+
+ <../figures/eigenvectors-3.pdf>]
+File: ../figures/eigenvectors-3.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-3.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-3.pdf  used on input line 1220
+. on input line 1220.
+Package pdftex.def Info: Requested size: 116.68564pt x 103.13506pt on input lin
+e 1220.
+ [155
+
+]
+File: ../figures/eigenvectors-3.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-3.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-3.pdf  used on input line 1220
+. on input line 1220.
+Package pdftex.def Info: Requested size: 116.68564pt x 103.13506pt on input lin
+e 1220.
+ [156
+
+]
+File: ../figures/eigenvectors-3.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-3.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-3.pdf  used on input line 1220
+. on input line 1220.
+Package pdftex.def Info: Requested size: 116.68564pt x 103.13506pt on input lin
+e 1220.
+ [157
+
+]
+File: ../figures/eigenvectors-3.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-3.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-3.pdf  used on input line 1220
+. on input line 1220.
+Package pdftex.def Info: Requested size: 116.68564pt x 103.13506pt on input lin
+e 1220.
+ [158
+
+]
+File: ../figures/eigenvectors-3.pdf Graphic file (type pdf)
+<use ../figures/eigenvectors-3.pdf>
+Package pdftex.def Info: ../figures/eigenvectors-3.pdf  used on input line 1220
+. on input line 1220.
+Package pdftex.def Info: Requested size: 116.68564pt x 103.13506pt on input lin
+e 1220.
+ [159
+
+] [160
+
+] [161
+
+] [162
+
+] [163
+
+] [164
+
+]
+[165
+
+] [166
+
+] [167
+
+]
+<../figures/R2-rotate-pi.pdf, id=1655, pagebox=cropbox, 182.6825pt x 164.615pt>
+
+File: ../figures/R2-rotate-pi.pdf Graphic file (type pdf)
+<use ../figures/R2-rotate-pi.pdf>
+Package pdftex.def Info: ../figures/R2-rotate-pi.pdf  used on input line 1286. 
+on input line 1286.
+Package pdftex.def Info: Requested size: 127.87686pt x 115.2297pt on input line
+ 1286.
+ [168
+
+ <../figures/R2-rotate-pi.pdf>]
+File: ../figures/R2-rotate-pi.pdf Graphic file (type pdf)
+<use ../figures/R2-rotate-pi.pdf>
+Package pdftex.def Info: ../figures/R2-rotate-pi.pdf  used on input line 1286. 
+on input line 1286.
+Package pdftex.def Info: Requested size: 127.87686pt x 115.2297pt on input line
+ 1286.
+ [169
+
+]
+File: ../figures/R2-rotate-pi.pdf Graphic file (type pdf)
+<use ../figures/R2-rotate-pi.pdf>
+Package pdftex.def Info: ../figures/R2-rotate-pi.pdf  used on input line 1286. 
+on input line 1286.
+Package pdftex.def Info: Requested size: 127.87686pt x 115.2297pt on input line
+ 1286.
+ [170
+
+]
+File: ../figures/R2-rotate-pi.pdf Graphic file (type pdf)
+<use ../figures/R2-rotate-pi.pdf>
+Package pdftex.def Info: ../figures/R2-rotate-pi.pdf  used on input line 1286. 
+on input line 1286.
+Package pdftex.def Info: Requested size: 127.87686pt x 115.2297pt on input line
+ 1286.
+ [171
+
+]
+File: ../figures/R2-rotate-pi.pdf Graphic file (type pdf)
+<use ../figures/R2-rotate-pi.pdf>
+Package pdftex.def Info: ../figures/R2-rotate-pi.pdf  used on input line 1286. 
+on input line 1286.
+Package pdftex.def Info: Requested size: 127.87686pt x 115.2297pt on input line
+ 1286.
+
+[172
+
+]
+File: ../figures/R2-rotate-pi.pdf Graphic file (type pdf)
+<use ../figures/R2-rotate-pi.pdf>
+Package pdftex.def Info: ../figures/R2-rotate-pi.pdf  used on input line 1286. 
+on input line 1286.
+Package pdftex.def Info: Requested size: 127.87686pt x 115.2297pt on input line
+ 1286.
+ [173
+
+]
+<../figures/R2-rotate-halfpi.pdf, id=1715, pagebox=cropbox, 182.6825pt x 164.61
+5pt>
+File: ../figures/R2-rotate-halfpi.pdf Graphic file (type pdf)
+<use ../figures/R2-rotate-halfpi.pdf>
+Package pdftex.def Info: ../figures/R2-rotate-halfpi.pdf  used on input line 13
+18. on input line 1318.
+Package pdftex.def Info: Requested size: 127.87686pt x 115.2297pt on input line
+ 1318.
+ [174
+
+ <../figures/R2-rotate-halfpi.pdf>]
+File: ../figures/R2-rotate-halfpi.pdf Graphic file (type pdf)
+<use ../figures/R2-rotate-halfpi.pdf>
+Package pdftex.def Info: ../figures/R2-rotate-halfpi.pdf  used on input line 13
+18. on input line 1318.
+Package pdftex.def Info: Requested size: 127.87686pt x 115.2297pt on input line
+ 1318.
+ [175
+
+]
+File: ../figures/R2-rotate-halfpi.pdf Graphic file (type pdf)
+<use ../figures/R2-rotate-halfpi.pdf>
+Package pdftex.def Info: ../figures/R2-rotate-halfpi.pdf  used on input line 13
+18. on input line 1318.
+Package pdftex.def Info: Requested size: 127.87686pt x 115.2297pt on input line
+ 1318.
+ [176
+
+]
+File: ../figures/R2-rotate-halfpi.pdf Graphic file (type pdf)
+<use ../figures/R2-rotate-halfpi.pdf>
+Package pdftex.def Info: ../figures/R2-rotate-halfpi.pdf  used on input line 13
+18. on input line 1318.
+Package pdftex.def Info: Requested size: 127.87686pt x 115.2297pt on input line
+ 1318.
+ [177
+
+]
+File: ../figures/R2-rotate-halfpi.pdf Graphic file (type pdf)
+<use ../figures/R2-rotate-halfpi.pdf>
+Package pdftex.def Info: ../figures/R2-rotate-halfpi.pdf  used on input line 13
+18. on input line 1318.
+Package pdftex.def Info: Requested size: 127.87686pt x 115.2297pt on input line
+ 1318.
+ [178
+
+]
+[179
+
+] [180
+
+] [181
+
+] [182
+
+]
+\tf@nav=\write8
+\openout8 = `7.1-EigenvaluesEigenvectorsEDITED.nav'.
+
+\tf@toc=\write9
+\openout9 = `7.1-EigenvaluesEigenvectorsEDITED.toc'.
+
+\tf@snm=\write10
+\openout10 = `7.1-EigenvaluesEigenvectorsEDITED.snm'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1336.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1336.
+ (7.1-EigenvaluesEigenvectorsEDITED.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1336.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1336.
+
+Package rerunfilecheck Info: File `7.1-EigenvaluesEigenvectorsEDITED.out' has n
+ot changed.
+(rerunfilecheck)             Checksum: 1364B7D85CE6144A244ABEE6393D24CF;284.
+ ) 
+Here is how much of TeX's memory you used:
+ 32428 strings out of 493322
+ 736408 string characters out of 3139038
+ 893075 words of memory out of 3000000
+ 34945 multiletter control sequences out of 15000+200000
+ 53762 words of font info for 82 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 58i,16n,82p,823b,1179s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\UNBSJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecss0800.pk> <C:\Users\UNBSJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecsx1000.pk> <C:\Users\UNBSJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecss0700.pk> <C:\Users\UNBSJ\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecss1000.pk> <C:\Users\UNBSJ\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1200.pk> <C:\Users\UNBSJ\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx0600.pk> <C:\Users\UNBSJ\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0900.pk> <C:\Us
+ers\UNBSJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1440.
+pk> <C:\Users\UNBSJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ecss0600.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+s10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmssi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmb10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on 7.1-EigenvaluesEigenvectorsEDITED.pdf (182 pages, 935589 byte
+s).
+PDF statistics:
+ 2263 PDF objects out of 2487 (max. 8388607)
+ 370 named destinations out of 1000 (max. 500000)
+ 279 words of extra memory for PDF output out of 10000 (max. 10000000)
+

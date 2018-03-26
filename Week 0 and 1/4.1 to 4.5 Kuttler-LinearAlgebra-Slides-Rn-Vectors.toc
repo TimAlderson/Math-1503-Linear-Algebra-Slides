@@ -1,0 +1,9 @@
+\beamer@sectionintoc {1}{Copyright}{2}{0}{1}
+\beamer@sectionintoc {2}{What is Rn?}{3}{0}{2}
+\beamer@sectionintoc {3}{Geometric Vectors}{13}{0}{3}
+\beamer@sectionintoc {4}{Algebra in Rn}{23}{0}{4}
+\beamer@sectionintoc {5}{The Geometry of Vector Addition}{38}{0}{5}
+\beamer@sectionintoc {6}{Length of a Vector}{58}{0}{6}
+\beamer@sectionintoc {7}{The Geometry of Scalar Multiplication}{75}{0}{7}
+\beamer@sectionintoc {8}{Unit Vectors}{93}{0}{8}
+\beamer@sectionintoc {9}{Vector problems and examples}{101}{0}{9}

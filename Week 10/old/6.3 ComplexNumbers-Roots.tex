@@ -1,0 +1,435 @@
+%%%%%%%%%%%%%%%%%%%%%%
+%%Options for presentations (in-class) and handouts (e.g. print). 
+\documentclass[pdf
+%,handout
+]{beamer}
+\usepackage{pgfpages}
+%\pgfpagesuselayout{2 on 1}[letterpaper,border shrink=5mm]
+
+\graphicspath{{../}}
+%%%%%%%%%%%%%%%%%%%%%%
+%% Change this for different slides so it appears in bar
+\usepackage{authoraftertitle}
+\date{6.3: Complex Numbers; Roots of Complex Numbers}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% Upload common style file
+\usepackage{../LyryxLinearAlgebraSlidesStyle}
+
+\begin{document}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%
+	%% Title Page and Copyright Common to All Slides	
+	%Title Page
+	\input ../frontmatter/titlepage.tex	
+	%LOTS Page
+	%\input frontmatter/lyryxopentexts.tex	
+	%Copyright Page
+	\input ../frontmatter/copyright.tex	
+	%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Roots of Complex Numbers}
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Roots of Complex Numbers}
+\begin{definition}
+Let $z$ and $q$ be complex numbers, and let $n$ be a positive 
+integer.  
+\pause
+Then $z$ is called \alert{an $n^{th}$ root of $q$} 
+if $z^n=q$.
+\end{definition}
+\pause
+\begin{alertblock}{De Moivre's Theorem and its implication}
+If $\theta$ is any angle and $n$ is a positive integer,
+$\left( e^{i \theta} \right)^n = e^{i n \theta}$.
+This implies that
+for any real number $r>0$ and any positive integer $n$, 
+\[ (re^{i\theta})^n =r^ne^{i n\theta}. \]
+This leads to the following result.
+\end{alertblock}
+\pause
+\begin{corollary}\em
+Let $q$ be a nonzero complex number and $n$ a positive integer.
+Then $z^n=q$ has exactly $n$ complex solutions, i.e., $q$ 
+has exactly $n$ complex $n^{th}$ roots.
+%Let $z$ be a non zero complex number.
+%\index{complex numbers ! roots}Then there are always exactly $k$ many  $k^{th}$
+%roots of $z$ in $\mathbb{C}$.
+\end{corollary}
+}
+%--------------end slide----------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{example}
+For any positive real number $a$, $z^2=a$ has two complex
+(in this case, real) solution, $z=\sqrt{a}$ and $z=-\sqrt{a}$.
+This is equivalent to the statement that $a$ has two complex
+(in this case, real) square roots.
+\pause
+\begin{itemize}
+\item
+One particular example: $25$ has two square roots, $5$ and $-5$, and
+these are the two solutions to $z^2=25$.
+\pause
+\item
+But we all knew that. A more interesting example is that $-1$ has no
+real square roots, but suddenly it has two (complex) square roots, $i$
+and $-i$.  These are the two (complex) solutions to $z^2=1$.
+\end{itemize}
+\end{example}
+}
+%--------------end slide----------------------------%
+
+%-------------- start slide -------------------------------%
+{\small
+\frame{\frametitle{Cube Roots}
+\begin{example}
+To find the (three) cube roots of $i$, we solve the equation 
+$z^3=i$.
+\pause
+To do so, we express both $z$ and $i$ in polar form: convert
+$i$ to polar form, and write $z=re^{i\theta}$, giving us
+\vspace*{-.25in}
+
+\[ (re^{i\theta})^3 =\pause e^{\pi i/2}.\]
+\vspace*{-.2in}
+
+\pause
+Thus
+$r^3e^{3i\theta}=1e^{\pi i/2}$, 
+\pause
+implying that
+$\textcolor{blue}{r^3=1}
+\pause
+\mbox{ and } \alert{3\theta = \frac{\pi}{2}}$.
+\pause
+\begin{itemize}
+\item \textcolor{blue}{Since $r$ is a non-negative real number, $r^3=1$ implies 
+that $r=1$.}
+\pause
+\item The statement $\alert{3\theta = \frac{\pi}{2}}$
+is \alert{not completely correct}.
+\pause
+The problem that arises is that the argument for $i$, $\frac{\pi}{2}$
+is not unique.
+\pause
+Instead, we could have written 
+\vspace*{-.1in}
+
+\[ i=e^{5\pi i/2}\mbox{ or } i=e^{9\pi i/2}\mbox{ or } i=e^{-3\pi i/2}.\]
+\vspace*{-.2in}
+
+\pause
+\alert{In fact, there are infinitely many choices for the argument.}
+\pause
+The important thing to notice is that any two different arguments differ
+by a multiple of $2\pi i$, 
+\pause
+and thus we may write
+\vspace*{-.1in}
+
+\[ 3\theta = \frac{\pi}{2} + 2\pi\ell,~\ell\in\ZZ.\]
+\vspace*{-.2in}
+
+\pause
+($\ZZ$ denotes the set of integers:
+$\{ \ldots, -3, -2, -1, 0,1, 2,3,\ldots\}$).
+\end{itemize}
+\end{example}
+}}
+%-----------------------end slide---------------------------%
+
+%----------------------start slide -------------------------%
+{\small
+\frame{
+\begin{example}[continued]
+Dividing both sides of $3\theta = \frac{\pi}{2} + 2\pi\ell$
+by $3$:
+\[ \theta = \frac{\pi}{6} + \frac{2}{3}\pi\ell,\]
+where $\ell$ is any integer.
+\pause
+The Corollary to De Moivre's Theorem tells us that there are only
+\alert{three} different cube roots.
+\pause
+These are obtained by using $\ell=0$, $\ell=1$, and $\ell=2$, 
+resulting in three values of $\theta$:
+\pause
+\[ \frac{\pi}{6}, \frac{5\pi}{6}, 
+\mbox{ and } \frac{9\pi}{6}=\frac{3\pi}{2}.\]
+\pause
+Thus the cube roots of $i$ are
+\[ e^{\pi i/6}, e^{5\pi i/6}, \mbox{ and } e^{3\pi i/2}.\]
+\pause
+We now convert these to Cartesian form.
+\end{example}
+}}
+%-----------------------end slide---------------------------%
+
+%----------------------start slide -------------------------%
+{\small
+\frame{
+\begin{example}[continued]
+\begin{eqnarray*}
+e^{\pi i/6} & = & \pause \frac{\sqrt{3}}{2} +\frac{1}{2}i, \\
+\pause
+e^{\pi i/6} & = & \pause -\frac{\sqrt{3}}{2} +\frac{1}{2}i, \\
+\pause
+e^{3\pi i/2} & = & \pause -i .
+\end{eqnarray*}
+\pause
+\textcolor{blue}{You can check your work by computing the cube of each of
+these.}
+\end{example}
+
+\pause
+
+\begin{alertblock}{}
+This process is summarized in the following procedure.
+\end{alertblock}
+}}
+%-----------------------end slide---------------------------%
+%------------start slide------------------------%
+\frame{
+\begin{alertblock}{Finding Roots of a Complex Number}
+Let $w$ be a complex number. We wish to find the $n^{th}$ roots of $w$, that is all $z$ such that $z^n = w$. 
+
+There are $n$ distinct $n^{th}$ roots and they can be found as follows:. 
+\pause
+\begin{enumerate}
+\item[1.] Express both $z$ and $w$ in polar form $z=re^{i\theta}, w=se^{i\phi}$. Then $z^n = w$ becomes:
+\[
+(re^{i\theta})^n = r^n e^{i n \theta} = se^{i\phi}
+\]
+We need to solve for $r$ and $\theta$. 
+\pause
+\item[2.] Solve the following two equations:
+\begin{eqnarray*}
+r^n &=& s 
+\end{eqnarray*}
+\begin{eqnarray}
+e^{i n \theta} &=& e^{i \phi}
+\label{rootseqns}
+\end{eqnarray}
+\end{enumerate}
+\end{alertblock}
+}
+%------------------end slide------------------%
+
+%-----------------start slide-----------------%
+\frame{
+\begin{alertblock}{Continued}
+\begin{enumerate}
+\item[3.] The solutions to $r^n = s$ are given by $r = \sqrt[n]{s}$. 
+\pause
+\item[4.] The solutions to $e^{i n \theta} = e^{i \phi}$ are given by:
+\[
+n\theta = \phi + 2\pi \ell,  \; \mbox{for} \; \ell = 0,1,2, \cdots, n-1
+\]
+or
+\[
+\theta = \frac{\phi}{n} + \frac{2}{n} \pi \ell, \; \mbox{for} \; \ell = 0,1,2, \cdots, n-1 
+\]
+\pause
+\item[5.]
+Using the solutions $r, \theta$ to the equations given in (\ref{rootseqns})
+construct the $n^{th}$ roots of the form $z = re^{i\theta}$.  
+\end{enumerate}
+\end{alertblock}
+}
+%-------------------end slide------------------------%
+
+%-------------- start slide -------------------------------%
+{\small
+\frame{
+\begin{problem}\em
+Find all complex numbers $z$ such that
+$z^4=2(\sqrt{3}i-1)$,
+and express each in the form $a+bi$.
+\end{problem}
+\pause
+\begin{solution}\em
+\begin{enumerate}
+\item[1.] Convert $2(\sqrt{3}i-1)=-2+2\sqrt{3}i$ to polar form:
+\pause
+\[ |z^4|=\sqrt{(-2)^2+(2\sqrt{3})^2} =\sqrt{16}=4. \]
+
+\pause
+If $\phi$ is an argument for $-2+2\sqrt{3}i$, then
+\[\cos\phi = \frac{-2}{4}=-\frac{1}{2}
+\mbox{ and }
+\sin\phi = \frac{2\sqrt{3}}{4}=\frac{\sqrt{3}}{2},
+\mbox{ so } \phi = \frac{2\pi}{3}.\]  
+\pause 
+Thus
+$z^4 = 4 e^{2\pi i/3}$.
+\pause
+Let $z=re^{i\theta}$. 
+\pause
+\item[2.] 
+The equation becomes $r^4e^{i4\theta} =  4 e^{2\pi i/3}$, so we need to solve
+\begin{eqnarray*}
+r^4&=&4 \\
+e^{i4\theta} &=& e^{2\pi i/3}
+\end{eqnarray*}
+\end{enumerate}
+\end{solution}
+}
+%----------------------end slide----------------------%
+
+%--------------------start slide----------------%
+\frame{
+\begin{solution}[continued]\em
+\begin{enumerate}
+\item[3.]
+Since $r^4=4$, $r^2=\pm 2$.  But $r$ is \alert{real}, and so
+$r^2=2$, implying $r=\pm\sqrt{2}$.
+However $r\geq 0$, and therefore $r=\sqrt{2}$.
+\pause
+\item[4.]
+The solutions to $e^{i4\theta} = e^{2\pi i/3}$ are given by 
+\[ 4\theta = \frac{2}{3}\pi +2\pi \ell, \ell=0, 1, 2, 3.\]
+\pause
+Therefore, 
+\[ \theta =  \frac{2\pi}{12} + \frac{2\pi \ell}{4} 
+ =  \frac{\pi}{6} + \frac{\pi \ell}{2}  
+ =  \frac{\pi(3\ell+1)}{6},
+\mbox{ for } \ell =0,1,2,3.\]
+
+\end{enumerate}
+\end{solution}
+}}
+%--------------------end slide--------------------%
+
+%-------------start slide----------------------%
+\frame{
+\begin{solution}[continued]\em
+\begin{enumerate}
+\item[5.]
+Thus $r=\sqrt{2}$ and
+$\theta= \left(\frac{3\ell +1}{6}\right)\pi$, $\ell =0,1,2,3$.
+\pause
+Converting to Cartesian form:
+\pause
+\[ \begin{array}{llll} 
+\ell =0: & z=\sqrt{2}e^{\pi i/6} & =
+\sqrt{2}(\frac{(\sqrt{3}}{2} + \frac{1}{2}i) &
+=\frac{\sqrt{6}}{2} + \frac{\sqrt{2}}{2}i \\ 
+\pause
+\ell =1: & z=\sqrt{2}e^{2\pi i/3} & =
+\sqrt{2}(-\frac{1}{2} + \frac{\sqrt{3}}{2}i)  &
+= -\frac{\sqrt{2}}{2} + \frac{\sqrt{6}}{2}i\\
+\pause
+\ell =2: & z=\sqrt{2}e^{7\pi i/6} & =
+\sqrt{2}(-\frac{\sqrt{3}}{2} - \frac{1}{2}i)  &
+=-\frac{\sqrt{6}}{2} - \frac{\sqrt{2}}{2}i \\ 
+\pause
+\ell =3: & z=\sqrt{2}e^{5\pi i/3} & =
+\sqrt{2}(\frac{1}{2} - \frac{\sqrt{3}}{2}i)  &
+= \frac{\sqrt{2}}{2} - \frac{\sqrt{6}}{2}i\\
+\end{array}\]
+\pause
+
+Therefore, the fourth roots of $2(\sqrt{3}i-1)$ are:
+\[ \frac{\sqrt{6}}{2} + \frac{\sqrt{2}}{2}i,
+\pause
+\textcolor{blue}{-\frac{\sqrt{2}}{2} + \frac{\sqrt{6}}{2}i},
+\pause
+-\frac{\sqrt{6}}{2} - \frac{\sqrt{2}}{2}i,
+\pause
+\textcolor{blue}{\frac{\sqrt{2}}{2} - \frac{\sqrt{6}}{2}i}.\]
+\end{enumerate}
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+
+%--------------- start slide ------------------------%
+{\small
+\frame{\frametitle{Roots of Unity}
+\begin{definition}
+A complex number $z$ is a \alert{root of unity} if there
+exists a positive integer $n$ so that $z^n=1$.
+\end{definition}
+\pause
+\begin{problem}\em
+Find the sixth roots of unity, i.e., all solutions to $z^6=1$.
+\end{problem}
+\pause
+\begin{solution}\em
+Write $z=re^{i\theta}$ and convert $1$ to polar form to get
+\vspace*{-.1in}
+
+\[ (re^{i\theta})^6 = e^{i0},\mbox{ and so }
+r^6e^{6\theta i} = e^{i0}.\]
+\vspace*{-.2in}
+
+\pause
+Equating the absolute values and arguments,
+\vspace*{-.1in}
+
+\[ r^6=1 \mbox{ and } 6\theta = 0 + 2\pi \ell,~\ell=0,1,2,3,4,5.\]
+\vspace*{-.2in}
+
+\pause
+Since $r$ is real, $r=1$. 
+\pause
+The six arguments for the solutions are
+\vspace*{-.1in}
+
+\[ \theta=\frac{2\pi\ell}{6}=\frac{\pi\ell}{3},~\ell = 0,1,2,3,4,5.\]
+
+\end{solution}
+}}
+%-----------------------end slide---------------------------%
+
+%--------------- start slide ------------------------%
+{\small
+\frame{
+\begin{solution}[continued]\em
+The six arguments for the solutions are
+\[ \theta=\frac{2\pi\ell}{6}=\frac{\pi\ell}{3},~\ell = 0,1,2,3,4,5.\]
+\pause
+Converting these to Cartesian form:
+\pause
+\[ \begin{array}{l|l|l}
+\ell & \theta & z \\ \hline \hline
+% & & \\
+0 & 0 & e^{0i}=1 \\
+\pause
+\textcolor{blue}{1} & \textcolor{blue}{\frac{\pi}{3}} &
+\textcolor{blue}{e^{\pi i/3}=\frac{1}{2} + \frac{\sqrt{3}}{2}i} \\
+\pause
+2 & \frac{2\pi}{3} & e^{2\pi i/3}=-\frac{1}{2} + \frac{\sqrt{3}}{2}i \\
+\pause
+\textcolor{blue}{3} & \textcolor{blue}{\pi} &
+\textcolor{blue}{e^{\pi i}=-1} \\
+\pause
+4 & \frac{4\pi}{3} & e^{4\pi i/3}=-\frac{1}{2} - \frac{\sqrt{3}}{2}i \\
+\pause
+\textcolor{blue}{5} & \textcolor{blue}{\frac{5\pi}{3}} & 
+\textcolor{blue}{e^{5\pi i/3}=\frac{1}{2} - \frac{\sqrt{3}}{2}i} 
+\end{array}\]
+\pause
+If you graph these six point in the complex plane, you'll see
+that they result in six equally spaced points on the unit circle,
+one of them being $(1,0)$.
+\end{solution}
+}}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{alertblock}{Roots of Unity}
+For any integer $n\geq 1$, the (complex) solutions to $z^n=1$ are
+\[ z=e^{2\pi\ell i / n} \mbox{ for } \ell=0,1,2,\ldots,n-1.\]
+\pause
+Furthermore, the $n^{th}$ roots of unity correspond to $n$ 
+equally spaced points on the unit circle, one of them being
+$(1,0)$.
+\end{alertblock}
+}
+%-------------- end slide -------------------------------%
+
+
+\end{document}

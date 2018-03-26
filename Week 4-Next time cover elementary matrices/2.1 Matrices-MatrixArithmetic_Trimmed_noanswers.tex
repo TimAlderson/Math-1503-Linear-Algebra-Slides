@@ -1,0 +1,2947 @@
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+%%Options for presentations (in-class) and handouts (e.g. print). 
+%\documentclass[pdf]{beamer} 
+\documentclass[pdf
+%,handout
+]{beamer}
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{2 on 1}[letterpaper,border shrink=5mm]
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% Change this for different slides so it appears in bar
+\usepackage{authoraftertitle}
+\date{Matrices: Matrix Arithmetic}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% Upload common style file
+\usepackage{../LyryxLinearAlgebraSlidesStyle}
+
+\begin{document}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%
+	%% Title Page and Copyright Common to All Slides
+	
+	%Title Page
+	\input ../frontmatter/titlepage.tex
+	
+	%LOTS Page
+	%\input frontmatter/lyryxopentexts.tex
+	
+	%Copyright Page
+	\input ../frontmatter/copyright.tex
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Matrices}
+%-------------- start slide -------------------------------%
+{\small
+\frame{\frametitle{Matrices - Basic Definitions and Notation}
+\begin{definitions}
+Let $m$ and $n$ be positive integers.
+\begin{itemize}
+\item \alert{An $m\times n$ matrix} is a rectangular array
+of numbers having $m$ rows and $n$ columns.  
+Such a matrix is said to have \alert{size $m\times n$}.
+\pause
+\item \alert{A row matrix} (or row) is a $1\times n$ matrix, and
+\alert{a column matrix} (or column)
+is an $m\times 1$ matrix.
+\pause
+\item \alert{A square matrix} is an $n \times n$ matrix.
+\pause
+\item \alert{The $(i,j)$-entry of a matrix} is the
+entry in row $i$ and column $j$. For a matrix $A$, the 
+$(i,j)$-entry of $A$ is often written as $a_{ij}$.
+\end{itemize}
+\end{definitions}
+\pause
+General notation for an $m\times n$ matrix, $A$:
+\vspace*{-.1in}
+
+\[ A=\left[\begin{array}{ccccc}
+a_{11} & a_{12} & a_{13} & \ldots & a_{1n} \\
+a_{21} & a_{22} & a_{23} & \ldots & a_{2n} \\
+a_{31} & a_{32} & a_{33} & \ldots & a_{3n} \\
+\vdots & \vdots & \vdots & & \vdots \\
+a_{m1} & a_{m2} & a_{m3} & \ldots & a_{mn} \\
+\end{array}\right] = \left[ a_{ij} \right] \]
+}}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Matrices -- Properties and Operations}
+\pause
+\begin{enumerate}
+\item {\bf Equality:}
+two matrices are equal if and only if they have the same
+size and the corresponding entries are equal.
+\pause
+\item {\bf Zero Matrix:}
+an $m\times n$ matrix with all entries equal to zero.
+\pause
+\item {\bf Addition:}
+matrices must have the same size; add corresponding entries.
+\pause
+\item {\bf Scalar Multiplication:}
+multiply each entry of the matrix by the scalar.
+\pause
+\item {\bf Negative of a Matrix:}
+for an $m\times n$ matrix $A$, its negative is denoted $-A$ and
+$-A=(-1)A$.
+\pause
+\item {\bf Subtraction:}
+for $m\times n$ matrices $A$ and $B$,
+$A-B= A+(-1)B$.
+\end{enumerate}
+}
+%-------------- end slide -------------------------------%
+
+\section{Matrix Addition}
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Matrix Addition} 
+
+\begin{definition}
+Let $A = \leftB a_{ij} \rightB$ and $B = \leftB b_{ij} \rightB$ be two $m \times n$ matrices. Then $A+B = C$ where $C$ is the $m \times n$ matrix $C = \leftB c_{ij} \rightB$ defined by 
+\[
+c_{ij} = a_{ij} + b_{ij}
+\]
+\end{definition}
+
+\pause
+
+\begin{example}
+Let $A = \leftB
+\begin{array}{rr}
+1 & 3 \\
+2 & 5 
+\end{array}\rightB, B = \leftB
+\begin{array}{rr}
+0 & -2 \\
+6 & 1 
+\end{array}
+\rightB$. Then,
+\begin{eqnarray*}
+A + B &=& 
+%\leftB
+%\begin{array}{rr}
+%1 + 0 & 3 + -2 \\
+%2 + 6 & 5 + 1 
+%\end{array}
+%\rightB \\
+%&=& 
+%\leftB
+%\begin{array}{rr}
+%1 & 1 \\
+%8 & 6 
+%\end{array}
+%\rightB
+\end{eqnarray*}
+\vspace*{10mm}
+\end{example}
+}
+%-------------- end slide -------------------------------%
+
+%-------------------start slide----------------------%
+\frame{
+\begin{theorem}[Properties of Matrix Addition]\em
+Let $A,B$ and $C$ be $m\times n$ matrices.
+Then the following properties hold. 
+\pause
+\begin{enumerate}
+\item 
+$A+B=B+A$
+\textcolor{blue}{(matrix addition is commutative)}.
+\medskip
+\pause
+\item 
+$( A+B) +C=A+( B+C)$
+\textcolor{blue}{(matrix addition is associative)}.
+\medskip
+\pause
+\item 
+There exists an $m\times n$ zero matrix, \alert{$0$}, such that 
+\alert{$A+0=A$}.\\
+\textcolor{blue}{(existence of an additive identity)}.
+\medskip
+\pause
+\item 
+There exists an $m\times n$ matrix \alert{$-A$} such that
+\alert{$A+(-A) =0$}.\\
+\textcolor{blue}{(existence of an additive inverse)}.
+\end{enumerate}
+\end{theorem}
+}
+%------------------end slide--------------------------%
+
+\section{Scalar Multiplication}
+%---------------- start slide --------------------------%
+\frame{\frametitle{Scalar Multiplication}
+\begin{definition}
+Let $A = \leftB a_{ij} \rightB$ be an $m\times n$ matrix
+and let $k$ be a scalar. Then $kA = \leftB ka_{ij} \rightB$.
+\end{definition}
+\pause
+
+\begin{example}
+Let $A = \leftB
+\begin{array}{rrr}
+2 & 0 & -1 \\
+3 & 1 & -2 \\
+0 & 4 & 5 
+\end{array}
+\rightB$. 
+
+\pause
+Then 
+\begin{eqnarray*}
+3A &=&
+\invisible{\leftB
+\begin{array}{rrr}
+3(2) & 3(0) & 3(-1) \\
+3(3) & 3(1) & 3(-2) \\
+3(0) & 3(4) & 3(5) 
+\end{array}
+\rightB \\
+&=& 
+\leftB
+\begin{array}{rrr}
+6 & 0 & -3 \\
+9 & 3 & -6 \\
+0 & 12 & 15 
+\end{array}
+\rightB}
+\end{eqnarray*}
+\end{example}
+
+}
+%---------------- end slide ----------------------------%
+
+%-----------------start slide----------------------------%
+\frame{
+\begin{theorem}[Properties of Scalar Multiplication]\em
+Let $A, B$ be $m\times n$ matrices and let $k, p\in\RR$ (scalars).
+Then the following properties hold.
+\pause
+\begin{enumerate}
+\item 
+$k \left( A+B\right) =k A+ kB$. \\
+\textcolor{blue}{(scalar multiplication distributes over matrix 
+addition)}.
+\medskip
+\pause
+\item 
+$\left( k +p \right) A= k A+p A$. \\
+\textcolor{blue}{(addition distributes over scalar multiplication)}.
+\medskip
+\pause
+\item 
+$k \left( p A\right) = \left( k p \right) A$.
+\textcolor{blue}{(scalar multiplication is associative)}.
+\medskip
+\pause
+\item 
+$1A=A$. 
+\textcolor{blue}{(existence of a multiplicative identity)}.
+\end{enumerate}
+\end{theorem}
+}
+%------------------end slide-------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{example}
+\[
+2\left[\begin{array}{rr} -1 & 0 \\ 1 & 1 \end{array}
+\right]
++
+4\left[\begin{array}{rr} -2 & 1 \\ 3 & 0 \end{array}
+\right]
+-
+\left[\begin{array}{rr} 6 & 8 \\ 1 & -1 \end{array}
+\right]
+=
+%\pause
+%\left[\begin{array}{rr} -16 & -4 \\ 13 & 3 \end{array}
+%\right]
+\]
+\end{example}
+\pause
+
+\begin{problem}\em
+Let $A$ and $B$ be $m\times n$ matrices.
+Simplify the expression
+\[ 2[9(A-B)+7(2B-A)] - 2[3(2B+A) - 2(A+3B) - 5(A+B)] \]
+\end{problem}
+\pause
+\begin{solution}\em
+\begin{eqnarray*}
+& & 2[9(A-B)+7(2B-A)] - 2[3(2B+A) - 2(A+3B) - 5(A+B)] \\
+& = & 2(9A-9B+14B-7A) -2(6B+3A-2A-6B-5A-5B) \\
+& = & 2(2A + 5B) -2(-4A-5B) \\
+& = & 12A + 20B
+\end{eqnarray*}
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+\section{Vectors}
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Vectors}
+
+\begin{definitions}
+A row matrix or column matrix is often called a
+\alert{vector}, and such matrices are referred to as 
+\alert{row vectors} and \alert{column vectors},
+respectively.
+If $X$ is a row vector of size $1\times n$, and
+$Y$ is a column vector of size $m\times 1$, 
+then we write
+\[
+X= \left[\begin{array}{cccc} x_1 & x_2 & \cdots & x_n\end{array} \right]
+ \mbox{ and }
+Y= \left[\begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_m\end{array} \right]
+\]
+\end{definitions}
+}
+
+%-------------- end slide -------------------------------%
+
+%-------------start slide-------------------------------%
+\frame{\frametitle{Vector form of a system of linear equations}
+\begin{definition}
+Consider the system of linear equations
+\begin{equation*}
+\begin{array}{ccccccccc}
+a_{11}x_{1} & + & a_{12}x_2 & + & \cdots & + & a_{1n}x_{n} & = & b_{1} \\
+a_{21}x_{1} & + & a_{22}x_2 & + & \cdots & + & a_{2n}x_{n} & = & b_{2} \\
+ \vdots & & \vdots & & & & \vdots & & \vdots \\
+a_{m1}x_{1} & + & a_{m2}x_2 & + & \cdots & + & a_{mn}x_{n} & = & b_{m} 
+\end{array}
+\end{equation*}
+\pause
+Such a system can be expressed in \alert{vector form} 
+or as a \alert{vector equation} by using
+\textcolor{blue}{linear combinations} of column vectors:
+\[
+x_1 \left[ \begin{array}{c} a_{11}\\ a_{21}\\ \vdots \\ a_{m1}
+\end{array} \right]
++
+x_2 \left[ \begin{array}{c} a_{12}\\ a_{22}\\ \vdots \\ a_{m2}
+\end{array} \right]
++ \cdots +
+ x_n \left[ \begin{array}{c} a_{1n}\\ a_{2n}\\ \vdots \\ a_{mn}
+\end{array} \right]
+=
+\left[ \begin{array}{c} b_1\\ b_2\\ \vdots \\ b_m \end{array} \right]
+\]
+\end{definition}
+}
+%---------------------end slide------------------------%
+
+%---------------------start slide----------------------%
+\frame{\frametitle{Vector form of a system of linear equations}
+\begin{problem}\em
+Express the following system of linear equations in vector form.
+\[ \begin{array}{ccccccr}
+2x_1 & + & 4x_2 & - & 3x_3 & = & -6 \\
+  &  - & x_2  & + & 5 x_3 & = & 0 \\
+x_1 & + & x_2 & + & 4x_3 & = & 1
+\end{array}\]
+\end{problem}
+\pause
+\begin{solution}\em
+\[ x_1 \left[ \begin{array}{r} 2\\ 0\\ 1 \end{array} \right]
++ x_2 \left[ \begin{array}{r} 4\\ -1\\ 1 \end{array} \right]
++ x_3 \left[ \begin{array}{r} -3\\ 5\\ 4 \end{array} \right]
+= \left[ \begin{array}{r} -6\\ 0\\ 1 \end{array} \right] \]
+\end{solution}
+}
+%-----------------------end slide---------------------%
+
+\section{Multiplication of Matrices}
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Matrix Vector Multiplication}
+\begin{definition}
+Let $A=\left[ a_{ij} \right]$ be an $m\times n$ matrix with
+columns $A_1, A_2, \ldots, A_n$, written
+$A= \left[ \begin{array}{cccc}
+A_1 & A_2 & \cdots & A_n \end{array}\right]$,
+and let $X$ be an $n\times 1$ column vector, 
+\vspace*{-.1in}
+
+\[ X = \left[ \begin{array}{r} x_1 \\ x_2 \\ \vdots \\ x_n
+\end{array} \right] \]
+\vspace*{-.1in}
+
+\pause
+Then \alert{the product of matrix $A$ and (column) vector $X$}
+is the $m\times 1$ column vector given by
+\vspace*{-.35in}
+
+\[
+\left[ \begin{array}{cccc}
+A_1 & A_2 & \cdots & A_n \end{array}\right]
+\left[ \begin{array}{r} x_1 \\ x_2 \\ \vdots \\ x_n
+\end{array} \right]
+=
+x_{1}A_{1}+x_{2}A_{2}+\cdots +x_{n}A_{n} = \sum_{j=1}^{n}x_{j}A_{j}  \]
+\vspace*{-.1in}
+
+that is, $AX$ is a \textcolor{blue}{linear combination} of the
+columns of $A$. Notice how this is a generalization of the dot product between vectors.
+\end{definition}
+}
+%-------------- end slide -------------------------------%
+
+%--------------- start slide ---------------------------%
+\frame{\frametitle{Matrix Vector Multiplication}
+\begin{problem}\em
+Compute the product $AX$ for 
+\[ A= \left[ \begin{array}{rr}
+1 & 4 \\ 5 & 0 \end{array} \right]\mbox{ and }
+X= \left[ \begin{array}{r} 2 \\ 3 \end{array} \right] \]
+\end{problem}
+\pause
+\begin{solution}\em
+\[ AX= 
+\left[ \begin{array}{rr} 1 & 4 \\ 5 & 0 \end{array} \right]
+\left[ \begin{array}{r} 2 \\ 3 \end{array} \right] =
+2 \left[ \begin{array}{r} 1 \\ 5 \end{array} \right]
++ 3 \left[ \begin{array}{r} 4 \\ 0 \end{array} \right]
+= \left[ \begin{array}{r} 2 \\ 10 \end{array} \right]
++ \left[ \begin{array}{r} 12 \\ 0 \end{array} \right]
+= \left[ \begin{array}{r} 14 \\ 10 \end{array} \right]
+\]
+\end{solution}
+}
+%----------------end slide ----------------------------%
+
+%--------------- start slide ---------------------------%
+\frame{\frametitle{Matrix Vector Multiplication}
+\begin{problem}\em
+Compute $AY$ for 
+\[ A=\left[\begin{array}{rrrr}
+1 & 0 & 2 & -1 \\
+2 & -1 & 0 & 1 \\
+3 & 1 & 3 & 1
+\end{array}\right] \mbox{ and }
+Y=\left[\begin{array}{r}
+2 \\ -1 \\ 1 \\ 4
+\end{array}\right]
+\]
+\end{problem}
+\pause
+\begin{solution}\em
+	$ AY= $
+\invisible{$AY = 2\left[\begin{array}{r} 1 \\ 2 \\ 3
+\end{array}\right] +
+(-1)\left[\begin{array}{r} 0 \\ -1 \\ 1
+\end{array}\right] +
+1\left[\begin{array}{r} 2 \\ 0 \\ 3
+\end{array}\right] +
+4\left[\begin{array}{r} -1 \\ 1 \\ 1
+\end{array}\right] =
+\left[\begin{array}{r} 0 \\ 9 \\ 12
+\end{array}\right]$}
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%--------------- start slide--------------------------------%
+{\small
+\frame{\frametitle{Matrix form of a system of linear equations}
+\begin{definition}
+Consider the system of linear equations
+\[ \begin{array}{ccccccccc}
+a_{11}x_{1} & + & a_{12}x_2 & + &  \cdots & + & a_{1n}x_{n} & = & b_{1} \\
+a_{21}x_{1} & + & a_{22}x_2 & + &  \cdots & + & a_{2n}x_{n} & = & b_{2} \\
+\vdots &  & \vdots & & & & & & \vdots \\
+a_{m1}x_{1} & + & a_{m2}x_2 & + &  \cdots & + & a_{mn}x_{n} & = & b_{m} 
+\end{array}\]
+Such a system can be expressed in
+\alert{matrix form} using matrix vector multiplication,
+\[ \left[ \begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots &        & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{array} \right]
+\left[ \begin{array}{c} x_{1} \\ x_{2} \\ \vdots \\ x_{n}
+\end{array} \right]
+=
+\left[ \begin{array}{c} b_{1}\\ b_{2}\\ \vdots \\ b_{m}
+\end{array} \right] \]
+\vspace*{-.15in}
+\pause
+
+Thus a system of linear equations can be expresses as a 
+\alert{matrix equation $AX=B$},
+where \textcolor{blue}{$A$ is the coefficient matrix},
+\textcolor{blue}{$B$ is the constant matrix}, and
+\alert{$X$ is the matrix of variables.}
+\end{definition}
+}}
+%--------------- end slide -----------------------------%
+
+%---------------------start slide----------------------%
+\frame{\frametitle{Matrix form of a system of linear equations}
+\begin{problem}\em
+Express the following system of linear equations in matrix form.
+\[ \begin{array}{ccccccr}
+2x_1 & + & 4x_2 & - & 3x_3 & = & -6 \\
+  &  - & x_2  & + & 5 x_3 & = & 0 \\
+x_1 & + & x_2 & + & 4x_3 & = & 1
+\end{array}\]
+\end{problem}
+\pause
+\begin{solution}\em
+\[ \left[ \begin{array}{rrr}
+2 & 4 & -3\\ 0 & -1 & 5\\ 1 & 1 & 4 \end{array} \right]
+\left[ \begin{array}{c} x_1 \\ x_2 \\ x_3 \end{array} \right]
+= \left[ \begin{array}{r} -6 \\ 0\\ 1 \end{array} \right]\]
+\end{solution}
+}
+%-----------------------end slide---------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Matrix and Vector Equations}
+\begin{theorem}\em
+\begin{enumerate}
+\item
+Every system of $m$ linear equations in $n$
+variables can be written in the 
+form $AX=B$ where $A$ is the coefficient matrix,
+$X$ is the matrix of variables, and
+$B$ is the constant matrix.  
+\pause
+\item
+The system $AX=B$ is consistent (i.e., has at least one solution)
+if and only if $B$ is a linear combination of the columns of $A$.
+\pause
+\item
+The vector $X=\left[ \begin{array}{c}
+x_1 \\ x_2 \\ \vdots \\ x_n \end{array}\right]$ is a solution
+to the system $AX=B$ if and only if 
+$x_1, x_2, \ldots, x_n$ are a solution to the 
+vector equation
+\[ x_1A_1 + x_2A_2 + \cdots x_nA_n=B \]
+where $A_1, A_2, \ldots, A_n$ are the columns of $A$.
+\end{enumerate}
+\end{theorem}
+}
+%-------------- end slide -------------------------------%
+
+%-------------------start slide----------------------%
+\frame{\frametitle{Proof of the Theorem (a sketch)}
+
+Every statement that deserves to be called a theorem deserves a proof, 
+and the theorem from the previous slide is no exception.
+ \pause 
+In this particular case the proof is straightforward (i.e. uneventful). 
+\pause
+
+\begin{block}{Proof.}
+(a) One first checks that $(x_1,\dots, x_n)$ is a solution to the original system if and only if
+$\tiny X= \left[ \begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n\end{array} \right]$ is a solution to $AX=B$. 
+\pause
+
+This \alert{depends on the way that the matrix arithmetics (addition, multiplication 
+by scalars, multiplication) was defined}.
+\end{block}
+}
+%-------------------end slide----------------------%
+
+%---------------start slide-----------------------%
+\frame{\frametitle{Proof continued}
+\begin{proof}
+(b) Once (a) is taken care of, it gives a one-to-one correspondence between 
+the set of solutions to the original system and the set of solutions to $AX=B$: 
+\[
+\tiny (x_1,\dots, x_n)\mapsto \left[ \begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n\end{array} \right].
+\]
+
+\pause
+
+This \emph{is}  (3), and it  implies that the two sets have the same cardinality, and (2) follows. 
+\end{proof}
+}
+%------------------end slide--------------------------%
+
+
+%-------------- start slide -------------------------------%
+{\small
+\frame{
+\begin{problem}\em
+Let
+\vspace*{-.3in}
+
+\[ A=\left[\begin{array}{rrrr}
+1 & 0 & 2 & -1 \\
+2 & -1 & 0 & 1 \\
+3 & 1 & 3 & 1 
+\end{array}\right]
+\mbox{ and } B =\left[\begin{array}{r}
+1 \\ 1 \\ 1 \end{array}\right] \]
+\vspace*{-.1in}
+
+Express $B$ as a linear combination of the columns $A_1, A_2, A_3, A_4$
+of $A$, or show that this is impossible.
+\end{problem}
+\pause
+\begin{solution}\em
+Solve the system $AX=B$ where $X$ is a column vector with
+four entries.
+\pause
+Do so by putting the {\bf augmented matrix} 
+$\left[ \begin{array}{c|c} A & B \end{array}\right]$
+in reduced row-echelon form.
+\pause
+\vspace*{-.1in}
+
+{\footnotesize
+\[ \left[\begin{array}{rrrr|r}
+1 & 0 & 2 & -1 & 1 \\
+2 & -1 & 0 & 1 & 1 \\
+3 & 1 & 3 & 1 & 1 
+\end{array}\right]
+\rightarrow \cdots \rightarrow
+\left[\begin{array}{rrrr|r}
+1 & 0 & 0 & 1 & \vspace{0.05in}\frac{1}{7} \\
+0 & 1 & 0 & 1 & -\vspace{0.05in}\frac{5}{7} \\
+0 & 0 & 1 & -1 & \vspace{0.05in}\frac{3}{7} 
+\end{array}\right]
+\]}
+\vspace*{-.1in}
+
+\pause
+Since there are infinitely many solutions ($x_4$ is assigned
+a parameter), choose any value for $x_4$.
+\pause
+Choosing $x_4=0$ (which is the simplest thing to do) gives us
+\vspace*{-.2in}
+
+\[ B = \left[\begin{array}{r} 1 \\ 1\\ 1 \end{array}\right]
+= \frac{1}{7} \left[\begin{array}{r} 1 \\ 2 \\ 3
+\end{array}\right] 
+-\frac{5}{7}\left[\begin{array}{r} 0 \\ -1 \\ 1
+\end{array}\right] +
+\frac{3}{7}\left[\begin{array}{r} 2 \\ 0 \\ 3
+\end{array}\right] 
+=\frac{1}{7} A_{1} - \frac{5}{7} A_{2} + \frac{3}{7} A_{3} + 0 A_{4}.\]
+\end{solution}
+}}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Matrix Multiplication}
+\begin{definition}[Product of two matrices]
+ Let $A$ be an $m\times n$ matrix
+and let
+$B=\left[ \begin{array}{cccc} B_1 & B_2 & \cdots & B_{p}\end{array}
+\right]$  be an $n\times p$ matrix, whose
+columns are $B_1, B_2, \ldots, B_p$.
+The \alert{product of $A$ and $B$} is the matrix
+\[ AB=A\left[\begin{array}{cccc}
+B_1 & B_2 & \cdots & B_p \end{array}\right]
+=\left[\begin{array}{cccc}
+AB_1 & AB_2 & \cdots & AB_p \end{array}\right] \]
+i.e., the first column of $AB$ is $AB_1$,  the second
+column of $AB$ is $AB_2$, etc.
+Note that $AB$ has size $m \times p$.
+\end{definition}
+}
+%-------------- end slide -------------------------------%
+%\section{The $(i,j)$-Entry of a Product}
+%-------------- start slide -------------------------------%
+\frame{
+	\begin{definition}[The $(i,j)$-entry of a product]
+		Let $A=[a_{ij}]$ be an $m\times n$ matrix and $B=[b_{ij}]$ be an
+		$n\times p$ matrix.
+		Then the \alert{ $(i,j)$-entry of $AB$} is given by \vspace*{-4mm}
+		\[ a_{i1}b_{1j}+a_{i2}b_{2j}+\cdots +a_{in}b_{nj}=
+		\sum_{k=1}^{n}a_{ik}b_{kj}\]
+		(Note: This can simply be viewed as the dot product of the $ i $'th row of $ A $ with the $ j$'th column of $ B $. )
+	\end{definition}
+	\pause
+	\begin{example}
+		Using the above definition,
+		the $(2,3)$-entry of the product  \vspace*{-2mm}
+		\[ 
+		\left[\begin{array}{rrr}
+		-1 & 0 & 3 \\
+		\alert{2} & \alert{-1} & \alert{1}
+		\end{array}\right]
+		\left[\begin{array}{rrr}
+		-1 & 1 & \alert{2} \\
+		0 & -2 & \alert{4} \\
+		1 & 0 & \alert{0}
+		\end{array}\right] 
+		\] \vspace*{-4mm}
+		\pause
+		
+		is computed using the \alert{second row} of the first 
+		matrix, and the \alert{third column} of the second matrix,
+		\pause
+		resulting in \vspace*{-4mm}
+		\[ 2(2) + (-1) ( 4) + 1 (0) = 4-4+0=0.\]
+	\end{example}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+	
+\begin{problem}\em
+Find the product $AB$ of matrices
+\vspace*{-.2in}
+
+\[
+A= \left[\begin{array}{rrr}
+-1 & 0 & 3 \\
+2 & -1 & 1 
+\end{array}\right]
+\mbox{ and }
+B= \left[\begin{array}{rrr}
+-1 & 1 & 2 \\
+0 & -2 & 4 \\
+1 & 0 & 0 
+\end{array}\right] \]
+\end{problem}
+\pause
+\begin{solution}\em
+%$AB$ has columns
+%\vspace*{-.2in}
+%
+%\[
+%AB_1 = \left[\begin{array}{rrr}
+%-1 & 0 & 3 \\ 2 & -1 & 1 \end{array}\right]
+%\left[\begin{array}{r}
+%-1\\ 0\\ 1 \end{array}\right],
+%AB_2 = \left[\begin{array}{rrr}
+%-1 & 0 & 3 \\ 2 & -1 & 1 \end{array}\right]
+%\left[\begin{array}{r} 1\\ -2\\ 0 \end{array}\right],
+%\]
+%\[ \mbox{and }
+%AB_3 =
+%\left[\begin{array}{rrr}
+%-1 & 0 & 3 \\ 2 & -1 & 1 \end{array}\right]
+%\left[\begin{array}{r} 2\\ 4\\ 0 \end{array}\right] \]
+%\pause
+%Thus, $AB=\left[\begin{array}{rrr}
+%4 & -1 & -2 \\
+%-1 & 4 & 0 
+%\end{array}\right]$.
+\end{solution}
+\vspace*{8cm} }
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Compatibility for Matrix Multiplication}
+\begin{definition}
+Let $A$ and $B$ be matrices, and suppose that $A$ is $m \times n$.
+\begin{itemize}
+\item
+ In order for the product $AB$
+to exist, the number of rows in $B$ must be equal to
+the number of columns in $A$, implying that
+$B$ is an $n\times p$ matrix for some $p$.  
+\item
+When defined, $AB$ is an \alert{$m\times p$} matrix.
+\end{itemize}
+If the product is defined, then $A$ and $B$ are said to be
+\alert{compatible} for (matrix) multiplication.
+\end{definition}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{example}
+As we saw in the previous problem
+\[
+\stackrel{2\times 3}{
+\left[\begin{array}{rrr}
+-1 & 0 & 3 \\
+2 & -1 & 1
+\end{array}\right]}
+\stackrel{3\times 3}
+{\left[\begin{array}{rrr}
+-1 & 1 & 2 \\
+0 & -2 & 4 \\
+1 & 0 & 0
+\end{array}\right]}
+=
+\stackrel{2\times 3}{
+\left[\begin{array}{rrr}
+4 & -1 & -2 \\
+-1 & 4 & 0
+\end{array}\right]}
+\]
+\pause
+Note that the product
+\[
+\stackrel{3\times 3}
+{\left[\begin{array}{rrr}
+-1 & 1 & 2 \\
+0 & -2 & 4 \\
+1 & 0 & 0
+\end{array}\right]}
+\stackrel{2\times 3}{
+\left[\begin{array}{rrr}
+-1 & 0 & 3 \\
+2 & -1 & 1
+\end{array}\right]}
+\] 
+does not exist.
+\end{example}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Multiplication by the Zero Matrix}
+\begin{example}
+Compute the product $A0$ for the matrix
+\[ A= \left[ \begin{array}{rr}
+1 & 2 \\ 3 & 4 \end{array} \right]\]
+and the $2 \times 2$ zero matrix given by $0= \left[ \begin{array}{rr}
+0 & 0 \\ 0 & 0 \end{array} \right]$
+\end{example}
+\pause
+
+\begin{solution}
+In this product, we compute
+\[ \left[ \begin{array}{rr}
+1 & 2 \\ 3 & 4 \end{array} \right]
+\left[ \begin{array}{rr}
+0 & 0 \\ 0 & 0 \end{array} \right]
+=
+\left[ \begin{array}{rr}
+0 & 0 \\ 0 & 0 \end{array} \right]
+\]
+Hence, $A0=0$.
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+
+
+
+\section{Properties of Matrix Multiplication}
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Questions on Matrix Multiplication}
+
+\begin{alertblock}{}
+Given matrices $A$ and $B$, is $AB=BA$? 
+\end{alertblock}
+
+\pause
+
+\begin{block}{}
+Suppose $A$ is an $m\times n$ matrix and $B$ is an $m'\times n'$ matrix. 
+\pause
+
+The product $AB$  is defined if and only if $n=m'$. 
+
+The product $BA$  is defined if and only if $m=n'$. 
+\pause
+
+\medskip
+
+Therefore the equation $AB=BA$ makes sense if and only if $A$ is an $m\times n$ matrix and $B$ is an $n\times m$
+matrix for some---possibly different---$m$ and $n$. 
+\pause
+
+\end{block}
+
+So the right question is:
+
+\begin{alertblock}{}
+Given matrices $A$ and $B$ such that both $AB$ and $BA$ are defined, is $AB=BA$? \end{alertblock}
+
+
+
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Matrix Multiplication is Not Commutative}
+\begin{problem}\em
+Let 
+\[
+A= \left[\begin{array}{rr}
+1 & 2 \\
+-3 & 0 \\
+1 & -4 \\
+\end{array}\right]
+\mbox{ and }
+B= \left[\begin{array}{rrrr}
+1 & -1 & 2 & 0 \\
+3 & -2 & 1 & -3 \\
+\end{array}\right] \]
+
+\begin{itemize}
+\item Does $AB$ exist?  If so, compute it.
+\item Does $BA$ exist?  If so, compute it.
+\end{itemize}
+\end{problem}
+\pause
+\begin{solution}\em
+\pause
+\[ AB = 
+\left[\begin{array}{rrrr}
+7 & -5 & 4 & -6 \\
+-3 & 3 & -6 & 0 \\
+-11 & 7 & -2 & 12 
+\end{array}\right] \]
+\pause
+
+\vspace*{-.1in}
+
+\alert{
+\[ BA \mbox{ does not exist }\] }
+
+\vspace*{-.1in}
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{problem}\em
+Let 
+\[
+G= \left[\begin{array}{r}
+1 \\ 1 
+\end{array}\right]
+\mbox{ and }
+H= \left[\begin{array}{rr}
+1 & 0 
+\end{array}\right] \]
+
+\begin{itemize}
+\item Does $GH$ exist?  If so, compute it.
+\item Does $HG$ exist?  If so, compute it.
+\end{itemize}
+\end{problem}
+\pause
+\begin{solution}\em
+\pause
+%\[ GH = \left[\begin{array}{rr}
+%1 & 0 \\ 1 & 0 
+%\end{array}\right] \] 
+%\pause
+%\[ HG = \left[\begin{array}{r}
+%1 \end{array}\right] \] 
+\pause
+\alert{
+In this example, $GH$ and $HG$ both exist, but they are not
+equal.
+They aren't even the same size!}
+\end{solution}\vspace*{7cm}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{problem}\em
+Let 
+\[ P= \left[\begin{array}{rr}
+1 & 0 \\ 2 & -1 
+\end{array}\right]
+\mbox{ and }
+Q= \left[\begin{array}{rr}
+-1 & 1 \\ 0 & 3 
+\end{array}\right] \]
+\begin{itemize}
+\item Does $PQ$ exist?  If so, compute it.
+\item Does $QP$ exist?  If so, compute it.
+\end{itemize}
+\end{problem}
+\pause
+\begin{solution}\em
+\pause
+\[ PQ = \left[\begin{array}{rr}
+-1 & 1 \\ -2 & -1 
+\end{array}\right] \] 
+\pause
+\[ QP = \left[\begin{array}{rr}
+1 & -1 \\ 6 & -3 
+\end{array}\right] \] 
+\alert{
+In this example, $PQ$ and $QP$ both exist
+and are the same size, but $PQ\neq QP$.}
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{fact}\em
+The three preceding problems illustrate an important 
+property of matrix multiplication.
+
+\begin{quote}
+In general, matrix multiplication is \alert{not}
+commutative, i.e., the order of the matrices in the
+product is important.
+\end{quote}
+
+In other words, in general $AB \neq BA$.
+\end{fact}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{problem}\em
+Let
+\[
+U= \left[\begin{array}{rr}
+2 & 0 \\ 0 & 2
+\end{array}\right]
+\mbox{ and }
+V= \left[\begin{array}{rr}
+1 & 2 \\ 3 & 4
+\end{array}\right]
+\]
+
+\begin{itemize}
+\item Does $UV$ exist?  If so, compute it.
+\item Does $VU$ exist?  If so, compute it.
+\end{itemize}
+\end{problem}
+\pause
+\begin{solution}\em
+\pause
+\[ UV = \left[\begin{array}{rr}
+2 & 4 \\ 6 & 8
+\end{array}\right] \] 
+\pause
+\[ VU = \left[\begin{array}{rr}
+2 & 4 \\ 6 & 8
+\end{array}\right] \]
+\pause
+In this particular example, the matrices
+\alert{commute,} i.e., $UV=VU$.
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Properties of Matrix Multiplication}
+\begin{theorem}\em
+Let $A$, $B$, and $C$ be matrices of the appropriate sizes, and let
+$r\in\RR$ be a scalar.  Then the following properties hold.
+\pause
+\begin{enumerate}
+\item
+$A(B+C) = AB + AC$.
+
+\textcolor{blue}{(matrix multiplication distributes over matrix addition).}
+\pause
+\item
+$(B+C)A = BA + CA$.
+
+\textcolor{blue}{(matrix multiplication distributes over matrix addition).}
+\pause
+\item
+$A\left( BC\right) =\left( AB\right) C$.
+\textcolor{blue}{(matrix multiplication is associative).}
+\pause
+\item $r(AB)= (rA)B = A(rB)$.
+\end{enumerate}
+\end{theorem}
+\pause
+
+\bigskip
+
+This applies to matrix-vector multiplication 
+as well, since a vector is a row matrix or a column matrix.
+}
+%-------------- end slide -------------------------------%
+
+%%-------------- start slide -------------------------------%
+%\frame{
+%\begin{problem} 
+%Let $A = \leftB a_{ij} \rightB$, $B = \leftB b_{ij} \rightB$ 
+%and $C=\leftB c_{ij} \rightB$ be three $n \times n$ matrices. 
+%For $1\leq i, j\leq n$ 
+%write down a formula for the $(i,j)$-entry of each of the following matrices. 
+%\begin{multicols}{2}
+%\begin{enumerate}
+%\item AB
+%\item BA
+%\item A+C
+%\item A(BC)
+%\item (AB)C 
+%\item (A+B) 
+%\item C(A+B)
+%\end{enumerate}
+%\end{multicols}
+%\end{problem}  
+%}
+%%-------------- end slide -------------------------------%
+
+
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Elementary Proofs}
+\begin{problem}\em
+Let $A$ and $B$ be $m\times n$ matrices, and let $C$ be an
+$n\times p$ matrix.
+Prove that if $A$ and $B$ commute with $C$, then $A+B$ 
+commutes with $C$.
+\end{problem}
+\pause
+
+\begin{proof}
+\invisible{We are given that $AC=CA$ and $BC=CB$.  
+Consider $(A+B)C$.
+\begin{eqnarray*}
+(A+B)C & = & \pause AC + BC \\
+\pause
+& = & CA + CB \\
+\pause
+& = & C(A+B)
+\end{eqnarray*}
+\pause
+Since $(A+B)C=C(A+B)$, $A+B$ commutes with $C$.}
+\end{proof}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{problem}\em
+Let $A,B$ and $C$ be $n\times n$ matrices, and suppose that
+both $A$ and $B$ commute with $C$, i.e.,
+$AC=CA$ and $BC=CB$.
+Show that $AB$ commutes with $C$.
+\end{problem}
+\pause
+\begin{proof}
+We must show that $(AB)C=C(AB)$ given that $AC=CA$ and $BC=CB$. \pause 
+\begin{eqnarray*}
+(AB)C  & = & A(BC) ~~\mbox{\small (matrix multiplication is associative)}\\ \pause% 
+ & = & A(CB) ~~\mbox{\small ($B$ commutes with $C$)} \\ \pause%
+& = & (AC)B ~~\mbox{\small (matrix multiplication is associative)}\\ \pause%
+ & = & (CA)B ~~\mbox{\small ($A$ commutes with $C$)} \\ \pause%
+ & = & C(AB) ~~\mbox{\small (matrix multiplication is associative)} \pause%
+\end{eqnarray*}
+Therefore, $AB$ commutes with $C$.
+\end{proof}
+}
+%-------------- end slide -------------------------------%
+
+% !!! Put in one more elementary proof!
+
+
+\section{The Transpose}
+%-------------- start slide -------------------------------%
+\frame{
+\begin{definition}[Matrix Transpose]
+If $A$ is an $m\times n$ matrix, then its \alert{transpose},
+denoted \alert{$A^T$}, is the $n\times m$ 
+whose $i^{th}$ row is the $i^{th}$ column of $A$, $1\leq i\leq n$;
+i.e., if $A=[a_{ij}]$, then
+\[ A^T= [a_{ij}]^T =
+[a_{ji}] \]
+i.e., the $(i,j)$-entry of $A^T$ is the $(j,i)$-entry of $A$.
+\end{definition}
+\pause
+
+\begin{theorem}[Properties of the Transpose of a Matrix]\em
+Let $A$ and $B$ be $m\times n$ matrices,
+$C$ be a $n\times p$ matrix, and $r\in\RR$ a scalar.
+Then
+\pause
+\begin{multicols}{2}
+\begin{enumerate}
+\item $(A^T)^T=A$
+\pause
+\item $(rA)^T = rA^T$
+\pause
+\item $(A+B)^T = A^T + B^T$
+\pause
+\item $(AC)^T=C^T A^T$
+\end{enumerate}
+\end{multicols}
+\end{theorem}
+\pause To prove each these properties, you only need to compute the $(i,j)$-entries of the 
+matrices on the left-hand side and the right-hand side.\pause \alert{ And you can do it!}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{problem}\em
+Find the matrix $A$ if
+$\left( A +
+3\left[ \begin{array}{rrr} 1 & -1 & 0 \\ 1 & 2 & 4 \end{array}
+\right] \right)^T =
+\left[ \begin{array}{rr} 2 & 1 \\ 0 & 5 \\ 3 & 8  \end{array}
+\right]$.
+\end{problem}
+\pause
+\begin{solution}
+\invisible{\begin{eqnarray*}
+\left( A +
+3\left[ \begin{array}{rrr} 1 & -1 & 0 \\ 1 & 2 & 4 \end{array}
+\right] \right)^T
+& = &
+\left[ \begin{array}{rr} 2 & 1 \\ 0 & 5 \\ 3 & 8  \end{array}
+\right] \;\;\;\textrm{Now transpose both sides:}\\ \pause
+\Rightarrow A + 3\left[ \begin{array}{rrr} 1 & -1 & 0 \\ 1 & 2 & 4 \end{array}
+\right]
+& = &
+\left[ \begin{array}{rrr} 2 & 0 & 3 \\ 1 & 5 & 8 \end{array}
+\right] \\ \pause
+\Rightarrow A & = &
+\left[ \begin{array}{rrr} 2 & 0 & 3 \\ 1 & 5 & 8 \end{array}
+\right] -
+3\left[ \begin{array}{rrr} 1 & -1 & 0 \\ 1 & 2 & 4 \end{array}
+\right] \\
+ & = &
+\left[ \begin{array}{rrr} -1 & 3 & 3 \\ -2 & -1 & -4 \end{array}
+\right]
+\end{eqnarray*}}
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Symmetric Matrices}
+\begin{definition}
+Let $A=\left[ a_{ij} \right]$ be an $m\times n$ matrix.
+The entries $a_{11}, a_{22}, a_{33},\ldots $ are called the
+\alert{main diagonal} of $A$.
+\end{definition}
+\pause
+\begin{definition}
+The matrix $A$ is called \alert{symmetric} if and only if
+$A^T=A$.  Note that this immediately implies that $A$ is
+a {\bf square} matrix.
+\end{definition}
+\pause
+\begin{examples}
+\[
+\left[ \begin{array}{rr}
+\textcolor{blue}{2} & -3 \\
+-3 & \textcolor{blue}{17}
+\end{array} \right],
+\left[ \begin{array}{rrr}
+\textcolor{blue}{-1} & 0 & 5 \\
+0 & \textcolor{blue}{2} & 11 \\
+5 & 11 & \textcolor{blue}{-3}
+\end{array} \right],
+\left[ \begin{array}{rrrr}
+\textcolor{blue}{0} & 2 & 5 & -1 \\ 
+2 & \textcolor{blue}{1} & -3 & 0 \\ 
+5 & -3 & \textcolor{blue}{2} & -7 \\ 
+-1 & 0 & -7 & \textcolor{blue}{4} 
+\end{array} \right]
+\]
+are symmetric matrices, and each
+\textcolor{blue}{is symmetric about its main diagonal}.
+\end{examples}
+}
+%-------------- end slide -------------------------------%
+%-------------- start slide -------------------------------%
+\frame{
+	\begin{problem}\em
+		Show that if $A$ and $B$ are symmetric matrices, then $2A-B$
+		is symmetric.
+	\end{problem}
+	\pause
+	\begin{proof}
+\invisible{		\begin{eqnarray*}
+			(2A-B)^T & = & (2A)^T - (B)^T \\
+			\pause
+			& = & 2A^T -B^T \\
+			\pause
+			& = & 2A -B, \mbox{ since } A^T=A\mbox{ and } B^T=B
+		\end{eqnarray*}
+		\pause
+		Since $(2A-B)^T=2A-B$, $2A-B$ is symmetric.}
+	\end{proof}
+}
+%-------------- end slide -------------------------------%
+%%-------------- start slide -------------------------------%
+%\frame{
+%\begin{problem}\em
+%Show that if $A$ and $B$ are symmetric matrices, then $A^T+2B$
+%is symmetric.
+%\end{problem}
+%\pause
+%\begin{proof}
+%\begin{eqnarray*}
+%(A^T+2B)^T & = & (A^T)^T + (2B)^T \\
+%\pause
+%& = & A + 2B^T \\
+%\pause
+%& = & A^T + 2B, \mbox{ since } A^T=A\mbox{ and } B^T=B
+%\end{eqnarray*}
+%\pause
+%Since $(A^T+2B)^T=A^T+2B$, $A^T+2B$ is symmetric.
+%\end{proof}
+%}
+%%-------------- end slide -------------------------------%
+
+%-----------------------start slide-------------------------%
+{\small
+\frame{\frametitle{Skew Symmetric Matrices}
+
+\begin{definition}
+An $n \times n$ matrix $A$ is said to be \alert{skew symmetric} if 
+$A^{T} = -A$.
+\end{definition}
+
+\begin{example}[Skew Symmetric Matrices]
+\[
+\left[ \begin{array}{rr}
+\textcolor{blue}{0} & 2 \\
+-2 & \textcolor{blue}{0}
+\end{array} \right],
+\left[ \begin{array}{rrr}
+\textcolor{blue}{0} & 9 & 4 \\
+-9 & \textcolor{blue}{0} & -3 \\
+-4 & 3 & \textcolor{blue}{0} \end{array} \right]
+\]
+\end{example}
+\pause
+\begin{problem}\em
+Show that if $A$ is a square matrix, then $A-A^T$ is 
+skew-symmetric.
+\end{problem}
+\pause
+\begin{solution}\em
+We must show that $(A-A^T)^T=-(A-A^T)$.
+\pause
+Using the properties of matrix addition, scalar multiplication,
+and transposition
+\[ (A-A^T)^T = A^T - (A^T)^T = A^T - A=-(A-A^T).\] 
+\end{solution}
+}}
+%-------------------------end slide--------------------------%
+
+\section{The Identity and Inverse}
+%-------------- start slide -------------------------------%
+{\small
+\frame{\frametitle{The $n\times n$ Identity Matrix}
+\begin{definition}
+For each $n\geq 2$,
+the \alert{$n\times n$ identity matrix}, denoted \alert{$I_n$},
+is the matrix having ones on its main diagonal and zeros 
+elsewhere, and is defined for all $n\geq 2$.
+\end{definition}
+\begin{example}
+\[ I_2 = \left[\begin{array}{rr}
+1 & 0 \\ 0 & 1
+\end{array}\right],
+I_3 = \left[\begin{array}{rrr}
+1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1
+\end{array}\right] \]
+\end{example}
+\pause
+\begin{definition}
+Let $n\geq 2$. 
+For each $j$, $1\leq j\leq n$, we denote by $E_j$ the 
+$j^{\mbox{th}}$ column of $I_n$.
+\end{definition} 
+\begin{example}
+When $n=3$, 
+$E_1 = \left[\begin{array}{r}
+1 \\ 0 \\ 0 \end{array}\right], 
+E_2 = \left[\begin{array}{r}
+0 \\ 1 \\ 0 \end{array}\right], 
+E_3 = \left[\begin{array}{r}
+0 \\ 0 \\ 1 \end{array}\right]$. 
+\end{example}
+}
+%-------------------------end slide--------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{theorem}\em
+Let $A$ be an $m\times n$ matrix
+Then $AI_{n}=A$ and $I_{m}A=A.$
+\end{theorem}
+
+\pause
+
+\begin{block}{Proof}
+The $(i,j)$-entry of $AI_n$ is the product of the $i^{th}$ row
+of $A=[a_{ij}]$, namely
+$\left[\begin{array}{cccccc}
+a_{i1} & a_{i2} & \cdots & a_{ij} & \cdots & a_{in} \end{array}\right]$
+with the $j^{th}$ column of $I_n$, namely $E_j$.
+Since $E_j$ has a one in row $j$ and zeros elsewhere,
+\[ \left[\begin{array}{cccccc}
+a_{i1} & a_{i2} & \cdots & a_{ij} & \cdots & a_{in} \end{array}\right] E_j
+=a_{ij}\]
+Since this is true for all $i\leq m$ and all $j\leq n$, $A I_n=A$. 
+
+\alert{The proof of  $I_m A=A$ is analogous---work it out!}
+\end{block}
+}
+%---------------------end slide---------------------_%
+
+%---------------------start slide---------------------%
+\frame{
+\begin{alertblock}{}
+Instead of $AI_n$ and $I_mA$ we often write $AI$ and
+$IA$, respectively, since the size of the identity matrix is
+clear from the context: the sizes of $A$ and $I$ must be 
+compatible for matrix multiplication.
+\pause
+
+Thus
+\[ AI=A\mbox{ and } IA=A \]
+which is why $I$ is called an \alert{identity} matrix --
+it is an identity for matrix multiplication.
+\end{alertblock}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Matrix Inverses}
+\begin{definition}
+Let $A$ be an $n\times n$ matrix.
+Then $B$ is \alert{an inverse} of $A$ if and only if
+$AB=I_n$ and $BA=I_n$.
+\pause
+Note that since $A$ and $I_n$ are both $n\times n$, 
+$B$ {\bf must also be} an $n\times n$ matrix.
+\end{definition}
+\pause
+\begin{example}
+Let
+$A=\left[\begin{array}{rr}
+1 & 2 \\ 3 & 4 \end{array}\right]$
+and
+$B=\left[\begin{array}{rr}
+-2 & 1 \\ \frac{3}{2} & -\frac{1}{2} \end{array}\right]$.
+Then 
+\[ AB =
+\left[\begin{array}{rr}
+1 & 0 \\ 0 & 1 \end{array}\right]
+ \]
+and
+\[ BA = 
+\left[\begin{array}{rr}
+1 & 0 \\ 0 & 1 \end{array}\right]
+ \]
+so $B$ is an inverse of $A$.
+\end{example}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{alertblock}{Does every square matrix have an inverse?}
+\pause No! Take e.g. the zero matrix $\mathbf{0_n}$ (all entries of $\mathbf{O_n}$ are equal to $0$)  
+\[
+A \mathbf{0_n}=\mathbf{0_n} A=\mathbf{O_n}
+\]
+for all $n\times n$ matrices $A$: 
+\pause The $(i,j)$-entry of $\mathbf{O_n} A$ is equal to $\sum_{k=1}^n 0 a_{kj}=0$. 
+\end{alertblock}
+\pause
+
+\begin{alertblock}{Does every \textbf{nonzero} square matrix have an inverse?}
+\end{alertblock}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{example}
+Does the matrix
+\[ A=\left[\begin{array}{rr}
+0 & 1 \\ 0 & 1 \end{array}\right]\]
+have an inverse? \pause
+
+\alert{No!}
+To see this, suppose
+\[ B=\left[\begin{array}{rr}
+a & b \\ c & d \end{array}\right]\]
+is an inverse of $A$. 
+\pause
+Then 
+\[ AB=\left[\begin{array}{rr} 0 & 1 \\ 0 & 1 \end{array}\right]
+\left[\begin{array}{rr} a & b \\ c & d \end{array}\right]
+= \left[\begin{array}{rr} c & d \\ c & d \end{array}\right]
+\]
+which is never equal to $I_2$.   \alert{(Why?)}
+\end{example}
+}
+%-------------- end slide -------------------------------%
+
+
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Uniqueness of an Inverse}
+\begin{theorem}\em
+If $A$ is a square matrix and $B$ and $C$
+are inverses of $A$, then $B=C$.
+\end{theorem}
+\pause
+\begin{proof}
+Since $B$ and $C$ are inverses of $A$,
+$AB=I=BA$ and $AC=I=CA$.
+Then
+\[ B = BI \pause = B(AC) \pause = (BA)C\pause  =IC\pause  =C \]
+
+so $B=C$.
+\end{proof}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{example}[revisited]
+For
+$A=\left[\begin{array}{rr}
+1 & 2 \\ 3 & 4 \end{array}\right]$
+and
+$B=\left[\begin{array}{rr}
+-2 & 1 \\ \frac{3}{2} & -\frac{1}{2} \end{array}\right]$, we saw that
+\[ AB = \left[\begin{array}{rr}
+1 & 0 \\ 0 & 1 \end{array}\right]
+\mbox{ and }
+BA = \left[\begin{array}{rr}
+1 & 0 \\ 0 & 1 \end{array}\right] \]
+The preceding theorem tells us that
+$B$ is \alert{the inverse} of $A$,
+rather than just
+\textcolor{blue}{an inverse} of $A$.
+\end{example}
+}
+%-------------- start slide -------------------------------%
+\frame{
+\begin{definitions}
+Let $A$ be a square matrix, i.e., an $n\times n$ matrix.
+\begin{itemize}
+\item
+\alert{The} inverse of $A$, if it exists, is
+denoted $A^{-1}$, and
+\[ AA^{-1}=I=A^{-1}A \]
+\item<2->
+If $A$ has an inverse, then we say that $A$ is
+\alert{invertible} (or \alert{nonsingular}).
+\end{itemize}
+\end{definitions}
+}
+%-------------- end slide -------------------------------%
+
+\section{Finding the Inverse of a Matrix}
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Finding the inverse of a $2\times 2$ matrix}
+\begin{example}
+Suppose that $A=\left[\begin{array}{rr}
+a & b \\ c & d\end{array}\right]$.
+\pause
+\alert{If $ad-bc\neq 0$}, then there is a formula for $A^{-1}$:
+\[ A^{-1} =
+\frac{1}{ad-bc}
+\left[\begin{array}{rr}
+d & -b \\ -c & a \end{array}\right] \]
+\pause
+This can easily be verified by computing the products
+$A A^{-1}$ and $A^{-1}A$. 
+\pause
+\begin{eqnarray*}
+A A^{-1} & = & 
+\left[\begin{array}{rr} a & b \\ c & d\end{array}\right]
+\frac{1}{ad-bc} 
+\left[\begin{array}{rr} d & -b \\ -c & a \end{array}\right] \\
+& = &
+\frac{1}{ad-bc} 
+\left(
+\left[\begin{array}{rr} a & b \\ c & d\end{array}\right]
+\left[\begin{array}{rr} d & -b \\ -c & a \end{array}\right] 
+\right)\\
+& = & 
+\frac{1}{ad-bc} 
+\left[\begin{array}{cc} ad-bc & 0 \\ 0 & -bc+ad\end{array}\right]
+= \left[\begin{array}{rr} 1 & 0 \\ 0 & 1\end{array}\right]
+\end{eqnarray*}
+\pause
+Showing that $A^{-1}A=I_2$ is left as an exercise.
+\end{example}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Finding the inverse of an $n\times n$ matrix}
+\begin{problem}\em
+Suppose that $A$ is any $n \times n$ matrix.
+\pause
+\begin{itemize}
+\item
+How do we know whether or not $A^{-1}$ exists?
+\pause
+\item
+If $A^{-1}$ exists, how do we find it?
+\end{itemize}
+\end{problem}
+\begin{solution}\em
+\alert{The matrix inversion algorithm.}
+\end{solution}
+
+\pause
+
+\begin{alertblock}{}
+Although the formula for the inverse of a $2\times 2$ matrix is 
+quicker and easier to use than the matrix inversion algorithm,
+the general formula for the inverse an $n\times n$ matrix, $n\geq 3$
+(which we will see later), is more
+complicated and difficult to use than the matrix inversion algorithm.
+To find inverses of square matrices that are not $2\times 2$, 
+the matrix inversion algorithm is the most efficient method to use.
+\end{alertblock}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{block}{The Matrix Inversion Algorithm}
+Let $A$ be an $n\times n$ matrix.
+To find $A^{-1}$, if it exists, 
+\begin{itemize}
+\item take the $n\times 2n$ matrix
+\[ \left[\begin{array}{c|c} A & I_n \end{array}\right] \]
+obtained by augmenting $A$ with the $n\times n$
+identity matrix, $I_n$.
+\item Perform elementary row operations to transform 
+$\left[\begin{array}{c|c} A & I_n \end{array}\right]$ into
+a reduced row-echelon matrix.
+\end{itemize}
+\end{block}
+\pause
+\begin{theorem}[Matrix Inverses]
+Let $A$ be an $n\times n$ matrix.
+Then the following conditions are equivalent.
+\begin{enumerate}
+\item $A$ is invertible.
+\item the reduced row-echelon form on $A$ is $I$.
+\item $\left[\begin{array}{c|c} A & I_n \end{array}\right]$
+can be transformed into 
+$\left[\begin{array}{c|c} I_n & A^{-1} \end{array}\right]$
+using the Matrix Inversion Algorithm.
+\end{enumerate}
+\end{theorem}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{problem}\em
+Find, if possible, the inverse of 
+$\left[\begin{array}{rrr}
+1 & 0 & -1 \\
+-2 & 1 & 3 \\
+-1 & 1 & 2
+\end{array}\right]$.
+\end{problem}
+\pause
+\begin{solution}\em
+Using the matrix inversion algorithm (fill in the operations)
+\pause
+\[
+\left[\begin{array}{rrr|rrr}
+1 & 0 & -1 & 1 & 0 & 0 \\
+-2 & 1 & 3 & 0 & 1 & 0 \\
+-1 & 1 & 2 & 0 & 0 & 1
+\end{array}\right] \pause \rightarrow
+\left[\begin{array}{rrr|rrr}
+1 & 0 & -1 & 1 & 0 & 0 \\
+0 & 1 & 1 & 2 & 1 & 0 \\
+0 & 1 & 1 & 1 & 0 & 1
+\end{array}\right] \pause \rightarrow
+\]
+\[
+\left[\begin{array}{rrr|rrr}
+1 & 0 & -1 & 1 & 0 & 0 \\
+0 & 1 & 1 & 2 & 1 & 0 \\
+0 & 0 & 0 & -1 & -1 & 1
+\end{array}\right]
+\]
+\bigskip
+
+From this, we see that \alert{$A$ has no inverse}.
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{problem}\em
+Let $A=
+\left[\begin{array}{rrr}
+3 & 1 & 2 \\
+1 & -1 & 3 \\
+1 & 2 & 4
+\end{array}\right]$.  Find the inverse of $A$, if it exists.
+\end{problem}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{solution}[continued]
+Using the matrix inversion algorithm (fill in the operations)
+\pause
+\[ \left[\begin{array}{c|c} A & I \end{array}\right]
+=\left[\begin{array}{rrr|rrr}
+3 & 1 & 2 & 1 & 0 & 0 \\
+1 & -1 & 3 & 0 & 1 & 0 \\
+1 & 2 & 4 & 0 & 0 & 1
+\end{array}\right]
+\pause
+\rightarrow
+\left[\begin{array}{rrr|rrr}
+1 & -1 & 3 & 0 & 1 & 0 \\
+3 & 1 & 2 & 1 & 0 & 0 \\
+1 & 2 & 4 & 0 & 0 & 1
+\end{array}\right]
+\rightarrow
+\]
+\[
+\left[\begin{array}{rrr|rrr}
+1 & -1 & 3 & 0 & 1 & 0 \\
+0 & 4 & -7 & 1 & -3 & 0 \\
+0 & 3 & 1 & 0 & -1 & 1
+\end{array}\right]
+\rightarrow
+\left[\begin{array}{rrr|rrr}
+1 & -1 & 3 & 0 & 1 & 0 \\
+0 & 1 & -8 & 1 & -2 & -1 \\
+0 & 3 & 1 & 0 & -1 & 1
+\end{array}\right]
+\rightarrow
+\]
+\[
+\left[\begin{array}{rrr|rrr}
+1 & 0 & -5 & 1 & -1 & -1 \\
+0 & 1 & -8 & 1 & -2 & -1 \\
+0 & 0 & 25 & -3 & 5 & 4
+\end{array}\right]
+\rightarrow
+\left[\begin{array}{rrr|rrr}
+1 & 0 & -5 & 1 & -1 & -1 \\
+0 & 1 & -8 & 1 & -2 & -1 \\
+0 & 0 & 1 & -\frac{3}{25} & \frac{5}{25} & \frac{4}{25}
+\end{array}\right]
+\rightarrow
+\]
+\[
+\left[\begin{array}{rrr|rrr} \vspace*{.02in}
+1 & 0 & 0 & \frac{10}{25} & 0 & -\frac{5}{25} \\ \vspace*{.02in}
+0 & 1 & 0 & \frac{1}{25} & -\frac{10}{25} & \frac{7}{25} \\
+0 & 0 & 1 & -\frac{3}{25} & \frac{5}{25} & \frac{4}{25}
+\end{array}\right]
+= \left[\begin{array}{c|c} I & A^{-1} \end{array}\right]
+\]
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{solution}[continued]\em
+Therefore, $A^{-1}$ exists, and
+\[ A^{-1}=
+\left[\begin{array}{rrr} \vspace*{.02in}
+\frac{10}{25} & 0 & -\frac{5}{25} \\ \vspace*{.02in}
+\frac{1}{25} & -\frac{10}{25} & \frac{7}{25} \\
+-\frac{3}{25} & \frac{5}{25} & \frac{4}{25}
+\end{array}\right]
+=\frac{1}{25}
+\left[\begin{array}{rrr}
+10 & 0 & -5 \\
+1 & -10 & 7 \\
+-3 & 5 & 4
+\end{array}\right]
+\]
+\pause
+\alert{You can check your work by computing $AA^{-1}$ and $A^{-1}A$.}
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Systems of Linear Equations and Inverses}
+Suppose that a system of $n$ linear equations in $n$ variables
+is written in matrix form as
+\alert{$AX=B$},
+and suppose that $A$ is invertible.
+\pause
+\begin{example}
+The system of linear equations
+\begin{eqnarray*}
+2x-7y & = & 3 \\
+5x-18y & = & 8 
+\end{eqnarray*}
+can be written in matrix form as 
+$AX=B$:
+\[
+\left[\begin{array}{rr}
+2 & -7 \\ 5 & -18 \end{array}\right]
+\left[\begin{array}{r}
+x \\ y \end{array}\right]
+=
+\left[\begin{array}{r}
+3 \\ 8 \end{array}\right] \]
+\pause
+You can check that
+$A^{-1}= \left[\begin{array}{rr}
+18 & -7 \\ 5 & -2 \end{array}\right]$.
+\end{example}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{example}[continued]
+Since $A^{-1}$ exists and has the property
+that $A^{-1}A=I$, we obtain the following.
+\pause
+\vspace*{-.21in}
+
+\begin{eqnarray*}
+AX & = & B \\ 
+\pause
+A^{-1}(AX) & = & A^{-1}B \\
+\pause
+(A^{-1}A)X & = & A^{-1}B \\
+\pause
+IX & = & A^{-1}B \\
+\pause
+X & = & A^{-1}B
+\end{eqnarray*}
+\vspace*{-.21in}
+
+\pause
+i.e., $AX=B$ has the \alert{unique solution} given by
+\alert{$X=A^{-1}B$}.
+\pause
+Therefore, 
+\[ X=A^{-1}\left[\begin{array}{r} 3 \\ 8 \end{array}\right]
+= \left[\begin{array}{rr}
+18 & -7 \\ 5 & -2 \end{array}\right]
+\left[\begin{array}{r} 3 \\ 8 \end{array}\right]
+= \left[\begin{array}{r} -2 \\ -1 \end{array}\right]
+\]
+\pause
+\alert{You should verify that $x=-2$, $y=-1$ is a solution to the
+system.}
+\end{example}
+}
+%-------------------end slide-------------------%
+
+%---------------------start slide-----------------%
+\frame{
+\begin{alertblock}{}
+The last example illustrates another method for solving a system of linear
+equations when {\bf the coefficient matrix is square and invertible}.
+\pause
+Unless that coefficient matrix is $2\times 2$, this is generally
+{\bf NOT} an efficient method for solving a system of linear
+equations.
+\end{alertblock}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+{\small
+\frame{
+\begin{example}
+Let $A, B$ and $C$ be matrices, and suppose
+that $A$ is invertible.
+\begin{enumerate}
+\item
+If $AB=AC$, then
+\pause
+\begin{eqnarray*}
+A^{-1}(AB) & = & A^{-1}(AC) \\
+\pause
+(A^{-1}A)B & = & (A^{-1}A)C \\
+\pause
+IB & = & IC \\
+\pause
+B & = & C
+\end{eqnarray*}
+\pause
+\vspace*{-.2in}
+
+\item
+If $BA=CA$, then
+\pause
+\begin{eqnarray*}
+(BA)A^{-1} & = & (CA)A^{-1} \\
+B(AA^{-1}) & = & C(AA^{-1}) \\
+BI & = & CI \\
+B & = & C
+\end{eqnarray*}
+\end{enumerate}
+\end{example}
+\pause
+\begin{problem}\em
+Find square matrices $A, B$ and $C$ for which $AB=AC$ but $B\neq C$.
+\end{problem}
+}}
+%-------------- end slide -------------------------------%
+
+\section{Properties of the Inverse}
+%-----------------------start slide-------------------%
+\frame{\frametitle{Inverses of Transposes and Products}
+\begin{example}
+Suppose $A$ is an invertible matrix.  
+Then
+\[ A^T(A^{-1})^T =
+\pause (A^{-1}A)^T = 
+\pause I^T = 
+\pause I \]
+and
+\[ (A^{-1})^TA^T 
+\pause = (AA^{-1})^T 
+\pause = I^T 
+\pause = I \]
+This means that \alert{$(A^T)^{-1}=(A^{-1})^T$}.
+\end{example}
+\pause
+\begin{example}
+Suppose $A$ and $B$ are invertible $n\times n$ matrices.  Then
+\[ (AB)(B^{-1}A^{-1})
+\pause = A(BB^{-1})A^{-1}
+\pause =AIA^{-1}
+\pause =AA^{-1}
+\pause =I \]
+\pause
+and
+\[ (B^{-1}A^{-1})(AB)
+\pause =B^{-1}(A^{-1}A)B
+\pause =B^{-1}IB
+\pause =B^{-1}B
+\pause =I \]
+\pause
+This means that \alert{$(AB)^{-1}=B^{-1}A^{-1}$}.
+\end{example}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Inverses of Transposes and Products}
+\begin{alertblock}{}
+The previous two examples prove the first two parts of the
+following theorem.
+\end{alertblock}
+\pause
+\begin{theorem}\em
+\begin{enumerate}
+\item
+If $A$ is an invertible matrix, then $(A^T)^{-1}=(A^{-1})^T$.
+\pause
+\item
+If $A$ and $B$ are invertible matrices, then $AB$ is invertible
+and
+\[ (AB)^{-1}=B^{-1}A^{-1} \]
+\pause
+\item If $A_1, A_2, \ldots, A_k$ are invertible, then
+$A_1A_2\cdots A_k$ is invertible and
+\[ (A_1A_2\cdots A_k)^{-1}=
+A_k^{-1} A_{k-1}^{-1}\cdots A_2^{-1} A_1^{-1} \]
+\textcolor{blue}{(the third part is proved by iterating the above, or, more formally, by using \alert{mathematical induction})}
+\end{enumerate}
+\end{theorem}
+}
+%-----------------------end slide------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Properties of Inverses}
+\begin{theorem}\em
+\begin{enumerate}
+\item
+$I$ is invertible, and $I^{-1}=I$.
+\pause
+\item
+If $A$ is invertible, so is $A^{-1}$, and
+$(A^{-1})^{-1}=A$.
+\pause
+\item
+If $A$ is invertible, so is $A^k$, and
+$(A^k)^{-1}=(A^{-1})^k$.
+
+\textcolor{blue}{($A^k$ means $A$ multiplied by itself $k$ times)}
+\pause
+\item
+If $A$ is invertible and $p\in\RR$ is nonzero, then
+$pA$ is invertible, and $(pA)^{-1}=\frac{1}{p}A^{-1}$.
+\end{enumerate}
+\end{theorem}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{example}
+Given $(3I - A^T)^{-1}=2
+\left[\begin{array}{rr}
+1 & 1 \\ 2 & 3 \end{array}\right]$,
+we wish to find the matrix $A$.
+\pause
+Taking inverses of both sides of the equation:
+\invisible{\begin{eqnarray*}
+3I - A^T & = & \left(2\left[\begin{array}{rr}
+1 & 1 \\ 2 & 3 \end{array}\right] \right)^{-1} 
+\pause \\
+& = & \frac{1}{2} 
+\left[\begin{array}{rr}
+1 & 1 \\ 2 & 3 \end{array}\right]^{-1}
+\pause \\
+& = & \frac{1}{2} 
+\left[\begin{array}{rr}
+3 & -1 \\ -2 & 1 \end{array}\right]
+\pause \\
+& = & 
+\left[\begin{array}{rr} \vspace*{.02in}
+\frac{3}{2} & -\frac{1}{2} \\ 
+-1 & \frac{1}{2} \end{array}\right]
+\end{eqnarray*}}
+\end{example}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{example}[continued]
+\invisible{\begin{eqnarray*}
+3I - A^T & = &
+\left[\begin{array}{rr} \vspace*{.02in}
+\frac{3}{2} & -\frac{1}{2} 
+\\ 
+-1 & \frac{1}{2} \end{array}\right]
+\pause \\
+-A^T & = &
+\left[\begin{array}{rr} \vspace*{.02in}
+\frac{3}{2} & -\frac{1}{2} \\ 
+-1 & \frac{1}{2} \end{array}\right] - 3I
+\pause \\
+-A^T & = &
+\left[\begin{array}{rr} \vspace*{.02in}
+\frac{3}{2} & -\frac{1}{2} \\ 
+-1 & \frac{1}{2} \end{array}\right] -
+\left[\begin{array}{rr} 
+3 & 0 \\ 0 & 3
+\end{array}\right]
+\pause \\
+-A^T & = &
+\left[\begin{array}{rr} \vspace*{.02in}
+-\frac{3}{2} & -\frac{1}{2} \\ 
+-1 & -\frac{5}{2} \end{array}\right] 
+\pause \\
+A & = & 
+\left[\begin{array}{rr} \vspace*{.02in}
+\frac{3}{2} & 1 \\ 
+\frac{1}{2} & \frac{5}{2} \end{array}\right] \\
+\end{eqnarray*}}
+\end{example}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{problem}\em
+True or false?  Justify your answer.
+\begin{center}
+If $A^3=4I$, then $A$ is invertible.
+\end{center}
+\end{problem}
+\pause
+\begin{solution}\em
+\invisible{If $A^3=4I$, then
+\[ \frac{1}{4} A^3 = I \]
+\pause
+so
+\[ (\frac{1}{4} A^2)A = I \mbox{ and }
+\pause
+A(\frac{1}{4} A^2) = I \]
+\pause
+
+Therefore $A$ is invertible, and $A^{-1}=\frac{1}{4}A^2$.}
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{A Fundamental Result}
+
+\begin{theorem}
+Let $A$ be an $n\times n$ matrix, and
+let $X$, $B$ be $n \times 1$ vectors.
+The following conditions are equivalent.
+\pause
+\begin{enumerate}
+\item The rank of $A$ is $n$. 
+\item
+$A$ can be transformed to $I_n$ by elementary row operations.
+\pause
+\item
+$A$ is invertible.
+\pause
+\item
+There exists an $n\times n$ matrix $C$ with the property that
+$CA=I_n$.
+\pause
+\item
+The system $AX=B$ has a unique solution $X$ for any
+choice of $B$.
+\item
+$AX=0$ has only the trivial solution, $X=0$.
+\pause
+\item
+There exists an $n\times n$ matrix $C$ with the property that
+$AC=I_n$.
+\end{enumerate}
+\end{theorem}
+ }
+%-----------------end slide---------------------------------%
+
+%-------------- start slide -------------------------------%
+{\small
+\frame{
+
+\begin{block}{Proof of Theorem:} 
+(1) $\Rightarrow$ (2) The rank of $A$ is the number of leading 1s in the RREF of $A$. 
+Since the size of $A$ is $n\times n$,   $\rank(A)=n$ \alert{is equivalent to} $A$ being row-equivalent to $I_n$. 
+
+
+\pause
+
+(2) $\Rightarrow$ (3): Matrix inversion algorithm.
+
+
+
+\pause
+(3) $\Rightarrow$ (4): $C=A^{-1}$. 
+
+
+\pause
+(4) $\Rightarrow$ (5): $X=CB$. 
+
+\pause
+(5) $\Rightarrow$ (6): Take $B=0$. 
+
+\pause
+(6) $\Rightarrow$ (1): If rank of $A$ is $<n$, then there are non-leading variables in the RREF of $[A|0]$. 
+Hence $AX=0$ has  infinitely many solutions. 
+
+\pause
+
+(4) $\Leftrightarrow$ (7): 
+ $CA=I$ if and only if $A^TC^T=I$; hence (4) for $A$ is equivalent to (7) for $A^T$. 
+\pause
+
+We already know that $A^{-1}$ exists if and only if $(A^T)^{-1}$ exists. 
+
+\end{block} 
+
+ }
+%-----------------end slide---------------------------------%
+
+%-------------- start slide -------------------------------%
+{\small
+\frame{
+\begin{alertblock}{}
+The following is an important and useful consequence of the 
+theorem.
+\end{alertblock}
+\pause
+\begin{theorem}
+If $A$ and $B$ are $n\times n$ matrices such that $AB=I$, then
+$BA=I$.
+Furthermore, $A$ and $B$ are invertible, with $B=A^{-1}$ and
+$A=B^{-1}$.
+\end{theorem}
+\pause
+\begin{alertblock}{Important Fact}
+In the second Theorem, it is essential that the matrices be square.
+\end{alertblock}
+}}
+%-------------- end slide -------------------------------%
+
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{theorem}
+If $A$ and $B$ are matrices such that $AB=I$ and $BA=I$, then 
+$A$ and $B$ are square matrices (of the same size).
+\end{theorem}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+{\small
+\frame{
+\begin{example}
+Let
+$A=\left[\begin{array}{rrr}
+1 & 1 & 0 \\ -1 & 4 & 1 \end{array}\right]
+\mbox{ and }
+B=\left[\begin{array}{rr}
+1 & 0 \\ 0 & 0 \\ 1 & 1 \end{array}\right]$.
+\pause
+Then
+\[ AB= 
+\left[\begin{array}{rrr}
+1 & 1 & 0 \\ -1 & 4 & 1 \end{array}\right]
+\left[\begin{array}{rr}
+1 & 0 \\ 0 & 0 \\ 1 & 1 \end{array}\right] 
+\pause 
+= \left[ \begin{array}{rr}
+1 & 0 \\ 0 & 1 \end{array} \right] =I_2 \]
+\pause
+\vspace*{-.2in}
+
+and
+\vspace*{-.2in}
+
+\[ BA= 
+\left[\begin{array}{rr}
+1 & 0 \\ 0 & 0 \\ 1 & 1 \end{array}\right]
+\left[\begin{array}{rrr}
+1 & 1 & 0 \\ -1 & 4 & 1 \end{array}\right]
+\pause
+= \left[ \begin{array}{rrr}
+1 & 1 & 0 \\
+0 & 0 & 0 \\
+0 & 5 & 1
+\end{array} \right] \neq I_3 \]
+\end{example}
+\pause
+\begin{alertblock}{}
+This example illustrates why ``an inverse'' of a non-square matrix
+doesn't make sense.
+If $A$ is $m\times n$ and $B$ is $n\times m$, where $m\neq n$,
+then even if $AB=I$, it will never be the case that $BA=I$.
+\end{alertblock}
+}}
+%-------------- end slide -------------------------------%
+
+%
+%\section{Elementary Matrices}
+%%-------------- start slide -------------------------------%
+%\frame{\frametitle{Elementary Matrices}
+%\begin{definition}
+%An \alert{elementary matrix} is a matrix obtained from an
+%identity matrix by performing \alert{a single} elementary 
+%row operation.
+%\end{definition}
+%\pause
+%\bigskip
+%
+%The \alert{type} of an elementary matrix is given by the type of row operation 
+%used to obtain the elementary matrix. 
+%Recall the elementary row operations.
+%\pause
+%\bigskip
+%
+%\begin{block}{Elementary Row Operations.}
+%\pause
+%\begin{itemize}
+%\item {\bf Type I:} Interchange two rows.
+%\pause
+%\item {\bf Type II:} Multiply a row by a nonzero number.
+%\pause
+%\item {\bf Type III:} 
+%Add a (nonzero) multiple of one row to a different row.
+%\end{itemize}
+%\end{block}
+%}
+%%-----------------start slide------------------------%
+%\frame{
+%\begin{example}
+%\[ E =
+%\left[ \begin{array}{cccc}
+%1 & 0 & 0 & 0 \\
+%0 & 0 & 0 & 1 \\
+%0 & 0 & 1 & 0 \\
+%0 & 1 & 0 & 0
+%\end{array}\right],
+%F=
+%\left[ \begin{array}{rrrr}
+%1 & 0 & 0 & 0 \\
+%0 & 1 & 0 & 0 \\
+%0 & 0 & -2 & 0 \\
+%0 & 0 & 0 & 1 
+%\end{array}\right],
+%G=
+%\left[ \begin{array}{rrrr}
+%1 & 0 & 0 & 0 \\
+%0 & 1 & 0 & 0 \\
+%-3 & 0 & 1 & 0 \\
+%0 & 0 & 0 & 1 
+%\end{array}\right],
+%\]
+%are examples of elementary matrices of types I, II and III, 
+%respectively.
+%\pause
+%
+%Let 
+%\[A= \left[ \begin{array}{rr}
+%1 & 1 \\ 2 & 2 \\ 3 & 3 \\ 4 & 4 
+%\end{array}\right] \]
+%\pause
+%We are interested in the effect that (left) multiplication of
+%$A$ by $E$, $F$ and $G$ has on the matrix $A$.
+%\pause
+%Computing $EA$, $FA$, and $GA$ \ldots
+%\end{example}
+%}
+%%-------------- end slide -------------------------------%
+%
+%%-------------- start slide -------------------------------%
+%{\small
+%\frame{
+%\begin{example}[continued]
+%\[
+%EA=
+%\left[ \begin{array}{cccc}
+%1 & 0 & 0 & 0 \\
+%0 & 0 & 0 & 1 \\
+%0 & 0 & 1 & 0 \\
+%0 & 1 & 0 & 0
+%\end{array}\right]
+%\left[ \begin{array}{rr}
+%1 & 1 \\ 2 & 2 \\ 3 & 3 \\ 4 & 4 
+%\end{array}\right]=
+%\left[ \begin{array}{rr}
+%1 & 1 \\
+%4 & 4 \\
+%3 & 3 \\
+%2 & 2 
+%\end{array}\right]
+%\]
+%\pause
+%\[
+%FA=
+%\left[ \begin{array}{rrrr}
+%1 & 0 & 0 & 0 \\
+%0 & 1 & 0 & 0 \\
+%0 & 0 & -2 & 0 \\
+%0 & 0 & 0 & 1 
+%\end{array}\right]
+%\left[ \begin{array}{rr}
+%1 & 1 \\ 2 & 2 \\ 3 & 3 \\ 4 & 4
+%\end{array}\right]=
+%\left[ \begin{array}{rr}
+%1 & 1 \\ 
+%2 & 2 \\
+%-6 & -6 \\ 
+%4 & 4 \\
+%\end{array}\right]
+%\]
+%\pause
+%\[
+%GA=
+%\left[ \begin{array}{rrrr}
+%1 & 0 & 0 & 0 \\
+%0 & 1 & 0 & 0 \\
+%-3 & 0 & 1 & 0 \\
+%0 & 0 & 0 & 1 
+%\end{array}\right]
+%\left[ \begin{array}{rr}
+%1 & 1 \\ 2 & 2 \\ 3 & 3 \\ 4 & 4
+%\end{array}\right]=
+%\left[ \begin{array}{rr}
+%1 & 1 \\
+%2 & 2 \\
+%0 & 0 \\
+%4 & 4 \\
+%\end{array}\right]
+%\]
+%
+%\pause
+%\alert{
+%Notice that $EA$ is the matrix obtained from $A$ by interchanging row 2
+%and row 4,
+%\pause
+%which is the same row operation used to obtain $E$ from $I_4$.}
+%\pause
+%What about $FA$ and $GA$?
+%\end{example}
+%}}
+%%-------------- end slide -------------------------------%
+%
+%%-------------- start slide -------------------------------%
+%\frame{\frametitle{Multiplication by an Elementary Matrix}
+%\begin{theorem}\em
+%Let $A$ be an $m\times n$ matrix, and suppose that $B$ is obtained
+%from $A$ by performing \alert{a single elementary} row operation.
+%\pause
+%Then $B=EA$ where $E$ is the elementary matrix obtained from $I_m$ 
+%by performing the same elementary operation on $I_m$ as was 
+%performed on $A$.
+%\end{theorem}
+%}
+%%-------------- end slide -------------------------------%
+%
+%%-------------- start slide -------------------------------%
+%{\small
+%\frame{
+%\begin{problem}\em
+%Let
+%\vspace*{-.3in}
+%
+%\[ A=\left[\begin{array}{rr}
+%4 & 1 \\ 1 & 3 \end{array}\right]
+%\mbox{ and }
+%C=\left[\begin{array}{rr}
+%1 & 3 \\ 2 & -5 \end{array}\right] \]
+%Find elementary matrices $E$ and $F$ so that 
+%$C=FEA$.
+%\end{problem}
+%\pause
+%\begin{solution}\em
+%{\bf Note.}
+%The statement of the problem implies that \alert{$C$ can be
+%obtained from $A$ by a sequence of two elementary row 
+%operations}, represented by elementary matrices $E$ and $F$.
+%\pause
+%\[
+%A = \left[\begin{array}{rr}
+%4 & 1 \\ 1 & 3 
+%\end{array}\right]
+%\pause
+%\stackrel{\rightarrow}{_E}
+%\left[\begin{array}{rr}
+%1 & 3 \\
+%4 & 1 
+%\end{array}\right]
+%\pause
+%\stackrel{\rightarrow}{_F}
+%\left[\begin{array}{rr}
+%1 & 3 \\
+%2 & -5 
+%\end{array}\right] = C 
+%\]
+%\pause
+%where
+%$E=\left[\begin{array}{rr}
+%0 & 1 \\ 1 & 0 \end{array}\right]$
+%\pause
+%and $F=\left[\begin{array}{rr}
+%1 & 0 \\ -2 & 1 \end{array}\right]$.
+%\pause
+%Thus we have the sequence
+%$A\rightarrow EA \rightarrow F(EA)=C$,
+%\pause
+%so $C=FEA$, i.e.,
+%\[ \left[\begin{array}{rr} 1 & 3 \\ 2 & -5 \end{array}\right]
+%=
+%\left[\begin{array}{rr}
+%1 & 0 \\ -2 & 1 \end{array}\right]
+%\left[\begin{array}{rr}
+%0 & 1 \\ 1 & 0 \end{array}\right]
+%\left[\begin{array}{rr}
+%4 & 1 \\ 1 & 3 
+%\end{array}\right] \]
+%\pause
+%\alert{You can check your work by doing the matrix multiplication.}
+%\end{solution}
+%}}
+%%-------------- end slide -------------------------------%
+%
+%
+%%-------------- start slide -------------------------------%
+%\frame{\frametitle{Inverses of Elementary Matrices}
+%\begin{example}
+%Without using the matrix inversion algorithm, find the
+%inverse of the elementary matrix
+%\[ G=
+%\left[ \begin{array}{rrrr}
+%1 & 0 & 0 & 0 \\
+%0 & 1 & 0 & 0 \\
+%-3 & 0 & 1 & 0 \\
+%0 & 0 & 0 & 1
+%\end{array}\right] 
+%\]
+%\pause
+%{\bf Hint.}
+%What row operation can be applied to $G$ to transform it
+%to $I_4$?
+%\pause
+%The row operation $G\rightarrow I_4$ is to \alert{add} three times
+%row one to row three,
+%\pause
+%and thus
+%\[ G^{-1} =
+%\left[ \begin{array}{cccc}
+%1 & 0 & 0 & 0 \\
+%0 & 1 & 0 & 0 \\
+%3 & 0 & 1 & 0 \\
+%0 & 0 & 0 & 1
+%\end{array}\right] \]
+%
+%\pause
+%\alert{Check by computing $G^{-1}G$.}
+%\end{example}
+%}
+%%-------------- end slide -------------------------------%
+%
+%%-------------- start slide -------------------------------%
+%\frame{
+%\begin{example}[continued]
+%Similarly,
+%\[ E^{-1} = 
+%\left[ \begin{array}{cccc}
+%1 & 0 & 0 & 0 \\
+%0 & 0 & 0 & 1 \\
+%0 & 0 & 1 & 0 \\
+%0 & 1 & 0 & 0
+%\end{array}\right]^{-1} =
+%\left[ \begin{array}{cccc}
+%1 & 0 & 0 & 0 \\
+%0 & 0 & 0 & 1 \\
+%0 & 0 & 1 & 0 \\
+%0 & 1 & 0 & 0
+%\end{array}\right]
+%\]
+%\uncover<2->{
+%and 
+%\[ F^{-1} =
+%\left[ \begin{array}{rrrr}
+%1 & 0 & 0 & 0 \\
+%0 & 1 & 0 & 0 \\
+%0 & 0 & -2 & 0 \\
+%0 & 0 & 0 & 1
+%\end{array}\right]^{-1}
+%= \left[ \begin{array}{rrrr}
+%1 & 0 & 0 & 0 \\
+%0 & 1 & 0 & 0 \\
+%0 & 0 & -\frac{1}{2} & 0 \\
+%0 & 0 & 0 & 1
+%\end{array}\right]
+%\]}
+%\end{example}
+%}
+%%-------------- end slide -------------------------------%
+%
+%
+%%-------------- start slide -------------------------------%
+%\frame{\frametitle{The Form $B=UA$}
+%Suppose $A$ is an $m\times n$ matrix and that $B$ can be 
+%obtained from $A$ by a sequence of $k$ elementary row operations.
+%\pause
+%Then there exist elementary matrices $E_1, E_2,\ldots E_k$
+%such that
+%\[ B=E_k(E_{k-1}(\cdots(E_2(E_1A))\cdots)) \]
+%\pause
+%Since matrix multiplication is associative, we have
+%\[ B=(E_k E_{k-1} \cdots E_2 E_1)A\]
+%\pause
+%or, more concisely, $B=UA$ where
+%$U=E_k E_{k-1} \cdots E_2 E_1$.
+%\pause
+%\bigskip
+%
+%To find $U$ so that $B=UA$, we \alert{could} find
+%$E_1, E_2, \ldots, E_k$ and multiply these together
+%(in the correct order), but there is an easier method for
+%finding $U$.
+%}
+%%-------------- end slide -------------------------------%
+%
+%%-------------- start slide -------------------------------%
+%\frame{
+%\begin{definition}
+%Let $A$ be an $m\times n$ matrix.  We write
+%\[ A\rightarrow B \]
+%if $B$ can be obtained from $A$ by a sequence of elementary
+%row operations.
+%\end{definition}
+%\pause
+%\begin{theorem}\em
+%Suppose $A$ is an $m\times n$ matrix and that $A\rightarrow B$.
+%Then
+%\pause
+%\begin{enumerate}
+%\item
+%there exists an invertible $m\times m$ matrix $U$ such that
+%$B=UA$;
+%\pause
+%\item 
+%$U$ can be computed by performing elementary row operations on
+%$\left[\begin{array}{c|c} A & I_m \end{array}\right]$ 
+%to transform it into 
+%$\left[\begin{array}{c|c} B & U \end{array}\right]$;
+%\pause
+%\item
+%$U=E_k E_{k-1} \cdots E_2 E_1$, where
+%$E_1, E_2, \ldots, E_k$ are elementary matrices
+%corresponding, in order,
+%to the elementary row operations
+%used to obtain $B$ from $A$.
+%\end{enumerate}
+%\end{theorem}
+%}
+%%-------------- end slide -------------------------------%
+%
+%%-------------- start slide -------------------------------%
+%\frame{
+%\begin{problem}\em
+%Let $A=\left[\begin{array}{rrr}
+%3 & 0 & 1 \\ 2 & -1 & 0 \end{array}\right]$, 
+%and let $R$ be the reduced row-echelon form of $A$.
+%
+%Find a matrix $U$ so that $R=UA$.
+%\end{problem}
+%%%Also, find a matrix $Q$ so that $A=QR$.
+%\pause
+%\begin{solution}\em
+%{\small
+%\[ 
+%\left[\begin{array}{rrr|rr}
+%3 & 0 & 1 & 1 & 0 \\
+%2 & -1 & 0 & 0 & 1
+%\end{array}\right]
+%\rightarrow
+%\left[\begin{array}{rrr|rr}
+%1 & 1 & 1 & 1 & -1 \\
+%2 & -1 & 0 & 0 & 1
+%\end{array}\right]
+%\rightarrow
+%\left[\begin{array}{rrr|rr}
+%1 & 1 & 1 & 1 & -1 \\
+%0 & -3 & -2 & -2 & 3
+%\end{array}\right]
+%\]
+%\[ 
+%\rightarrow
+%\left[\begin{array}{rrr|rr}
+%1 & 1 & 1 & 1 & -1 \\
+%0 & 1 & \frac{2}{3} & \frac{2}{3} & -1
+%\end{array}\right]
+%\rightarrow
+%\left[\begin{array}{rrr|rr}\vspace*{.02in}
+%1 & 0 & \frac{1}{3} & \frac{1}{3} & 0 \\
+%0 & 1 & \frac{2}{3} & \frac{2}{3} & -1
+%\end{array}\right]
+%\]}
+%\pause
+%Starting with 
+%$\left[\begin{array}{c|c}
+%A & I \end{array}\right]$, we've obtained
+%$\left[\begin{array}{c|c}
+%R & U \end{array}\right]$.
+%
+%\pause
+%Therefore $R=UA$, where
+%\[ U=\left[\begin{array}{rr}\vspace*{.02in}
+%\frac{1}{3} & 0 \\
+%\frac{2}{3} & -1
+%\end{array}\right] \]
+%%%\uncover<5->{
+%%%Since $R=UA$ and $U$ is invertible \alert{(why?)}, we have}
+%\end{solution}
+%}
+%%-------------- end slide -------------------------------%
+%
+%%-------------- start slide -------------------------------%
+%%%ADD THIS SLIDE FOR QR-FACTORIZATION
+%%%\frame{
+%%%\begin{example}[continued]
+%%%\begin{eqnarray*}
+%%%R & = & UA \\
+%%%U^{-1} R & = & U^{-1}(UA) \\
+%%%& = & (U^{-1}U)A \\
+%%%& = & IA \\
+%%%& = & A.
+%%%\end{eqnarray*}
+%%%\uncover<2->{
+%%%Thus $A=U^{-1} R$, and
+%%%\[ Q=U^{-1}=
+%%%\left[\begin{array}{rr}\vspace*{.02in}
+%%%\frac{1}{3} & 0 \\
+%%%\frac{2}{3} & -1
+%%%\end{array}\right]^{-1}
+%%%=\left[\begin{array}{rr}
+%%%3 & 0 \\
+%%%2 & -1
+%%%\end{array}\right].
+%%%\]}
+%%%\end{example}
+%%%}
+%%-------------- end slide -------------------------------%
+%
+%%-------------- start slide -------------------------------%
+%{\small
+%\frame{\frametitle{A Matrix as a Product of Elementary Matrices}
+%\begin{example}
+%Let 
+%\[ A= \left[\begin{array}{rrr}
+%1 & 2 & -4 \\
+%-3 & -6 & 13 \\
+%0 & -1 & 2 \end{array}\right] \]
+%\pause
+%Suppose we do row operations to put $A$ in reduced row-echelon form,
+%and write down the corresponding elementary matrices.
+%\pause
+%\[
+%\left[\begin{array}{rrr}
+%1 & 2 & -4 \\
+%-3 & -6 & 13 \\
+%0 & -1 & 2
+%\end{array}\right]
+%\pause
+%\stackrel{\longrightarrow}{_{E_1}}
+%\left[\begin{array}{rrr}
+%1 & 2 & -4 \\
+%0 & 0 & 1 \\
+%0 & -1 & 2
+%\end{array}\right]
+%\pause
+%\stackrel{\longrightarrow}{_{E_2}}
+%\left[\begin{array}{rrr}
+%1 & 2 & -4 \\
+%0 & -1 & 2\\
+%0 & 0 & 1 
+%\end{array}\right]
+%\pause
+%\stackrel{\longrightarrow}{_{E_3}}
+%\]
+%\[
+%\left[\begin{array}{rrr}
+%1 & 2 & -4 \\
+%0 & 1 & -2\\
+%0 & 0 & 1 
+%\end{array}\right]
+%\pause
+%\stackrel{\longrightarrow}{_{E_4}}
+%\left[\begin{array}{rrr}
+%1 & 0 & 0 \\
+%0 & 1 & -2\\
+%0 & 0 & 1 
+%\end{array}\right]
+%\pause
+%\stackrel{\longrightarrow}{_{E_5}}
+%\left[\begin{array}{rrr}
+%1 & 0 & 0 \\
+%0 & 1 & 0\\
+%0 & 0 & 1 
+%\end{array}\right]
+%\]
+%\pause
+%Notice that the reduced row-echelon form of $A$ equals $I_3$.
+%Now find the matrices $E_1, E_2, E_3, E_4$ and $E_5$.
+%\end{example}
+%}}
+%%-------------- end slide -------------------------------%
+%
+%%-------------- start slide -------------------------------%
+%\frame{
+%\begin{example}[continued]
+%\[ E_1 =\left[\begin{array}{rrr}
+%1 & 0 & 0 \\
+%3 & 1 & 0\\
+%0 & 0 & 1
+%\end{array}\right],
+%\pause
+%E_2 =\left[\begin{array}{rrr}
+%1 & 0 & 0 \\
+%0 & 0 & 1\\
+%0 & 1 & 0\\
+%\end{array}\right],
+%\pause
+%E_3 =\left[\begin{array}{rrr}
+%1 & 0 & 0 \\
+%0 & -1 & 0\\
+%0 & 0 & 1
+%\end{array}\right]
+%\]
+%\pause
+%\[
+%E_4 =\left[\begin{array}{rrr}
+%1 & -2 & 0 \\
+%0 & 1 & 0\\
+%0 & 0 & 1
+%\end{array}\right],
+%\pause
+%E_5 =\left[\begin{array}{rrr}
+%1 & 0 & 0 \\
+%0 & 1 & 2\\
+%0 & 0 & 1
+%\end{array}\right]
+%\]
+%\pause
+%It follows that 
+%\begin{eqnarray*}
+%(E_5(E_4(E_3(E_2(E_1A))))) & = & I\\
+%(E_5E_4E_3E_2E_1)A & = & I
+%\end{eqnarray*}
+%and therefore
+%\[ A^{-1}=E_5E_4E_3E_2E_1 \]
+%\end{example}
+%}
+%%-------------- end slide -------------------------------%
+%
+%%-------------- start slide -------------------------------%
+%\frame{
+%\begin{example}[continued]
+%Since $A^{-1}=E_5E_4E_3E_2E_1$, 
+%\begin{eqnarray*}
+%A^{-1} & = & E_5E_4E_3E_2E_1 \\
+%(A^{-1})^{-1} & = & (E_5E_4E_3E_2E_1)^{-1} \\
+%A & = & E_1^{-1}E_2^{-1}E_3^{-1}E_4^{-1}E_5^{-1}
+%\end{eqnarray*}
+%\end{example}
+%
+%This example illustrates the following result.
+%
+%\uncover<2->{
+%\begin{theorem}\em
+%Let $A$ be an $n \times n$ matrix. Then, $A^{-1}$ exists if and only if $A$ can be written as the product of elementary matrices.
+%\end{theorem}}
+%}
+%%-------------- end slide -------------------------------%
+%
+%%-------------- start slide -------------------------------%
+%\frame{
+%\begin{problem}\em
+%Express $A=
+%\left[\begin{array}{rr}
+%4 & 1 \\
+%-3 & 2 
+%\end{array}\right]$ as a product of elementary matrices.
+%\end{problem}
+%\pause
+%\begin{solution}\em
+%\[
+%\left[\begin{array}{rr}
+%4 & 1 \\ -3 & 2 
+%\end{array}\right]
+%\pause
+%\stackrel{\longrightarrow}{_{E_1}}
+%\left[\begin{array}{rr}
+%1 & 3 \\ -3 & 2 
+%\end{array}\right]
+%\pause
+%\stackrel{\longrightarrow}{_{E_2}}
+%\left[\begin{array}{rr}
+%1 & 3 \\ 0 & 11 
+%\end{array}\right]
+%\pause
+%\stackrel{\longrightarrow}{_{E_3}}
+%\left[\begin{array}{rr}
+%1 & 3 \\ 0 & 1 
+%\end{array}\right]
+%\pause
+%\stackrel{\longrightarrow}{_{E_4}}
+%\left[\begin{array}{rr}
+%1 & 0 \\ 0 & 1 
+%\end{array}\right]
+%\]
+%\pause
+%and 
+%\[
+%E_1 =\left[\begin{array}{rr}
+%1 & 1 \\ 0 & 1 
+%\end{array}\right],
+%\pause
+%E_2 =\left[\begin{array}{rr}
+%1 & 0 \\ 3 & 1 
+%\end{array}\right],
+%\pause
+%E_3 =\left[\begin{array}{rr}
+%1 & 0 \\ 0 & \frac{1}{11} 
+%\end{array}\right],
+%\pause
+%E_4 =\left[\begin{array}{rr}
+%1 & -3 \\ 0 & 1 
+%\end{array}\right]
+%\]
+%\pause
+%Since $E_4E_3E_2E_1A=I$, $A^{-1}=E_4E_3E_2E_1$, and hence
+%\[ A= E_1^{-1} E_2^{-1} E_3^{-1} E_4^{-1} \]
+%\end{solution}
+%}
+%%-------------- end slide -------------------------------%
+%
+%%-------------- start slide -------------------------------%
+%\frame{
+%\begin{solution}[continued]\em
+%Therefore, 
+%\[ A = 
+%\left[\begin{array}{rr}
+%1 & 1 \\
+%0 & 1 
+%\end{array}\right]^{-1}
+%\left[\begin{array}{rr}
+%1 & 0 \\
+%3 & 1
+%\end{array}\right]^{-1}
+%\left[\begin{array}{rr}
+%1 & 0 \\
+%0 & \frac{1}{11}
+%\end{array}\right]^{-1}
+%\left[\begin{array}{rr}
+%1 & -3 \\
+%0 & 1
+%\end{array}\right]^{-1}
+%\]
+%\pause
+%i.e.,
+%\[ A = 
+%\left[\begin{array}{rr}
+%1 & -1 \\
+%0 & 1
+%\end{array}\right]
+%\left[\begin{array}{rr}
+%1 & 0 \\
+%-3 & 1
+%\end{array}\right]
+%\left[\begin{array}{rr}
+%1 & 0 \\
+%0 & 11
+%\end{array}\right]
+%\left[\begin{array}{rr}
+%1 & 3 \\
+%0 & 1
+%\end{array}\right]
+%\]
+%\pause
+%\alert{Check your work by computing the product.}
+%\end{solution}
+%}
+%%-------------- end slide -------------------------------%
+%
+%%-------------- start slide -------------------------------%
+%\frame{
+%\begin{problem}\em
+%Is the $n\times n$ identity matrix an elementary matrix? 
+%Justify your answer.
+%\end{problem}
+%\pause
+%\bigskip
+%
+%One result that we have assumed in all our work involving
+%reduced row-echelon matrices is the following.
+%\pause
+%\begin{theorem}\em
+%If $A$ is an $m\times n$ matrix and $R$ and $S$ are reduced
+%row-echelon forms of $A$, then $R=S$.
+%\end{theorem}
+%\medskip
+%\pause
+%
+%\alert{This theorem ensures that the reduced row-echelon form of
+%a matrix is unique,}
+%\pause
+%and its proof follows from the results about elementary matrices.
+%}
+%%-------------- end slide -------------------------------%
+
+\end{document}

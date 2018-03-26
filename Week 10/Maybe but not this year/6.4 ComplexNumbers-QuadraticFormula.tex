@@ -1,0 +1,268 @@
+%%%%%%%%%%%%%%%%%%%%%%
+%%Options for presentations (in-class) and handouts (e.g. print). 
+\documentclass[pdf
+,handout
+]{beamer}
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}[letterpaper,border shrink=5mm]
+
+\graphicspath{{../}}
+%%%%%%%%%%%%%%%%%%%%%%
+%% Change this for different slides so it appears in bar
+\usepackage{authoraftertitle}
+\date{Complex Numbers: The Quadratic Formula}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% Upload common style file
+\usepackage{../LyryxLinearAlgebraSlidesStyle}
+
+\begin{document}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%
+	%% Title Page and Copyright Common to All Slides	
+	%Title Page
+	\input ../frontmatter/titlepage.tex	
+	%LOTS Page
+	%\input frontmatter/lyryxopentexts.tex	
+	%Copyright Page
+	\input ../frontmatter/copyright.tex	
+	%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{The Quadratic Formula}
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Real Quadratics}
+\begin{definition}
+A \alert{real} quadratic is an expression of the form
+$ax^2+bx+c$ where $a, b, c\in\RR$ and $a\neq 0$.
+\end{definition}
+
+\pause
+To find the roots of a real quadratic, we can either
+factor by inspection, or use the \alert{quadratic formula}:
+\[ 
+x= \frac{-b \pm\sqrt{b^2-4ac}}{2a} \]
+
+\pause
+The expression $b^2-4ac$ in the quadratic formula is called
+the \alert{discriminant}, \pause and
+\begin{itemize}
+\item
+if $b^2-4ac\geq 0$, then the roots of the quadratic are \alert{real};
+\pause
+\item
+if $b^2-4ac<0$, then the quadratic has \alert{no real roots}.
+\end{itemize}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{definition}
+A real quadratic $ax^2+bx+c$ is called
+\alert{irreducible} if the discriminant is less than zero,
+i.e., $b^2-4ac<0$.
+\end{definition}
+\pause
+\begin{alertblock}{}
+Notice that if $b^2-4ac<0$, then
+\[
+\sqrt{b^2-4ac}=\sqrt{(-1)(4ac-b^2)} = (\pm) i\sqrt{4ac-b^2}.\]
+\end{alertblock}
+\pause
+It follows that the roots of an irreducible quadratic are
+\[ \frac{-b\pm i\sqrt{4ac-b^2}}{2a}
+=\left\{ \begin{array}{l}\vspace*{.02in}
+-\frac{b}{2a} + \frac{\sqrt{4ac-b^2}}{2a}i \\
+-\frac{b}{2a} - \frac{\sqrt{4ac-b^2}}{2a}i
+\end{array}\right. ,
+\]
+\pause
+and we see that
+the two roots are complex conjugates of each other.
+\pause
+
+We denote the two roots by
+\[ u = -\frac{b}{2a} + \frac{\sqrt{4ac-b^2}}{2a}i 
+\mbox{ and }
+\overline{u}= -\frac{b}{2a} - \frac{\sqrt{4ac-b^2}}{2a}i. \]
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Real Quadratics with Complex Roots}
+\begin{example}
+The quadratic $x^2-14x+58$ has roots
+\begin{eqnarray*}
+x & = & \frac{14 \pm\sqrt{196-4\times 58}}{2}\\
+\pause
+& = & \frac{14 \pm\sqrt{196-232}}{2} \\
+\pause
+& = & \frac{14 \pm\sqrt{-36}}{2} \\
+\pause
+& = & \frac{14 \pm 6i}{2} \\
+\pause
+& = & 7\pm 3i,
+\end{eqnarray*}
+\pause
+so the roots are $7+3i$ and $7-3i$.
+\end{example}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{alertblock}{}
+Conversely, given $u=a+bi$ with $b\neq 0$, there is an 
+irreducible quadratic having roots $u$ and $\overline{u}$.
+\end{alertblock}
+\pause
+\begin{problem}\em
+Find an irreducible quadratic with $u=5-2i$ as a root.
+What is the other root?
+\end{problem}
+\pause
+\begin{solution}\em
+\vspace*{-.2in}
+
+\begin{eqnarray*}
+(x-u)(x-\overline{u}) & = & \pause (x-(5-2i))(x-(5+2i)) \\
+\pause
+& = & x^2 -(5-2i)x -(5+2i)x +(5-2i)(5+2i) \\
+\pause
+& = & x^2-10x+29.
+\end{eqnarray*}
+\pause
+Therefore, $x^2-10x+29$ is an irreducible quadratic with
+roots $5-2i$ and $5+2i$.
+\pause
+
+\alert{Notice that $-10 = -(u+\overline{u})$ and 
+$29=u\overline{u}=|u|^2$.}
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{block}{Exercise}
+Find an irreducible quadratic with root $u=-3+4i$, and 
+find the other root.
+\end{block}
+\begin{block}{Answer}
+$x^2+6x+25$ has roots $u=-3+4i$ and $\overline{u}=-3-4i$.
+\end{block}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{\frametitle{Quadratics with Complex Coefficients}
+\begin{problem}\em
+Find the roots of the quadratic $x^2-(3-2i)x+(5-i)=0$.
+\end{problem}
+\pause
+\begin{solution}\em
+Using the quadratic formula
+\[ x=\frac{3-2i \pm\sqrt{ (-(3-2i))^2-4(5-i)}}{2}. \]
+\pause
+Now,
+\[  (-(3-2i))^2-4(5-i) = 5-12i-20+4i=-15-8i,\]
+\pause
+so
+\[ x=\frac{3-2i \pm\sqrt{-15-8i}}{2}. \] 
+\pause
+To find $\pm\sqrt{-15-8i}$, solve $z^2=-15-8i$ for $z$.
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{solution}[continued]\em
+Let $z=a+bi$ and $z^2=-15-8i$.  
+\pause
+Then
+\[ (a^2-b^2)+2abi=-15-8i,\]
+\pause
+so $a^2-b^2=-15$ and $2ab=-8$.
+\medskip
+
+\pause
+Solving for $a$ and $b$ gives us
+$z= 1-4i, -1+4i$, i.e., $z=\pm(1-4i)$.
+\pause
+
+Therefore, 
+\[ x=\frac{3-2i \pm(1-4i)}{2}, \] 
+\pause
+and
+\[\begin{array}{l}
+\frac{3-2i +(1-4i)}{2}
+=\frac{4-6i}{2} = 2-3i,\\ \\
+\frac{3-2i -(1-4i)}{2}
+=\frac{2+2i}{2}= 1+i.
+\end{array}\]
+\pause
+Thus the roots of $x^2-(3-2i)x+(5-i)$ are 
+$2-3i$ and $1+i$.
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{block}{Exercise}
+Find the roots of $x^2-3ix+(-3+i)$.
+\end{block}
+\begin{block}{Answer}
+$1+i$ and $-1+2i$.
+\end{block}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{problem}\em
+Verify that $u_1=(4-i)$ is a root of 
+\[ x^2-(2-3i)x-(10+6i) \]
+and find the other root, $u_2$.
+\end{problem}
+\pause
+\begin{solution}\em
+First,
+\vspace*{-.3in}
+
+\begin{eqnarray*}
+u_1^2 -(2-3i)u_1 -(10+6i) 
+& = & (4-i)^2-(2-3i)(4-i)-(10+6i)\\
+& = & (15-8i)-(5-14i)-(10+6i) \\
+& = &  0,
+\end{eqnarray*}
+\vspace*{-.3in}
+
+so $u_1=(4-i)$ is a root.
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+%-------------- start slide -------------------------------%
+\frame{
+\begin{solution}[continued]\em
+Recall that if $u_1$ and $u_2$ are the roots of the quadratic,
+then
+\[ u_1 + u_2 = (2-3i) \mbox{ and } u_1u_2 = -(10+6i). \]
+Solve for $u_2$ using either one of these equations.
+\pause
+
+Since $u_1=4-i$ and $u_1+u_2=2-3i$,
+\[ u_2=2-3i-u_1=2-3i-(4-i)=-2-2i.\]
+\pause
+Therefore, the other root is $u_2=-2-2i$.
+\pause
+
+You can easily verify your answer by computing $u_1u_2$:
+\[ u_1u_2=(4-i)(-2-2i)= -10 -6i=-(10+6i).\]
+\end{solution}
+}
+%-------------- end slide -------------------------------%
+
+\end{document}

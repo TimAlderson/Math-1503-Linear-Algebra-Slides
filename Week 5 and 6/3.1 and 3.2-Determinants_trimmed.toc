@@ -1,0 +1,8 @@
+\beamer@sectionintoc {1}{Copyright}{2}{0}{1}
+\beamer@sectionintoc {2}{Cofactors and $n \times n$ Determinants}{3}{0}{2}
+\beamer@sectionintoc {3}{Triangular Matrices}{56}{0}{3}
+\beamer@sectionintoc {4}{Properties of the Determinant}{66}{0}{4}
+\beamer@sectionintoc {5}{Using Row Operations}{133}{0}{5}
+\beamer@sectionintoc {6}{A Formula for the Inverse}{133}{0}{6}
+\beamer@sectionintoc {7}{Cramer's Rule}{198}{0}{7}
+\beamer@sectionintoc {8}{Polynomial Interpolation}{214}{0}{8}
