@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Copyright}{2}{0}{1}
+\beamer@sectionintoc {2}{Rotations}{3}{0}{2}
+\beamer@sectionintoc {3}{Reflections}{10}{0}{3}
+\beamer@sectionintoc {4}{Reflection in the line}{12}{0}{4}

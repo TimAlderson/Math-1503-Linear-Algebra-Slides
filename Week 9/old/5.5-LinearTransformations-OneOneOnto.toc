@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Copyright}{2}{0}{1}
+\beamer@sectionintoc {3}{One to One}{5}{0}{2}
+\beamer@sectionintoc {4}{Onto}{7}{0}{3}
+\beamer@sectionintoc {5}{Examples}{10}{0}{4}

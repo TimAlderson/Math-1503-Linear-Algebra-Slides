@@ -1,0 +1,348 @@
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+%%Options for presentations (in-class) and handouts (e.g. print). 
+\documentclass[pdf
+,handout
+]{beamer}
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}[letterpaper,border shrink=5mm]
+
+\graphicspath{{../}}
+%%%%%%%%%%%%%%%%%%%%%%
+%% Change this for different slides so it appears in bar
+\usepackage{authoraftertitle}
+\date{Linear Transformations: Kernel and Image}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% Upload common style file
+\usepackage{../LyryxLinearAlgebraSlidesStyle}
+
+\begin{document}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%
+	%% Title Page and Copyright Common to All Slides	
+	%Title Page
+	\input ../frontmatter/titlepage.tex	
+	%LOTS Page
+	%\input frontmatter/lyryxopentexts.tex	
+	%Copyright Page
+	\input ../frontmatter/copyright.tex	
+	%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Definition}
+
+%-----------------start slide-------------%
+\frame{\frametitle{Kernel and Image}
+
+\begin{definition}[Kernel]
+  Let $V$ be a subspace of $\mathbb{R}^n$ and $W$ a subspace of $\mathbb{R}^m$, and
+  let $T: V \mapsto W$ be a linear transformation. 
+\pause
+
+Then the \alert{kernel} of $T$, $\ker(T)$, consists of all $\vect{v} \in V$ such that $T(\vect{v}) = \vect{0}$. 
+
+\pause
+
+\[
+\ker(T) = \left\{ \vect{v} \in V : T(\vect{v}) = \vect{0} \right\}
+\]
+\end{definition}
+
+\medskip
+\pause
+
+\begin{definition}[Image]
+  Let $V$ be a subspace of $\mathbb{R}^n$ and $W$ a subspace of $\mathbb{R}^m$, and
+  let $T: V \mapsto W$ be a linear transformation. 
+\pause
+
+Then the \alert{image} of $T$, $\im(T)$, consists of all $\vect{w} \in W$ such that $\vect{w} = T(\vect{v})$ for some $\vect{v} \in V$. 
+
+\pause
+
+\[
+\im(T) = \left\{ T(\vect{v}) : \vect{v} \in V \right\}
+\]
+
+\end{definition}
+
+}
+%----------------end slide---------------%
+
+%--------------start slide-----------------%
+\frame{\frametitle{Problem to Try}
+
+\begin{problem}
+  Let $V$ be a subspace of $\mathbb{R}^n$ and $W$ a subspace of $\mathbb{R}^m$, and
+let $T: V \mapsto W$ be a linear transformation.  
+
+\medskip
+\pause
+
+Show that $\ker(T)$ is a subspace of $V$ and $\im(T)$ is a subspace of $W$. 
+\end{problem}
+
+}
+%------------end slide-----------------%
+
+\section{Finding the Kernel and Image}
+
+%--------start slide----------------%
+\frame{
+\begin{example}
+Let $T: \mathbb{R}^3 \mapsto \mathbb{R}^2$ be defined by 
+\[
+T \left( \leftB \begin{array}{r}
+a \\
+b \\
+c
+\end{array} \rightB \right) = \leftB \begin{array}{c}
+a + b + c \\
+c - a
+\end{array}\rightB
+\]
+Then $T$ is a linear transformation. Find a basis for $\ker(T)$ and $\im(T)$. 
+\end{example}
+
+\medskip
+\pause
+
+\begin{solution}\em
+You can (and should!) verify that $T$ is a linear transformation.
+\end{solution}
+}
+%-------------end slide--------------%
+
+%--------------start slide-----------%
+\frame{
+
+\begin{solution}[continued]\em
+\textbf{Kernel of $T$:}
+We look for all vectors $\vect{x} \in \mathbb{R}^3$ such that $T(\vect{x}) = \vect{0}$. % for $\vect{0} \in \mathbb{R}^2$. 
+\vspace{-.1in}
+{\small
+\[
+T \left( \leftB \begin{array}{r}
+a \\ 
+b \\
+c
+\end{array}\rightB \right) =  \leftB \begin{array}{c}
+a + b + c \\
+c - a
+\end{array}\rightB =  \leftB \begin{array}{c}
+0 \\
+0
+\end{array}\rightB
+\]
+}
+\pause
+%\medskip
+%\vspace{-.1in}
+This gives a system of equations:
+%\vspace{-.1in}
+\begin{eqnarray*}
+a + b + c &=& 0 \\
+c - a &=& 0
+\end{eqnarray*}
+
+\pause
+%\medskip
+%\vspace{-.1in}
+The general solution is
+%\vspace{-.1in}
+{\small
+\[
+\left( \leftB \begin{array}{r} a \\ b \\ c \end{array}\rightB \right) =
+\left\{ \leftB \begin{array}{r} t \\ -2t \\ t \end{array}\rightB : t \in \mathbb{R} \right\} =
+\left\{ t \leftB \begin{array}{r} 1 \\ -2 \\ 1 \end{array}\rightB : t \in \mathbb{R} \right\}
+\]
+}
+%\vspace{-.2in}
+And therefore a basis for the kernel is {\small $
+\left\{ \leftB \begin{array}{r}
+1 \\
+-2 \\
+1
+\end{array} \rightB \right\}.
+$
+}
+\end{solution}
+}
+%------------end slide----------------%
+
+%--------------start slide-----------%
+\frame{
+
+\begin{solution}[continued]\em
+\textbf{Image of $T$:}
+We can write the image as %{\small
+\[ \begin{array}{cl}
+\im(T) & = \left\{ \leftB \begin{array}{c}
+a + b + c \\
+c - a
+\end{array}\rightB :  a,b,c  \in \mathbb{R} \right\} \\
+& = \left\{ \leftB \begin{array}{c} a \\ -a  \end{array} \rightB
++ \leftB \begin{array}{c} b \\ 0  \end{array} \rightB
++ \leftB \begin{array}{c} c \\ c  \end{array} \rightB
+:  a,b,c  \in \mathbb{R} \right\} \\
+& = \left\{ a \leftB  \begin{array}{c} 1 \\ -1  \end{array} \rightB
++ b \leftB \begin{array}{c} 1 \\ 0  \end{array} \rightB
++ c \leftB \begin{array}{c} 1 \\ 1  \end{array} \rightB
+:  a,b,c  \in \mathbb{R} \right\}
+\end{array}
+\]
+%}
+
+\pause
+%\medskip
+
+Thus $\im(T) = \mbox{span}\; \left\{ 
+\leftB \begin{array}{r}
+1 \\
+-1 
+\end{array}\rightB, 
+\leftB \begin{array}{r}
+1 \\
+0 
+\end{array}\rightB, 
+\leftB \begin{array}{r}
+1 \\
+1 
+\end{array}\rightB
+\right\} $.
+
+\pause
+%\medskip
+
+These vectors are not linearly independent, but the first two are so a basis for the image of $T$ is 
+{\small
+  \[
+\left\{ \leftB \begin{array}{r}
+1 \\
+-1
+\end{array} \rightB, \leftB \begin{array}{r} 
+1 \\
+0
+\end{array}\rightB
+\right\}.
+\]
+}
+
+\end{solution}
+}
+%------------end slide----------------%
+
+%-------------start slide------------%
+\frame{\frametitle{Kernel and One to One}
+
+\begin{alertblock}{}
+The kernel of a linear transformation gives important information
+about whether the transformation is one to one. Recall that a linear
+transformation $T$ is one to one if and only if $T(\vect{x}) = \vect{0}$ implies $\vect{x} = \vect{0}$.
+\end{alertblock}
+
+\medskip
+\pause
+
+\begin{theorem}[Dimension Theorem]
+  Let $T: V \mapsto W$ be a linear transformation where
+  $V$ is a subspace of $\mathbb{R}^n$ and $W$ a subspace of $\mathbb{R}^m$. \\
+  Then $T$ is one to one if and only if $\ker(T) = \left\{ \vect{0} \right\}$. 
+\end{theorem}
+}
+%-----------------end slide------------%
+
+\section{Dimension}
+
+%----------------start slide-----------%
+\frame{\frametitle{Dimension of the Kernel and Image}
+
+\begin{theorem}[]\em
+  Let $T: V \mapsto W$ be a linear transformation where
+  $V$ is a subspace of $\mathbb{R}^n$ and $W$ is a subspace of $\mathbb{R}^m$. 
+ Suppose further that the dimension of $V$ is $k$. Then
+\[
+k = \dim (\ker(T)) + \dim (\im(T))
+\]
+\end{theorem}
+
+\medskip
+\pause
+
+\begin{corollary}[]\em
+Let $T, V, W$ be defined as above, with $\dim(V) = k$. Then
+\begin{eqnarray*}
+\dim(\ker(T)) & \leq   k & \leq   n\\
+\dim(\im(T))  & \leq   k & \leq   n \\
+\end{eqnarray*}
+\end{corollary}
+}
+%-------------------end slide----------%
+
+%-----------------start slide---------%
+\frame{
+\begin{example}[Revisited]
+Let $T: \mathbb{R}^3 \mapsto \mathbb{R}^2$ be defined by 
+\[
+T \left( \leftB \begin{array}{r}
+a \\
+b \\
+c
+\end{array} \rightB \right) = \leftB \begin{array}{c}
+a + b + c \\
+c - a
+\end{array}\rightB
+\]
+Find the dimension of $\ker(T)$ and $\im(T)$.
+\end{example}
+
+\medskip
+\pause
+
+\begin{solution}\em
+We already know that a basis for the kernel of $T$ is given by 
+\[
+\left\{ \leftB \begin{array}{r}
+1 \\
+-2 \\
+1
+\end{array} \rightB \right\}
+\]
+
+\medskip
+\pause
+
+Therefore $\dim(\ker(T)) = 1$. 
+\end{solution}
+}
+%-----------------end slide-----------%
+
+%---------------start slide-----------%
+\frame{
+\begin{solution}[continued]\em
+We also found a basis for the image of $T$ as 
+\[
+\left\{ \leftB \begin{array}{r}
+1 \\
+-1
+\end{array} \rightB, \leftB \begin{array}{r} 
+1 \\
+0
+\end{array}\rightB
+\right\}
+\]
+and this of course shows $\dim(\im(T)) = 2$. 
+
+\medskip
+\pause
+
+But we could have found the dimension of $\im(T)$ without finding a basis. That's because 
+since the dimension of $\mathbb{R}^3$ is $3$, and the dimension of $\ker(T)$ is 1, we get by the Dimension Theorem that:
+\begin{eqnarray*}
+\dim (\im(T)) &=& \dim (\mathbb{R}^3) - \dim (\ker(T)) \\
+  &=& 3-1 =2 \\ 
+\end{eqnarray*}
+\end{solution}
+}
+%----------------end slide------------%
+\end{document}

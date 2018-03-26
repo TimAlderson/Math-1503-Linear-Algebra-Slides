@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Copyright}{2}{0}{1}
+\beamer@sectionintoc {2}{Definition}{3}{0}{2}
+\beamer@sectionintoc {3}{Finding the Kernel and Image}{5}{0}{3}
+\beamer@sectionintoc {4}{Dimension}{9}{0}{4}
